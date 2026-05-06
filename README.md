@@ -14,8 +14,8 @@ Analyze your AI coding assistant usage — any harness, one dashboard.
 
 <p align="center">
   
-https://github.com/user-attachments/assets/d60203ce-c678-4fdd-918e-f6c04bff04df
-  
+https://github.com/user-attachments/assets/9f0239bf-20e0-459f-b137-17cce0edd1b2
+
 </p>
 
 ---
