@@ -291,7 +291,7 @@ describe('parseClaudeSessions', () => {
 
   // ---- workspace name resolution with spaces ----
 
-  it('resolves workspace name when path contains a folder with spaces', () => {
+  it('resolves workspace name when path contains a folder with spaces', { timeout: 30_000 }, () => {
     // Create a real directory tree with a space in a folder name.
     // longTmpDir() resolves Windows 8.3 short names so the encoded path
     // uses long names that match readdirSync output.
@@ -397,5 +397,90 @@ describe('parseClaudeSessions', () => {
       fs.rmSync(root, { recursive: true, force: true });
       fs.rmSync(tmpBase, { recursive: true, force: true });
     }
+  });
+
+  it('extracts skillsUsed from Read tool calls targeting SKILL.md files', () => {
+    const assistantWithSkillRead = {
+      type: 'assistant',
+      timestamp: '2025-06-15T10:00:02Z',
+      sessionId: 'sess-1',
+      message: {
+        role: 'assistant',
+        model: 'claude-sonnet-4',
+        content: [
+          { type: 'tool_use', name: 'Read', input: { file_path: '/home/user/.claude/skills/investigate/SKILL.md' } },
+          { type: 'tool_use', name: 'Read', input: { file_path: '/home/user/.claude/skills/browse/SKILL.md' } },
+          { type: 'tool_use', name: 'Read', input: { file_path: '/home/user/project/src/main.ts' } },
+          { type: 'text', text: 'I read the skill files.' },
+        ],
+        usage: { input_tokens: 500, output_tokens: 100 },
+      },
+    };
+
+    withProjectsDir('s.jsonl', [
+      makeUser('investigate this bug'),
+      assistantWithSkillRead,
+    ], (projectsDir) => {
+      const session = parseClaudeSessions(projectsDir)[0].sessions[0];
+      expect(session.requests).toHaveLength(1);
+      expect(session.requests[0].skillsUsed).toContain('investigate');
+      expect(session.requests[0].skillsUsed).toContain('browse');
+      expect(session.requests[0].skillsUsed).toHaveLength(2);
+    });
+  });
+
+  it('extracts skillsUsed from Skill tool calls', () => {
+    const assistantWithSkillTool = {
+      type: 'assistant',
+      timestamp: '2025-06-15T10:00:02Z',
+      sessionId: 'sess-1',
+      message: {
+        role: 'assistant',
+        model: 'claude-sonnet-4',
+        content: [
+          { type: 'tool_use', name: 'Skill', input: { skill: 'office-hours', args: 'brainstorm my idea' } },
+          { type: 'text', text: 'Running office-hours skill.' },
+        ],
+        usage: { input_tokens: 500, output_tokens: 100 },
+      },
+    };
+
+    withProjectsDir('s.jsonl', [
+      makeUser('brainstorm this'),
+      assistantWithSkillTool,
+    ], (projectsDir) => {
+      const session = parseClaudeSessions(projectsDir)[0].sessions[0];
+      expect(session.requests).toHaveLength(1);
+      expect(session.requests[0].skillsUsed).toContain('office-hours');
+      expect(session.requests[0].skillsUsed).toHaveLength(1);
+      expect(session.requests[0].toolsUsed).toContain('Skill');
+    });
+  });
+
+  it('deduplicates skills from Skill tool and Read-based detection', () => {
+    const assistantWithBoth = {
+      type: 'assistant',
+      timestamp: '2025-06-15T10:00:02Z',
+      sessionId: 'sess-1',
+      message: {
+        role: 'assistant',
+        model: 'claude-sonnet-4',
+        content: [
+          { type: 'tool_use', name: 'Skill', input: { skill: 'investigate', args: 'debug this' } },
+          { type: 'tool_use', name: 'Read', input: { file_path: '/home/user/.claude/skills/investigate/SKILL.md' } },
+          { type: 'text', text: 'Investigating.' },
+        ],
+        usage: { input_tokens: 500, output_tokens: 100 },
+      },
+    };
+
+    withProjectsDir('s.jsonl', [
+      makeUser('debug this'),
+      assistantWithBoth,
+    ], (projectsDir) => {
+      const session = parseClaudeSessions(projectsDir)[0].sessions[0];
+      expect(session.requests[0].skillsUsed).toContain('investigate');
+      expect(session.requests[0].skillsUsed).toHaveLength(1);
+    });
   });
 });

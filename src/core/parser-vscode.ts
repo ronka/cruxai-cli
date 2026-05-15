@@ -8,7 +8,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Session, SessionRequest, ToolConfirmation } from './types';
-import { createRequest, createSession, detectDevcontainerFromRequests, ParseContext, prefetchCache } from './parser-shared';
+import { createRequest, createSession, detectDevcontainerFromRequests, extractSkillNameFromPath, ParseContext, prefetchCache } from './parser-shared';
 import { debugCore, warnCore } from './log';
 import { canonicalizeReasoningEffort, extractReasoningEffortFromModelId } from './helpers';
 import { parseCLIEventsFile } from './parser-vscode-cli';
@@ -386,7 +386,7 @@ interface RawRequest {
 
 interface RawVariable {
   kind?: string;
-  value?: string | { path?: string };
+  value?: string | { path?: string; external?: string };
 }
 
 interface RawContentRef {
@@ -419,6 +419,7 @@ interface SessionFileData {
   initialLocation?: string;
   requests?: RawRequest[];
   inputState?: {
+    mode?: { id?: string; kind?: string };
     selectedModel?: {
       identifier?: string;
       metadata?: {
@@ -488,6 +489,30 @@ function extractAgentInfo(agent: RawRequest['agent']): { agentName: string; agen
   };
 }
 
+/**
+ * Normalize the session-level inputState.mode.id into a canonical agentMode value.
+ * VS Code stores:
+ *   - 'agent' for Agent mode
+ *   - 'ask' for Ask/Chat mode
+ *   - 'edit' for Edit mode
+ *   - A full URI path (e.g. '.../Plan.agent.md') for Plan mode and custom agents
+ */
+function normalizeSessionMode(modeId: string | undefined): string {
+  if (!modeId) return '';
+  // Built-in modes
+  if (modeId === 'agent' || modeId === 'ask' || modeId === 'edit') return modeId;
+  // URI-based modes: extract the meaningful name from the path
+  const lower = modeId.toLowerCase();
+  if (lower.includes('plan')) return 'plan';
+  // Other custom agents/chatmodes — use the filename stem
+  let decoded: string;
+  try { decoded = decodeURIComponent(modeId); } catch { decoded = modeId; }
+  const lastSlash = decoded.lastIndexOf('/');
+  const filename = lastSlash >= 0 ? decoded.substring(lastSlash + 1) : decoded;
+  const stem = filename.replace(/\.(agent|chatmode)\.md$/i, '');
+  return stem || modeId;
+}
+
 function extractSlashCommand(slashCmd: RawRequest['slashCommand']): string {
   if (isObj(slashCmd) && typeof slashCmd.name === 'string') {
     return slashCmd.name;
@@ -522,20 +547,73 @@ function extractCustomInstructions(contentRefs: RawContentRef[] | undefined): st
   return instructions;
 }
 
-function extractSkillsUsed(vdVars: RawVariable[]): string[] {
-  const skills: string[] = [];
+// extractSkillNameFromPath is imported from parser-shared
+
+/** Extract skill names from legacy inline XML in variable values. */
+function extractSkillsFromXml(vdVars: RawVariable[], skills: Set<string>): void {
   const skillRe = /<skill>\s*<name>(.*?)<\/name>/g;
   for (const v of vdVars) {
     if (typeof v === 'object' && v && typeof v.value === 'string' && v.value.includes('<skill>')) {
       let sm: RegExpExecArray | null;
       while ((sm = skillRe.exec(v.value)) !== null) {
         const sn = sm[1].trim();
-        if (sn && !skills.includes(sn) && !sn.includes('ai_toolkit')) skills.push(sn);
+        if (sn && !sn.includes('ai_toolkit')) skills.add(sn);
       }
       skillRe.lastIndex = 0;
     }
   }
-  return skills;
+}
+
+/** Extract skill names from promptFile variables that point to SKILL.md files. */
+function extractSkillsFromPromptFiles(vdVars: RawVariable[], skills: Set<string>): void {
+  for (const v of vdVars) {
+    if (typeof v !== 'object' || !v || v.kind !== 'promptFile') continue;
+    const val = v.value;
+    if (typeof val !== 'object' || !val) continue;
+    // Try the decoded path first, then the URL-encoded external URI
+    const rawPath = val.path || val.external || '';
+    const name = extractSkillNameFromPath(rawPath);
+    if (name) skills.add(name);
+  }
+}
+
+/** Extract skill names from read_file tool calls that target SKILL.md files. */
+function extractSkillsFromToolCalls(result: RawRequest['result'], skills: Set<string>): void {
+  const resultMeta = (typeof result === 'object' && result ? result.metadata : null) || {};
+  if (typeof resultMeta !== 'object' || !resultMeta) return;
+  const meta = resultMeta;
+  for (const key of ['toolCallResults', 'toolCallRounds']) {
+    const arr = meta[key];
+    if (!Array.isArray(arr)) continue;
+    for (const tcr of arr) {
+      if (typeof tcr !== 'object' || !tcr) continue;
+      const tcrObj = tcr as ToolCallResult;
+      const tcData = parseToolCalls(tcrObj.toolCalls);
+      for (const tc of tcData) {
+        const tool = tc as { name?: string; arguments?: unknown };
+        if (!tool || typeof tool !== 'object') continue;
+        const toolName = tool.name;
+        if (toolName !== 'read_file' && toolName !== 'copilot_readFile' && toolName !== 'readFile') continue;
+        let args = tool.arguments;
+        if (typeof args === 'string') { try { args = JSON.parse(args); } catch { continue; } }
+        if (typeof args !== 'object' || !args) continue;
+        const a = args as Record<string, unknown>;
+        const filePath = (typeof a.filePath === 'string' ? a.filePath : '')
+          || (typeof a.path === 'string' ? a.path : '')
+          || (typeof a.uri === 'string' ? a.uri : '');
+        const name = extractSkillNameFromPath(filePath);
+        if (name) skills.add(name);
+      }
+    }
+  }
+}
+
+function extractSkillsUsed(vdVars: RawVariable[], result: RawRequest['result']): string[] {
+  const skills = new Set<string>();
+  extractSkillsFromXml(vdVars, skills);
+  extractSkillsFromPromptFiles(vdVars, skills);
+  extractSkillsFromToolCalls(result, skills);
+  return [...skills];
 }
 
 function parseToolCalls(toolCalls: unknown, onError?: (error: unknown) => void): unknown[] {
@@ -709,7 +787,7 @@ function extractRequestVariables(req: RawRequest, resp: RawRequest['response'], 
   return {
     variableKinds: extractVariableKinds(vdVars),
     customInstructions: extractCustomInstructions(req.contentReferences),
-    skillsUsed: extractSkillsUsed(vdVars),
+    skillsUsed: extractSkillsUsed(vdVars, result),
     toolsUsed: extractToolsUsed(result),
     editedFiles: extractEditedFiles(req.editedFileEvents),
     referencedFiles: extractReferencedFiles(vdVars),
@@ -888,12 +966,22 @@ export function parseSessionFile(sessionFile: string, wsId: string, wsName: stri
       ?.properties?.reasoningEffort?.default ?? null
   );
 
+  // Extract session-level mode from inputState.mode.id.
+  // VS Code stores the actual mode (agent/ask/edit/plan/custom) here,
+  // while per-request agent.id only distinguishes the extension participant.
+  const sessionMode = normalizeSessionMode(data.inputState?.mode?.id);
+
   const parsedRequests = requests.map(r => {
     const req = parseRawRequest(r);
     // Apply session-level effort default when per-request effort is unknown
     if (!req.reasoningEffort && sessionEffortDefault) {
       req.reasoningEffort = sessionEffortDefault;
     }
+    // Apply session-level mode as agentMode — it's the definitive source
+    // for distinguishing agent/ask/plan/edit/custom modes.
+    // When absent, clear the per-request agent.id (a participant identifier
+    // like "copilot") so downstream analytics don't misclassify it as a mode.
+    req.agentMode = sessionMode;
     return req;
   });
   const hasDevcontainer = detectDevcontainerFromRequests(parsedRequests);

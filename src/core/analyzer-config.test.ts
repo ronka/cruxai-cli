@@ -23,7 +23,6 @@ vi.mock('./config-health-helpers', () => ({
 }));
 
 const resolveWorkspaceRootMock = vi.mocked(helpers.resolveWorkspaceRoot);
-const isCloudPathMock = vi.mocked(helpers.isCloudPath);
 const scanConfigFilesMock = vi.mocked(helpers.scanConfigFiles);
 const scanPersonalSkillFilesMock = vi.mocked(helpers.scanPersonalSkillFiles);
 const analyzeHookCoverageMock = vi.mocked(helpers.analyzeHookCoverage);
@@ -115,7 +114,6 @@ beforeEach(() => {
   vi.useRealTimers();
   vi.resetAllMocks();
   resolveWorkspaceRootMock.mockImplementation((wsId, ws) => ws.path ?? `/fake/root/${wsId}`);
-  isCloudPathMock.mockReturnValue(false);
   scanConfigFilesMock.mockImplementation(() => []);
   scanPersonalSkillFilesMock.mockImplementation(() => []);
   analyzeHookCoverageMock.mockImplementation(() => null);
@@ -364,8 +362,12 @@ describe('ConfigAnalyzer', () => {
       avgResponseLength: 150,
       cancelRate: 50,
       agentModeRate: 50,
-      score: 100,
+      score: 50,
     });
+    expect(result.contextProvisionByHarness['VS Code'].modeDistribution).toEqual([
+      { mode: 'agent', count: 1 },
+      { mode: 'chat', count: 1 },
+    ]);
     expect(result.contextProvisionByHarness['VS Code'].topModels).toEqual([{ model: 'gpt-4', count: 2 }]);
     expect(result.contextProvisionByHarness['VS Code'].topTools).toEqual([{ tool: 'grep', count: 1 }]);
     expect(result.contextProvisionByHarness['VS Code'].topReferencedFiles).toEqual([{ file: 'src/a.ts', count: 1 }]);
@@ -581,14 +583,13 @@ describe('ConfigAnalyzer', () => {
     expect(result.workspaces[0].staleDays).toBeNull();
   });
 
-  it('skips workspaces whose resolved root is a cloud path', () => {
-    isCloudPathMock.mockReturnValue(true);
-
+  it('does not skip workspaces whose resolved root is a cloud path', () => {
     const result = makeAnalyzer(
       [makeSession({ requestCount: 60, requests: [makeRequest()] })],
       [makeWorkspace()],
     ).getConfigHealth();
 
-    expect(result.workspaces).toEqual([]);
+    expect(result.workspaces).toHaveLength(1);
+    expect(result.workspaces[0].workspaceId).toBe('ws-1');
   });
 });

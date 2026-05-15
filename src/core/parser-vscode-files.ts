@@ -7,6 +7,7 @@
 
 import * as fs from 'fs';
 import { assertTrustedPath, prefetchCache } from './parser-shared';
+import { fileUriToPath } from './helpers';
 import { debugCore, warnCore } from './log';
 
 export function readFile(fpath: string): string {
@@ -126,7 +127,7 @@ function workspaceLocationFromJson(wsJsonPath: string): string | null {
       : null;
   if (!rawLocation) return null;
 
-  const decoded = decodeURIComponent(rawLocation.replace(/^file:\/\//, ''));
+  const decoded = fileUriToPath(rawLocation);
   return decoded.replace(/\/+$/, '');
 }
 
@@ -169,6 +170,7 @@ function appendAtPath(obj: JsonValue, keys: PathKey[], items: JsonValue): void {
 
 export function reconstructFromJsonl(fpath: string): Record<string, unknown> | null {
   let state: JsonObject = {};
+  let initialModeId: string | undefined;
   let lines: string[];
   try {
     assertTrustedPath(fpath);
@@ -194,6 +196,14 @@ export function reconstructFromJsonl(fpath: string): Record<string, unknown> | n
       const entry = JSON.parse(stripImageData(trimmed)) as { kind: number; k?: PathKey[]; v?: JsonValue };
       if (entry.kind === 0) {
         state = (entry.v || {}) as JsonObject;
+        // Capture the initial mode from the session start — VS Code may later
+        // patch inputState.mode to "agent" when executing, losing the original
+        // plan/edit/custom mode.  Preserve it so the parser can use it.
+        const is = state.inputState as JsonObject | undefined;
+        const mode = is?.mode as JsonObject | undefined;
+        if (typeof mode?.id === 'string') {
+          initialModeId = mode.id;
+        }
       } else if (entry.kind === 1) {
         setAtPath(state, entry.k || [], entry.v as JsonValue);
       } else if (entry.kind === 2) {
@@ -204,7 +214,15 @@ export function reconstructFromJsonl(fpath: string): Record<string, unknown> | n
       continue;
     }
   }
-  return Object.keys(state).length > 0 ? state : null;
+  if (Object.keys(state).length === 0) return null;
+  // Restore the initial mode if it was overwritten by patches
+  if (initialModeId) {
+    const is = state.inputState;
+    if (is && typeof is === 'object' && !Array.isArray(is)) {
+      is.mode = { id: initialModeId } as unknown as JsonValue;
+    }
+  }
+  return state;
 }
 
 /* ── Lazy image extraction ─────────────────────────────────────── */
