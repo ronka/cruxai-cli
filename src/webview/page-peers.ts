@@ -332,7 +332,11 @@ export async function renderShareCard(container: HTMLElement, filter: DateFilter
   });
 
   // Social share handlers — use rpc to open externally (window.open doesn't work in webviews)
-  const openUrl = (url: string) => { void rpc('openExternal', { url }); };
+  const openUrl = (url: string) => {
+    void rpc('openExternal', { url }).catch(() => {
+      showToast('Unable to open link right now.');
+    });
+  };
   document.getElementById('share-x')?.addEventListener('click', () => openUrl(getTwitterShareUrl(shareCtx)));
   document.getElementById('share-linkedin')?.addEventListener('click', () => {
     // Copy image to clipboard first so user can paste it in LinkedIn
