@@ -148,7 +148,7 @@ async function runAgenticLoop(
         toolInvocationToken: request.toolInvocationToken,
       }, token);
 
-      resultParts.push(new vscode.LanguageModelToolResultPart(call.callId, result.content as Array<vscode.LanguageModelTextPart>));
+      resultParts.push(new vscode.LanguageModelToolResultPart(call.callId, result.content));
     }
 
     // Append user message with tool results
