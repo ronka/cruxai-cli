@@ -36,7 +36,7 @@ function loadPanelModule(): Promise<PanelModule> {
 async function exportSummaryFromLogs(): Promise<void> {
   const dirs = findLogsDirs();
   if (dirs.length === 0) {
-    vscode.window.showErrorMessage('No AI coding session log directories found.');
+    void vscode.window.showErrorMessage('No AI coding session log directories found.');
     return;
   }
 
@@ -91,7 +91,7 @@ async function reviewPendingTrust(context: vscode.ExtensionContext): Promise<Set
     await approveTrust(context.globalState, item.entry.filePath, item.entry.content);
     approved.add(item.entry.filePath);
   }
-  vscode.window.showInformationMessage(
+  void vscode.window.showInformationMessage(
     `Approved ${approved.size} file${approved.size === 1 ? '' : 's'}. Reloading rules...`,
   );
   return approved;
@@ -185,7 +185,7 @@ export function activate(context: vscode.ExtensionContext) {
           for (const p of Object.keys(listApproved(context.globalState))) {
             await revokeTrust(context.globalState, p);
           }
-          vscode.window.showInformationMessage('All approvals revoked. Reload the dashboard to re-scan.');
+          void vscode.window.showInformationMessage('All approvals revoked. Reload the dashboard to re-scan.');
         }
         return;
       }
