@@ -4,12 +4,59 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as fs from 'fs';
+import * as os from 'os';
 import * as path from 'path';
 import * as child_process from 'child_process';
 import { findLogsDirs, parseAllLogsAsyncDetailed } from '../../core/parser';
 import { getDashboardShellHtml } from '../../webview/dashboard-shell';
+import { RULES_DIR_NAME } from '../../core/rule-loader';
 import type { Workspace } from '../../core/types';
 import type { ParseResult } from '../../core/cache';
+
+/** On-disk rule baked into the report so the Rules tab can show user rules. */
+interface BakedRule {
+  id: string;
+  source: string;
+  filePath: string;
+  layer: 'personal' | 'project';
+}
+
+/** Hard cap on rule files read from a single directory (mirrors rule-loader). */
+const MAX_RULES_PER_DIR = 200;
+
+/**
+ * Read on-disk personal (~) and project (<workspace>) rule markdown so they can
+ * be baked into the offline report. The browser bundle has no fs access, so the
+ * Rules tab would otherwise only ever show built-in rules.
+ */
+function collectOnDiskRules(workspaces: Map<string, Workspace>): BakedRule[] {
+  const rules: BakedRule[] = [];
+  const seenDirs = new Set<string>();
+
+  const readDir = (dir: string, layer: BakedRule['layer']): void => {
+    const resolved = path.resolve(dir);
+    if (seenDirs.has(resolved)) return;
+    seenDirs.add(resolved);
+    let files: string[];
+    try {
+      files = fs.readdirSync(resolved).filter(f => f.endsWith('.md')).slice(0, MAX_RULES_PER_DIR);
+    } catch {
+      return; // Directory doesn't exist — fine.
+    }
+    for (const file of files) {
+      try {
+        const filePath = path.join(resolved, file);
+        rules.push({ id: file.replace(/\.md$/, ''), source: fs.readFileSync(filePath, 'utf-8'), filePath, layer });
+      } catch { /* skip unreadable file */ }
+    }
+  };
+
+  readDir(path.join(os.homedir(), RULES_DIR_NAME), 'personal');
+  for (const ws of workspaces.values()) {
+    if (ws.path) readDir(path.join(ws.path, RULES_DIR_NAME), 'project');
+  }
+  return rules;
+}
 
 /** Wire format for data.json — Maps serialized as [key, value][] arrays. */
 interface DataJson {
@@ -119,10 +166,16 @@ export async function runScan(argv: string[]): Promise<void> {
     fs.copyFileSync(src, path.join(outDir, asset));
   }
 
+  // Collect on-disk personal/project rules so the Rules tab shows them too.
+  const bakedRules = collectOnDiskRules(result.workspaces);
+  if (bakedRules.length > 0) {
+    console.log(`  Baked ${bakedRules.length} on-disk rule(s) into the report.`);
+  }
+
   // Write index.html (inline data.json so it works on file:// without fetch)
   const shellHtml = getDashboardShellHtml({ scanMode: true });
   const initialFilter = { from, to, workspace, harness };
-  const indexHtml = buildIndexHtml(shellHtml, dataJsonStr, initialFilter);
+  const indexHtml = buildIndexHtml(shellHtml, dataJsonStr, initialFilter, bakedRules);
   fs.writeFileSync(path.join(outDir, 'index.html'), indexHtml, 'utf-8');
 
   const indexPath = path.join(outDir, 'index.html');
@@ -142,10 +195,12 @@ interface InitialFilter {
   harness?: string;
 }
 
-function buildIndexHtml(shellHtml: string, rawDataJsonStr: string, initialFilter: InitialFilter): string {
-  // Escape </script> so session text content can't break out of the inline script block.
-  const dataJsonStr = rawDataJsonStr.replaceAll(/<\/script>/gi, '<\\/script>').replaceAll('<!--', '<\\!--');
-  const configJson = JSON.stringify(initialFilter).replaceAll(/<\/script>/gi, '<\\/script>').replaceAll('<!--', '<\\!--');
+function buildIndexHtml(shellHtml: string, rawDataJsonStr: string, initialFilter: InitialFilter, bakedRules: BakedRule[]): string {
+  // Escape </script> so inlined content can't break out of the inline script block.
+  const escapeInline = (s: string): string => s.replaceAll(/<\/script>/gi, '<\\/script>').replaceAll('<!--', '<\\!--');
+  const dataJsonStr = escapeInline(rawDataJsonStr);
+  const configJson = escapeInline(JSON.stringify(initialFilter));
+  const rulesJson = escapeInline(JSON.stringify(bakedRules));
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,7 +211,7 @@ function buildIndexHtml(shellHtml: string, rawDataJsonStr: string, initialFilter
 </head>
 <body>
 ${shellHtml}
-<script>window.__cruxData = ${dataJsonStr};window.__cruxConfig = ${configJson};</script>
+<script>window.__cruxData = ${dataJsonStr};window.__cruxConfig = ${configJson};window.__cruxRules = ${rulesJson};</script>
 <script src="analyzer.js"></script>
 <script src="app.js"></script>
 </body>
