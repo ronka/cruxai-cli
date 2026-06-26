@@ -1,7 +1,7 @@
 {
-  "name": "crux",
+  "name": "cruxai",
   "description": "Analyze your AI coding assistant usage across Claude, Codex, OpenCode, and more — a local-first CLI that turns your session logs into an offline dashboard and terminal reports. Read-only, zero telemetry.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Ron Kantor"
   },
@@ -33,13 +33,15 @@
   "main": "./dist/cli.cjs",
   "files": [
     "bin",
-    "dist"
+    "dist",
+    "!dist/**/*.map"
   ],
   "scripts": {
     "build": "node esbuild.mjs",
     "watch": "node esbuild.mjs --watch",
     "lint": "eslint src/",
     "bench": "vitest bench",
+    "crux": "node bin/run.js",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
