@@ -10,6 +10,7 @@ import { rpc, COLORS } from './shared';
 import { html, render } from './render';
 import { consumeNavHint, updateNavBadge } from './app';
 import { getSkillCache, setSkillCache } from './skill-cache';
+import { llmAvailable } from './capabilities';
 
 const CATALOG_BASE = 'https://awesome-copilot.github.com';
 
@@ -62,8 +63,17 @@ export async function renderSkills(container: HTMLElement, currentFilter: DateFi
           </select>
         </label>
       </div>
+      ${!llmAvailable() ? html`
+      <div class="sk-toolbar-row sk-api-key-row">
+        <label class="sk-lookback">
+          <span>Anthropic API Key</span>
+          <input type="password" id="skApiKeyInput" class="sk-input" placeholder="sk-ant-..." autocomplete="off" />
+        </label>
+        <button id="skApiKeyBtn" class="sk-btn">Set Key</button>
+        <span id="skApiKeyStatus" class="sk-status"></span>
+      </div>` : ''}
       <div class="sk-toolbar-row">
-        <button id="analyzeBtn" class="sk-btn sk-btn-primary">Analyze</button>
+        <button id="analyzeBtn" class="sk-btn sk-btn-primary" ${!llmAvailable() ? 'disabled' : ''}>Analyze</button>
         <span id="analyzeStatus" class="sk-status"></span>
       </div>
     </div>
@@ -89,6 +99,11 @@ export async function renderSkills(container: HTMLElement, currentFilter: DateFi
   `, container);
 
   document.getElementById('analyzeBtn')!.addEventListener('click', triggerRunAnalysis);
+
+  const keyBtn = document.getElementById('skApiKeyBtn');
+  if (keyBtn) {
+    keyBtn.addEventListener('click', () => void handleSetApiKey());
+  }
 
   // Check for cached results from dashboard scan
   const cached = getSkillCache(currentFilter);
@@ -220,6 +235,31 @@ async function runAnalysis(): Promise<void> {
 
 function triggerRunAnalysis(): void {
   void runAnalysis();
+}
+
+async function handleSetApiKey(): Promise<void> {
+  const input = document.getElementById('skApiKeyInput') as HTMLInputElement | null;
+  const statusEl = document.getElementById('skApiKeyStatus');
+  if (!input || !statusEl) return;
+
+  const key = input.value.trim();
+  if (!key) {
+    statusEl.textContent = 'Enter a key first.';
+    return;
+  }
+
+  try {
+    const result = await rpc<{ ok: boolean; llm: boolean }>('setApiKey', { apiKey: key } as Record<string, unknown>);
+    if (result.llm) {
+      statusEl.textContent = 'Key set. Click Analyze.';
+      const analyzeBtn = document.getElementById('analyzeBtn') as HTMLButtonElement | null;
+      if (analyzeBtn) analyzeBtn.disabled = false;
+    } else {
+      statusEl.textContent = 'Key rejected — check format.';
+    }
+  } catch {
+    statusEl.textContent = 'Failed to set key.';
+  }
 }
 
 /* ── Triage Results (Custom Skills) ───────────────────────────────── */

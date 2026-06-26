@@ -11,19 +11,29 @@ import { Analyzer } from '../core/analyzer';
 import { ParseResult } from '../core/parser';
 import { readFileSafe } from '../core/parser-shared';
 import { Workspace } from '../core/types';
-import { spotlight } from '../core/spotlight';
 import { exportSummaryFiles } from '../summary-export-vscode';
+import {
+  UNTRUSTED_DATA_GUARD,
+  SCHEMA_TRIAGE,
+  SCHEMA_CATALOG_PICKS,
+  getUserContext,
+  buildClusterSummaries,
+  buildTriagePrompt,
+  validateTriage,
+  buildCatalogTriagePrompt,
+  validateCatalogPicks,
+  buildSkillContentPrompt,
+  parseSkillMarkdown,
+} from '../core/skill-finder';
+import { spotlight } from '../core/spotlight';
 import {
   callLlm,
   callLlmJson,
-  UNTRUSTED_DATA_GUARD,
-  SCHEMA_CATALOG_PICKS,
   SCHEMA_CODE_REVIEW,
   SCHEMA_CONTEXT_REVIEW,
   SCHEMA_DID_YOU_KNOW,
   SCHEMA_QUIZ,
   SCHEMA_RESOURCES,
-  SCHEMA_TRIAGE,
 } from './panel-llm';
 import { getCatalogItems } from './panel-catalog';
 import { readTextWithByteLimit } from './fetch-utils';
@@ -321,44 +331,17 @@ Generate 3 ${context.difficulty} interview-style questions tailored to this deve
     const examples = Array.isArray(params.examples) ? (params.examples as string[]).slice(0, 5) : [];
     const skillDraft = isString(params.skillDraft) ? params.skillDraft : '';
 
-    const systemPrompt = `You are an expert at writing SKILL.md files for VS Code GitHub Copilot.
-A skill file is a markdown instruction file that teaches Copilot how to handle a specific repeated workflow pattern.
-
-Generate a professional, production-ready SKILL.md file. Include:
-1. YAML frontmatter with: name, description, and an applyTo glob pattern
-2. A clear "## When to Use" section
-3. Detailed "## Steps" with numbered instructions the AI should follow
-4. A "## Guidelines" section with quality criteria
-
-Respond with ONLY the markdown content of the SKILL.md file, nothing else.
-
-${UNTRUSTED_DATA_GUARD}`;
-
-    const userPrompt = `Create a SKILL.md for this workflow pattern:
-
-Name: ${label}
-Pattern: ${spotlight(pattern)}
-Seen ${occurrences} times across ${sessions} sessions.
-
-Example prompts from the user:
-${examples.map(ex => `- "${spotlight(ex)}"`).join('\n')}
-
-Starting draft:
-${spotlight(skillDraft)}`;
+    const { system: systemPrompt, user: userPrompt } = buildSkillContentPrompt({
+      label, pattern, occurrences, sessions, examples, skillDraft,
+    });
 
     try {
       const text = await callLlm([
         vscode.LanguageModelChatMessage.User(systemPrompt),
         vscode.LanguageModelChatMessage.User(userPrompt),
       ]);
-
-      let content = text.trim();
-      if (content.startsWith('```')) {
-        content = content.replace(/^```(?:markdown|md)?\n?/, '').replace(/\n?```$/, '');
-      }
-
-      const slug = label.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replaceAll(/-+/g, '-').replaceAll(/^-|-$/g, '');
-      postResponse(this.webview, msg.id, { content, filename: `${slug}/SKILL.md` });
+      const { content, filename } = parseSkillMarkdown(text, label);
+      postResponse(this.webview, msg.id, { content, filename });
     } catch (error: unknown) {
       postError(this.webview, msg.id, error instanceof Error ? error.message : 'Generation failed');
     }
@@ -687,69 +670,37 @@ ${UNTRUSTED_DATA_GUARD}`;
     const clustersRaw = Array.isArray(params.clusters) ? params.clusters : [];
     const workspaceFilter = isString(params.workspace) ? params.workspace : undefined;
 
-    const clusterSummaries = clustersRaw.slice(0, 200).map((cluster: unknown) => {
-      const entry = cluster as Record<string, unknown>;
-      return {
-        id: isString(entry.id) ? entry.id : '',
-        label: isString(entry.label) ? spotlight(entry.label) : '',
-        occurrences: isNumber(entry.occurrences) ? entry.occurrences : 0,
-        sessions: isNumber(entry.sessions) ? entry.sessions : 0,
-        cancelRate: isNumber(entry.cancelRate) ? entry.cancelRate : 0,
-        avgCorrectionTurns: isNumber(entry.avgCorrectionTurns) ? entry.avgCorrectionTurns : 0,
-        workspaces: Array.isArray(entry.workspaces) ? entry.workspaces : [],
-        examples: Array.isArray(entry.examples) ? (entry.examples as string[]).slice(0, 3).map(spotlight) : [],
-      };
-    });
+    const clusterSummaries = buildClusterSummaries(
+      clustersRaw.slice(0, 200).map((cluster: unknown) => {
+        const entry = cluster as Record<string, unknown>;
+        return {
+          id: isString(entry.id) ? entry.id : '',
+          label: isString(entry.label) ? entry.label : '',
+          canonicalPrompt: '',
+          occurrences: isNumber(entry.occurrences) ? entry.occurrences : 0,
+          sessions: isNumber(entry.sessions) ? entry.sessions : 0,
+          workspaces: Array.isArray(entry.workspaces) ? entry.workspaces : [],
+          harnesses: Array.isArray(entry.harnesses) ? entry.harnesses : [],
+          avgCorrectionTurns: isNumber(entry.avgCorrectionTurns) ? entry.avgCorrectionTurns : 0,
+          totalTurns: 0,
+          cancelRate: isNumber(entry.cancelRate) ? entry.cancelRate : 0,
+          firstSeen: null,
+          lastSeen: null,
+          examples: Array.isArray(entry.examples) ? (entry.examples as string[]) : [],
+          skillDraft: '',
+        };
+      }),
+    );
 
-    const context = this.getUserContext();
-    const systemPrompt = `You are an expert at identifying repeatable activities in a developer's AI coding assistant usage.
-
-You will receive groups of SIMILAR prompts that a developer has sent repeatedly to their AI coding agent. Each group includes the prompt text, how many times it occurred, and example prompts showing the actual wording.
-
-Your task is to identify which groups represent a REPEATED ACTIVITY — something the developer does over and over as part of their workflow. Examples of repeated activities:
-- Parsing log files or data files
-- Starting, building, or packaging an application
-- Scaffolding new components or services
-- Running deployments or migrations
-- Generating boilerplate (tests, configs, API endpoints)
-- Analyzing or transforming specific data formats
-
-For each group, look at the EXAMPLE PROMPTS carefully. They show the actual words the developer used. Ask yourself: "Is this developer doing the same type of task repeatedly? Could a skill file automate or speed this up?"
-
-SKIP groups that are:
-- Generic coding questions ("how do I...", "what is...")
-- One-off debugging ("fix this error", "why is this failing")
-- Standard refactoring ("clean up", "rename", "add types")
-- Conversational or vague prompts
-
-Respond with a JSON object: {"items":[{"id":"...","verdict":"strong","reason":"one sentence","suggestedSkillName":"short-kebab-name"}]}
-Include ONLY groups with verdict "strong" (max 10).
-
-${UNTRUSTED_DATA_GUARD}`;
-
-    const userPrompt = `Developer context:
-- Languages: ${context.languages.join(', ') || 'unknown'}
-- Harnesses: ${context.harnesses.join(', ') || 'unknown'}
-- Common topics: ${context.topics.join(', ') || 'unknown'}
-- Workspaces: ${context.workspaces.join(', ') || 'unknown'}${workspaceFilter ? `\n- Currently filtering: ${workspaceFilter}` : ''}
-
-Here are the top ${clusterSummaries.length} groups of similar prompts this developer sends repeatedly:\n\n${JSON.stringify(clusterSummaries, null, 2)}`;
+    const context = getUserContext(this.parseResult?.sessions ?? []);
+    const { system: systemPrompt, user: userPrompt } = buildTriagePrompt(clusterSummaries, context, workspaceFilter);
 
     try {
       const response = await callLlmJson<{ items: Array<{ id: string; verdict: string; reason: string; suggestedSkillName: string | null }> }>([
         vscode.LanguageModelChatMessage.User(systemPrompt),
         vscode.LanguageModelChatMessage.User(userPrompt),
       ], SCHEMA_TRIAGE);
-      const triaged = Array.isArray(response) ? response as unknown as typeof response['items'] : response.items ?? [];
-      const validVerdicts = new Set(['strong', 'maybe', 'skip']);
-      const result = triaged.map(item => ({
-        id: String(item.id || ''),
-        label: clusterSummaries.find(cluster => cluster.id === item.id)?.label || '',
-        verdict: validVerdicts.has(item.verdict) ? item.verdict as 'strong' | 'maybe' | 'skip' : 'maybe' as const,
-        reason: String(item.reason || ''),
-        suggestedSkillName: item.suggestedSkillName ? String(item.suggestedSkillName) : null,
-      }));
-
+      const result = validateTriage(response, clusterSummaries);
       postResponse(this.webview, msg.id, { triaged: result });
     } catch (error: unknown) {
       postError(this.webview, msg.id, error instanceof Error ? error.message : 'AI triage failed');
@@ -784,73 +735,51 @@ Here are the top ${clusterSummaries.length} groups of similar prompts this devel
     });
 
     const clustersRaw = Array.isArray(params.clusters) ? params.clusters : [];
-    const clusterContext = clustersRaw.slice(0, 30).map((cluster: unknown) => {
-      const entry = isRecord(cluster) ? cluster : {};
-      return {
-        label: spotlight(toText(entry.label)),
-        occurrences: typeof entry.occurrences === 'number' ? entry.occurrences : 0,
-        workspaces: Array.isArray(entry.workspaces) ? entry.workspaces : [],
-        examples: getStringArray(entry.examples, 2).map(spotlight),
-      };
-    });
+    const clusterSummaries = buildClusterSummaries(
+      clustersRaw.slice(0, 30).map((cluster: unknown) => {
+        const entry = isRecord(cluster) ? cluster : {};
+        return {
+          id: '',
+          label: toText(entry.label),
+          canonicalPrompt: '',
+          occurrences: typeof entry.occurrences === 'number' ? entry.occurrences : 0,
+          sessions: 0,
+          workspaces: Array.isArray(entry.workspaces) ? entry.workspaces : [],
+          harnesses: [],
+          avgCorrectionTurns: 0,
+          totalTurns: 0,
+          cancelRate: 0,
+          firstSeen: null,
+          lastSeen: null,
+          examples: getStringArray(entry.examples, 2),
+          skillDraft: '',
+        };
+      }),
+    );
 
-    const context = this.getUserContext();
+    const context = getUserContext(this.parseResult?.sessions ?? []);
     const workspace = isOptionalString(params.workspace) ? params.workspace : undefined;
-
-    const systemPrompt = `You are an expert at recommending GitHub Copilot customization files (skills, agents, instructions, hooks) for developers.
-
-You will receive:
-1. The developer's context: languages, harnesses, topics, and which workspace they are currently analyzing
-2. Their TOP REPEATED WORKFLOW PATTERNS with example prompts — these show exactly what tasks the developer performs repeatedly
-3. The FULL community catalog (${candidates.length} items) of skills, agents, instructions, and hooks
-
-Your job:
-1. Study the workflow patterns and example prompts carefully. These tell you EXACTLY what this developer does day-to-day.
-2. Consider the specific workspace being analyzed: ${workspace ? `"${workspace}"` : 'all workspaces'}.
-3. From the FULL catalog, find items that DIRECTLY help with the developer's actual repeated tasks or tech stack.
-4. REJECT items that don't match. A .NET skill is useless for someone building VS Code extensions. A React skill is useless for someone writing Python CLIs.
-5. For each pick, write a concrete reason referencing the developer's ACTUAL workflow patterns. Example: "You repeatedly package VS Code extensions (seen 47 times) — this skill automates VSIX packaging."
-
-Respond with a JSON object: {"items":[{"id":"...","reason":"specific sentence referencing their actual workflow patterns"}]}
-Max 5 items. If fewer genuinely match, return fewer. If NOTHING matches well, return empty items array. Do NOT pad with generic picks.
-
-${UNTRUSTED_DATA_GUARD}`;
-
-    const clusterSection = clusterContext.length > 0
-      ? `\n\nTop repeated workflow patterns (${clusterContext.length}):\n${JSON.stringify(clusterContext, null, 2)}`
-      : '';
-
-    const userPrompt = `Developer context:
-- Languages: ${context.languages.join(', ') || 'unknown'}
-- Harnesses: ${context.harnesses.join(', ') || 'unknown'}
-- Common topics: ${context.topics.join(', ') || 'unknown'}
-- Analyzing workspace: ${workspace || 'all workspaces'}${clusterSection}
-
-Full catalog (${candidates.length} items):
-${JSON.stringify(candidates)}`;
+    const { system: systemPrompt, user: userPrompt } = buildCatalogTriagePrompt(
+      candidates, clusterSummaries, context, workspace,
+    );
 
     try {
       const response = await callLlmJson<{ items: Array<{ id: string; reason: string }> }>([
         vscode.LanguageModelChatMessage.User(systemPrompt),
         vscode.LanguageModelChatMessage.User(userPrompt),
       ], SCHEMA_CATALOG_PICKS);
-      const picks = Array.isArray(response) ? response as unknown as typeof response['items'] : response.items ?? [];
-      const enriched = picks.map(pick => {
-        const rawItem = itemsRaw.find(item => isRecord(item) && item.id === pick.id);
-        const raw = isRecord(rawItem) ? rawItem : undefined;
-        return {
-          id: pick.id,
-          kind: toText(raw?.kind),
-          title: toText(raw?.title),
-          description: toText(raw?.description),
-          category: toText(raw?.category),
-          path: toText(raw?.path),
-          url: toText(raw?.url),
-          relevanceScore: 100,
-          matchReasons: [pick.reason],
-        };
-      }).filter(item => item.title);
-
+      const enriched = validateCatalogPicks(
+        response,
+        itemsRaw.filter(isRecord).map(item => ({
+          kind: toText(item.kind) as 'skill' | 'agent' | 'instruction' | 'hook',
+          id: toText(item.id),
+          title: toText(item.title),
+          description: toText(item.description),
+          category: toText(item.category),
+          path: toText(item.path),
+          url: toText(item.url),
+        })),
+      );
       postResponse(this.webview, msg.id, { items: enriched });
     } catch (error: unknown) {
       postError(this.webview, msg.id, error instanceof Error ? error.message : 'AI triage failed');
@@ -992,58 +921,6 @@ ${contextSection}`;
     } catch (error: unknown) {
       postError(this.webview, msg.id, error instanceof Error ? error.message : 'AI review failed');
     }
-  }
-
-  private getUserContext(): { languages: string[]; harnesses: string[]; topics: string[]; workspaces: string[] } {
-    if (!this.parseResult) {
-      return { languages: [], harnesses: [], topics: [], workspaces: [] };
-    }
-
-    const sessions = this.parseResult.sessions;
-    const langCounts = new Map<string, number>();
-    for (const session of sessions) {
-      for (const request of session.requests) {
-        for (const block of [...request.aiCode, ...request.userCode]) {
-          if (block.language && block.language !== 'unknown' && block.language !== 'text') {
-            langCounts.set(block.language, (langCounts.get(block.language) || 0) + block.loc);
-          }
-        }
-      }
-    }
-
-    const languages = Array.from(langCounts.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(entry => entry[0]);
-    const harnesses = Array.from(new Set(sessions.map(session => session.harness))).filter(Boolean);
-    const workspaces = Array.from(new Set(sessions.map(session => session.workspaceName))).filter(Boolean).slice(0, 10);
-
-    const topicCounts = new Map<string, number>();
-    const topicKeywords = [
-      'test', 'deploy', 'docker', 'kubernetes', 'ci', 'cd', 'api', 'auth', 'database',
-      'migration', 'refactor', 'debug', 'security', 'performance', 'accessibility',
-      'react', 'vue', 'angular', 'node', 'python', 'rust', 'go', 'java', 'swift',
-      'terraform', 'bicep', 'azure', 'aws', 'gcp', 'nextjs', 'django', 'flask',
-      'express', 'fastapi', 'graphql', 'rest', 'grpc', 'mongodb', 'postgres', 'redis',
-      'webpack', 'vite', 'eslint', 'prettier', '.net', 'csharp', 'blazor',
-    ];
-    for (const session of sessions) {
-      for (const request of session.requests) {
-        const lower = request.messageText.toLowerCase();
-        for (const keyword of topicKeywords) {
-          if (lower.includes(keyword)) {
-            topicCounts.set(keyword, (topicCounts.get(keyword) || 0) + 1);
-          }
-        }
-      }
-    }
-
-    const topics = Array.from(topicCounts.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 15)
-      .map(entry => entry[0]);
-
-    return { languages, harnesses, topics, workspaces };
   }
 
   private resolveWorkspaceRoot(workspace: Workspace): string | null {

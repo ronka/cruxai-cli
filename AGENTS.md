@@ -71,6 +71,46 @@ AI-Engineering-Coach/
 CI runs `npm run check` (typecheck + lint + spellcheck + knip + test) plus the size check on
 every PR. Run those locally before pushing.
 
+## crux CLI
+
+A standalone CLI ships alongside the extension. Build it with `npm run build`
+(output: `dist/cli.cjs`); run via `node ./bin/run <command>`.
+
+| Command | Description |
+|---------|-------------|
+| `crux scan [logDir]` | Generate an offline HTML dashboard from local session logs |
+| `crux context-health` | Print context-quality scores in the terminal |
+| `crux skills` | Analyze repeated prompts and surface custom skill opportunities + community catalog picks |
+
+### `crux skills` flags
+
+```
+crux skills [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>]
+            [--lookback <days>] [--catalog] [--install <clusterId>]
+            [--install-catalog <catalogId>] [--force] [--json] [--no-color]
+```
+
+| Flag | Description |
+|------|-------------|
+| `--workspace` | Filter to a single workspace ID |
+| `--from` / `--to` | Date window (ISO 8601) |
+| `--harness` | Filter to a specific harness (e.g. `Claude`) |
+| `--lookback` | Rolling window in days (default: 90) |
+| `--catalog` | Also fetch + LLM-rank the awesome-copilot community catalog |
+| `--install <id>` | Generate a `SKILL.md` for the cluster and write it to `~/.agents/skills/<slug>/` |
+| `--install-catalog <id>` | Download a community catalog item to `~/.agents/skills/` or `~/.agents/agents/` |
+| `--force` | Overwrite an existing install |
+| `--json` | Machine-readable output |
+| `--no-color` | Disable ANSI escape codes |
+
+**Requires** `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` + optional `OPENAI_BASE_URL`) in the
+environment. Set `ANTHROPIC_MODEL` / `OPENAI_MODEL` to override the default model
+(`claude-sonnet-4-6` / `gpt-4.1-mini`).
+
+The Skill Finder page is also available inside `crux scan` reports. Open the report in a
+browser, enter your API key in the key field, and click **Analyze** — all LLM calls run
+directly from the browser; the key is never written to disk.
+
 ## Skills
 
 Repo-specific instructions for recurring tasks live in [`skills/`](skills/). They are symlinked

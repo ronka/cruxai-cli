@@ -5,10 +5,12 @@
 
 import { runScan } from './commands/scan';
 import { runContextHealth } from './commands/context-health';
+import { runSkills } from './commands/skills';
 
 const USAGE = `Usage:
   crux scan [--out <dir>] [--open]
-  crux context-health [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>] [--json] [--no-color]\n`;
+  crux context-health [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>] [--json] [--no-color]
+  crux skills [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>] [--catalog] [--json] [--no-color]\n`;
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
@@ -17,6 +19,8 @@ async function main(): Promise<void> {
     await runScan(args.slice(1));
   } else if (command === 'context-health') {
     await runContextHealth(args.slice(1));
+  } else if (command === 'skills') {
+    await runSkills(args.slice(1));
   } else {
     process.stderr.write(`Unknown command: ${command ?? '<none>'}\n${USAGE}`);
     process.exit(1);

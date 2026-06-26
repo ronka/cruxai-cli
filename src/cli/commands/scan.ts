@@ -173,7 +173,7 @@ export async function runScan(argv: string[]): Promise<void> {
   }
 
   // Write index.html (inline data.json so it works on file:// without fetch)
-  const shellHtml = getDashboardShellHtml({ scanMode: true });
+  const shellHtml = getDashboardShellHtml({ scanMode: true, skillFinder: true });
   const initialFilter = { from, to, workspace, harness };
   const indexHtml = buildIndexHtml(shellHtml, dataJsonStr, initialFilter, bakedRules);
   fs.writeFileSync(path.join(outDir, 'index.html'), indexHtml, 'utf-8');

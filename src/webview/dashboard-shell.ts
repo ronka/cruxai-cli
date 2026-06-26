@@ -12,11 +12,13 @@ import { FF_TOKEN_REPORTING_ENABLED } from '../core/constants';
 export function getDashboardShellHtml(opts?: {
   includeSkillFinder?: boolean;
   includeLevelUp?: boolean;
-  /** Scan mode: hide pages not shipping in v1 (Coding Moments, Burndown, Skill Finder, Level Up) */
+  /** Scan mode: hide pages not shipping in v1 (Coding Moments, Burndown, Level Up) */
   scanMode?: boolean;
+  /** Explicitly enable the Skill Finder in scan mode (requires LLM key entered at runtime). */
+  skillFinder?: boolean;
 }): string {
   const scanMode = opts?.scanMode === true;
-  const includeSkillFinder = !scanMode && opts?.includeSkillFinder !== false;
+  const includeSkillFinder = opts?.skillFinder === true || (!scanMode && opts?.includeSkillFinder !== false);
   const includeLevelUp = !scanMode && opts?.includeLevelUp !== false;
   const includeCodingMoments = !scanMode;
   // Context Health ships in the offline scan report too — its RPCs are wired
