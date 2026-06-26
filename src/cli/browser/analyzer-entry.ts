@@ -47,6 +47,15 @@ const cfgFilter: DateFilter = (() => {
   return f;
 })();
 
+/** Resolve a date filter from params that wrap it as `{ filter: {...} }`
+ *  (Context Health pages), falling back to the top-level filter `f`. */
+function filterParam(params: Record<string, unknown>, f: DateFilter | undefined): DateFilter | undefined {
+  if (typeof params.filter === 'object' && params.filter) {
+    return validateDateFilter(params.filter as Record<string, unknown>);
+  }
+  return f;
+}
+
 function validateDateFilter(params: Record<string, unknown>): DateFilter | undefined {
   const f: DateFilter = { ...cfgFilter };
   if (typeof params.fromDate === 'string') f.fromDate = params.fromDate;
@@ -183,6 +192,15 @@ window.__cruxRpc = async function cruxRpc(method: string, params: Record<string,
     case 'getRecommendations': return analyzer.getRecommendations(f);
     case 'getProjectOverview': return analyzer.getProjectOverview(f);
     case 'getCalendarActivity': return analyzer.getCalendarActivity(f);
+    // Context Health page — Config Quality + Context Management sub-tabs.
+    // These pass the date filter wrapped as `{ filter: ... }`.
+    case 'getConfigHealth': return analyzer.getConfigHealth(f);
+    case 'getContextManagement': return analyzer.getContextManagement(filterParam(params, f));
+    case 'getContextRangeAvailability': return analyzer.getContextRangeAvailability(filterParam(params, f));
+    case 'getWorkspaceContextSessions':
+      return typeof params.workspaceId === 'string'
+        ? analyzer.getWorkspaceContextSessions(params.workspaceId, filterParam(params, f))
+        : null;
     case 'getCapabilities': return { host: 'canvas', llm: false };
     // Built-in rules are baked into the scan bundle; expose them read-only.
     // Personal/project (on-disk) rules remain unavailable in an offline report.

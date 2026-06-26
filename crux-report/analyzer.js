@@ -7162,22 +7162,17 @@
 
   // src/cli/browser/stub-analyzer-config.ts
   var ConfigAnalyzer = class extends AnalyzerBase {
+    // Return a complete, correctly-shaped ConfigHealthData so the Context Quality
+    // tab renders a clean empty state. The real fields (notably overallScore) must
+    // all be present — a missing field renders as "undefined/100" in the UI.
     getConfigHealth(_f) {
       return {
         workspaces: [],
-        totalWorkspaces: 0,
-        scoredWorkspaces: 0,
-        hasPersonalSkills: false,
-        personalSkillCount: 0,
-        contextAntiPatterns: [],
-        contextProvisionByHarness: [],
-        agenticReadiness: {
-          score: 0,
-          signals: [],
-          hasGlobalMcpServers: false,
-          hasGlobalSkills: false,
-          hasGlobalInstructions: false
-        }
+        overallScore: 0,
+        agenticReadiness: { score: 0, signals: [] },
+        contextProvisionByHarness: {},
+        suggestions: [],
+        contextAntiPatterns: []
       };
     }
     getContextReviewPayload(_wsIds) {
@@ -9019,6 +9014,12 @@
     if (cfg.to) f.toDate = cfg.to;
     return f;
   })();
+  function filterParam(params, f) {
+    if (typeof params.filter === "object" && params.filter) {
+      return validateDateFilter(params.filter);
+    }
+    return f;
+  }
   function validateDateFilter(params) {
     const f = { ...cfgFilter };
     if (typeof params.fromDate === "string") f.fromDate = params.fromDate;
@@ -9157,6 +9158,16 @@
         return analyzer.getProjectOverview(f);
       case "getCalendarActivity":
         return analyzer.getCalendarActivity(f);
+      // Context Health page — Config Quality + Context Management sub-tabs.
+      // These pass the date filter wrapped as `{ filter: ... }`.
+      case "getConfigHealth":
+        return analyzer.getConfigHealth(f);
+      case "getContextManagement":
+        return analyzer.getContextManagement(filterParam(params, f));
+      case "getContextRangeAvailability":
+        return analyzer.getContextRangeAvailability(filterParam(params, f));
+      case "getWorkspaceContextSessions":
+        return typeof params.workspaceId === "string" ? analyzer.getWorkspaceContextSessions(params.workspaceId, filterParam(params, f)) : null;
       case "getCapabilities":
         return { host: "canvas", llm: false };
       // Built-in rules are baked into the scan bundle; expose them read-only.

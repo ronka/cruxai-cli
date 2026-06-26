@@ -12,14 +12,16 @@ import { FF_TOKEN_REPORTING_ENABLED } from '../core/constants';
 export function getDashboardShellHtml(opts?: {
   includeSkillFinder?: boolean;
   includeLevelUp?: boolean;
-  /** Scan mode: hide pages not shipping in v1 (Coding Moments, Burndown, Context Health, Skill Finder, Level Up) */
+  /** Scan mode: hide pages not shipping in v1 (Coding Moments, Burndown, Skill Finder, Level Up) */
   scanMode?: boolean;
 }): string {
   const scanMode = opts?.scanMode === true;
   const includeSkillFinder = !scanMode && opts?.includeSkillFinder !== false;
   const includeLevelUp = !scanMode && opts?.includeLevelUp !== false;
   const includeCodingMoments = !scanMode;
-  const includeContextHealth = !scanMode;
+  // Context Health ships in the offline scan report too — its RPCs are wired
+  // into the scan analyzer bundle (src/cli/browser/analyzer-entry.ts).
+  const includeContextHealth = true;
   return `<div id="app">
   <nav id="sidebar">
     <ul class="nav-links">
