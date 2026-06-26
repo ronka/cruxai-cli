@@ -257,12 +257,32 @@ confirms nothing still-needed is removed.
 
 #### Acceptance criteria
 
-- [ ] `src/extension.ts`, `src/chat`, `src/mcp` removed
-- [ ] `package.json` `contributes` / `activationEvents` / `engines.vscode` removed; package renamed to crux
-- [ ] `esbuild.mjs` and `npm run check` re-pointed to CLI-only; `npm run check` passes
-- [ ] `src/canvas/host.ts` retained for the future `serve` command
-- [ ] README and `AGENTS.md` updated to describe the crux CLI (product renamed)
+- [x] `src/extension.ts`, `src/chat`, `src/mcp` removed
+- [x] `package.json` `contributes` / `activationEvents` / `engines.vscode` removed; package renamed to crux
+- [x] `esbuild.mjs` and `npm run check` re-pointed to CLI-only; `npm run check` passes
+- [~] `src/canvas/host.ts` retained for the future `serve` command — **deviation:** removed at the user's explicit request for a leaner CLI-only fork; `serve` would be rebuilt later
+- [x] README and `AGENTS.md` updated to describe the crux CLI (product renamed)
 - [ ] Human review sign-off on branding/rename and the deletion scope
+
+Status: done (pending human sign-off)
+
+#### Notes / deviations from plan
+
+- **Canvas + workers strip.** Per the user's decision, `src/canvas/host.ts` and the canvas RPC
+  surface (`panel-rpc`, `panel-shared`, `panel-llm`) were deleted alongside the extension. The
+  three worker bundles (`parse-worker`, `warm-up-worker`, `cache-write-worker`) were **kept** —
+  they are still live in the CLI runtime via `Analyzer.warmUp()` with a synchronous fallback, and
+  removing them would be a refactor of the core parse/analysis path rather than a deletion.
+- **Extra dead-code removed for the gate:** `summary-export-vscode.ts`, the VS Code panel host
+  (`panel.ts`, `panel-sidebar.ts`, `panel-html.ts`, `panel-request-service.ts`, `panel-cache.ts`),
+  the natural-language `rule-compiler.ts` (VS Code LM API), the `package-extension` skill, and the
+  VSIX packaging scripts (`package-readme-swap.mjs`, `smoke-test.mjs`, `dev-install.sh`,
+  `.vscodeignore`, `README.extension.md`). `@types/vscode` dropped; `Thenable` → `PromiseLike`.
+- **Pre-existing gate failures fixed:** `main` was already red (untyped `new Array()` in
+  `view.test.ts`; missing cspell words). Fixed to land a green `npm run check`.
+- **Attribution:** Microsoft MIT `LICENSE`/`NOTICE` retained verbatim, own copyright + fork
+  provenance note added (LICENSE, NOTICE, README "Provenance", AGENTS.md).
+- CI re-pointed: `ci.yml`/`release.yml` no longer package a VSIX; `check-size` targets `dist/cli.cjs`.
 
 #### User stories addressed
 

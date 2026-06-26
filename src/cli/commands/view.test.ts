@@ -94,7 +94,7 @@ describe('renderOverview', () => {
   });
 
   it('suppresses hourly section when all hours are zero', () => {
-    const noHourly: HourlyDistribution = { hours: new Array(24).fill(0), byType: {} };
+    const noHourly: HourlyDistribution = { hours: new Array<number>(24).fill(0), byType: {} };
     const out = renderOverview(stats, daily, harness, workspaces, noHourly, false);
     expect(out).not.toContain('Hourly Activity');
   });
@@ -204,7 +204,7 @@ describe('renderFlow', () => {
     deepFlowDays: 0,
     totalDays: 0,
     weeklyTrend: { labels: [], scores: [] },
-    hourlyFlow: new Array(24).fill(0),
+    hourlyFlow: new Array<number>(24).fill(0),
     suggestions: [],
   };
 
@@ -231,7 +231,7 @@ describe('renderFlow', () => {
         sessions: [],
       }],
       weeklyTrend: { labels: ['W1', 'W2'], scores: [60, 75] },
-      hourlyFlow: [...new Array(9).fill(0), ...new Array(9).fill(70), ...new Array(6).fill(0)],
+      hourlyFlow: [...new Array<number>(9).fill(0), ...new Array<number>(9).fill(70), ...new Array<number>(6).fill(0)],
       suggestions: ['Reduce interruptions during morning hours.'],
     };
     const out = renderFlow(data, false);
@@ -372,7 +372,7 @@ describe('view all composition', () => {
   it('renders all six sections when composed together', () => {
     // Compose the same way the `all` switch branch does, using already-tested fixtures.
     const emptyPatterns: AntiPatternData = { patterns: [], totalOccurrences: 0, weeklyTrend: { labels: [], counts: [] }, groupScores: [], weeklyScores: { labels: [], series: [] } };
-    const emptyFlow: FlowStateData = { days: [], overallFlowScore: 0, avgFollowUpSec: 0, avgBlockMin: 0, deepFlowDays: 0, totalDays: 0, weeklyTrend: { labels: [], scores: [] }, hourlyFlow: new Array(24).fill(0), suggestions: [] };
+    const emptyFlow: FlowStateData = { days: [], overallFlowScore: 0, avgFollowUpSec: 0, avgBlockMin: 0, deepFlowDays: 0, totalDays: 0, weeklyTrend: { labels: [], scores: [] }, hourlyFlow: new Array<number>(24).fill(0), suggestions: [] };
     const emptyCredits: AiCreditData = {
       totalCredits: 0, totalInputTokens: 0, totalOutputTokens: 0, totalCacheReadTokens: 0,
       totalCacheWriteTokens: 0, totalRequests: 0, countedRequests: 0, partialRequests: 0,
