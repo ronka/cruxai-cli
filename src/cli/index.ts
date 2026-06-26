@@ -6,11 +6,13 @@
 import { runScan } from './commands/scan';
 import { runContextHealth } from './commands/context-health';
 import { runSkills } from './commands/skills';
+import { runView } from './commands/view';
 
 const USAGE = `Usage:
   crux scan [--out <dir>] [--open]
   crux context-health [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>] [--json] [--no-color]
-  crux skills [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>] [--catalog] [--json] [--no-color]\n`;
+  crux skills [--workspace <id>] [--from <date>] [--to <date>] [--harness <name>] [--catalog] [--json] [--no-color]
+  crux view [overview|context|patterns|flow|credits|production|all] [--report <dir>] [--from <date>] [--to <date>] [--workspace <id>] [--harness <name>] [--json] [--no-color]\n`;
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
@@ -21,6 +23,8 @@ async function main(): Promise<void> {
     await runContextHealth(args.slice(1));
   } else if (command === 'skills') {
     await runSkills(args.slice(1));
+  } else if (command === 'view') {
+    await runView(args.slice(1));
   } else {
     process.stderr.write(`Unknown command: ${command ?? '<none>'}\n${USAGE}`);
     process.exit(1);
