@@ -7,6 +7,57 @@ import * as esbuild from 'esbuild';
 import * as fs from 'fs';
 import * as path from 'path';
 
+/** Swap ./shared → shared-browser.ts so app.js dispatches locally in the scan report. */
+const sharedBrowserSwap = {
+  name: 'shared-browser-swap',
+  setup(build) {
+    build.onResolve({ filter: /^\.\/shared$/ }, (args) => {
+      if (args.resolveDir.includes('webview')) {
+        return { path: path.resolve('./src/cli/browser/shared-browser.ts') };
+      }
+    });
+  },
+};
+
+/** Stub out node-only modules so Analyzer runs in the browser bundle. */
+const analyzerBrowserStubs = {
+  name: 'analyzer-browser-stubs',
+  setup(build) {
+    build.onResolve({ filter: /\/analyzer-config$/ }, () => ({
+      path: path.resolve('./src/cli/browser/stub-analyzer-config.ts'),
+    }));
+    build.onResolve({ filter: /\/rule-loader$/ }, () => ({
+      path: path.resolve('./src/cli/browser/stub-rule-loader.ts'),
+    }));
+  },
+};
+
+/**
+ * Embed the built-in markdown rule sources into the browser bundle.
+ * The scan report runs entirely client-side and cannot read rules from disk,
+ * so the stub rule-loader imports this virtual module and registers each source.
+ * Without it, getAllRules() is empty and Anti-Patterns detects nothing.
+ */
+const builtinRulesVirtualModule = {
+  name: 'builtin-rules-virtual-module',
+  setup(build) {
+    const NS = 'builtin-rules';
+    build.onResolve({ filter: /^virtual:builtin-rules$/ }, () => ({
+      path: 'builtin-rules', namespace: NS,
+    }));
+    build.onLoad({ filter: /.*/, namespace: NS }, () => {
+      const rulesDir = 'src/core/rules';
+      const entries = fs.readdirSync(rulesDir)
+        .filter(f => f.endsWith('.md'))
+        .map(f => [f.replace(/\.md$/, ''), fs.readFileSync(path.join(rulesDir, f), 'utf-8')]);
+      return {
+        contents: `export const BUILTIN_RULE_SOURCES = ${JSON.stringify(entries)};`,
+        loader: 'js',
+      };
+    });
+  },
+};
+
 const isWatch = process.argv.includes('--watch');
 
 // Stamp the build time into the bundle so the UI can show which build is running.
@@ -84,7 +135,44 @@ const webviewBuild = esbuild.build({
   sourcemap: true,
 });
 
-await Promise.all([extensionBuild, workerBuild, parseWorkerBuild, cacheWriteWorkerBuild, canvasHostBuild, webviewBuild]);
+// CLI bundle (Node) — entry for bin/run.js
+const cliBuild = esbuild.build({
+  entryPoints: ['src/cli/index.ts'],
+  bundle: true,
+  platform: 'node',
+  target: 'es2022',
+  format: 'cjs',
+  outfile: 'dist/cli.cjs',
+  sourcemap: true,
+  external: ['vscode'],
+});
+
+// Offline scan: app.js built with shared.ts swapped to shared-browser.ts
+const scanAppBuild = esbuild.build({
+  entryPoints: ['src/webview/app.ts'],
+  bundle: true,
+  platform: 'browser',
+  target: 'es2022',
+  format: 'iife',
+  outfile: 'dist/scan/app.js',
+  sourcemap: true,
+  plugins: [sharedBrowserSwap],
+  define,
+});
+
+// Offline scan: analyzer.js browser bundle with Analyzer + local RPC dispatcher
+const analyzerBrowserBuild = esbuild.build({
+  entryPoints: ['src/cli/browser/analyzer-entry.ts'],
+  bundle: true,
+  platform: 'browser',
+  target: 'es2022',
+  format: 'iife',
+  outfile: 'dist/scan/analyzer.js',
+  sourcemap: true,
+  plugins: [analyzerBrowserStubs, builtinRulesVirtualModule],
+});
+
+await Promise.all([extensionBuild, workerBuild, parseWorkerBuild, cacheWriteWorkerBuild, canvasHostBuild, webviewBuild, cliBuild, scanAppBuild, analyzerBrowserBuild]);
 
 // Copy static webview assets
 const webviewDist = 'dist/webview';
@@ -125,6 +213,10 @@ function bundleCss() {
 }
 
 bundleCss();
+
+// Copy bundled CSS into dist/scan/ for offline scan reports
+fs.mkdirSync('dist/scan', { recursive: true });
+fs.copyFileSync(path.join(webviewDist, 'styles.css'), 'dist/scan/styles.css');
 
 // Copy sidebar CSS separately (sidebar is its own webview)
 fs.copyFileSync('src/webview/styles-sidebar.css', path.join(webviewDist, 'sidebar.css'));

@@ -5,7 +5,6 @@
 
 /* Analyzer facade and warm-up helpers. */
 
-import * as path from 'path';
 import {
   Session, SessionRequest, DateFilter, DailyActivity, HourlyDistribution, HeatmapData,
   CodeProductionData, ConsumptionData, BurndownConfig, BurndownData, AiCreditData, AiCreditBurndownData, TokenCoverageData,
@@ -132,7 +131,7 @@ export class Analyzer {
     return new Promise((resolve, reject) => {
       const TIMEOUT_MS = 30_000;
 
-      const workerPath = path.join(__dirname, 'warm-up-worker.js');
+      const workerPath = __dirname + '/warm-up-worker.js';
       let worker: InstanceType<typeof WorkerClass>;
       try {
         worker = new WorkerClass(workerPath);
