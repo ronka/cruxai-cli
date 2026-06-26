@@ -63,19 +63,6 @@ const isWatch = process.argv.includes('--watch');
 // Stamp the build time into the bundle so the UI can show which build is running.
 const define = { __BUILD_TIME__: JSON.stringify(new Date().toISOString()) };
 
-// Bundle the extension host
-const extensionBuild = esbuild.build({
-  entryPoints: ['src/extension.ts'],
-  bundle: true,
-  platform: 'node',
-  target: 'es2022',
-  format: 'cjs',
-  outfile: 'dist/extension.js',
-  sourcemap: true,
-  external: ['vscode'],
-  define,
-});
-
 // Bundle the warm-up worker (runs off the extension host thread)
 const workerBuild = esbuild.build({
   entryPoints: ['src/core/warm-up-worker.ts'],
@@ -108,18 +95,6 @@ const cacheWriteWorkerBuild = esbuild.build({
   target: 'es2022',
   format: 'cjs',
   outfile: 'dist/cache-write-worker.js',
-  sourcemap: true,
-  external: ['vscode'],
-});
-
-// Bundle the canvas host (serves the webview as a Copilot app canvas; no vscode)
-const canvasHostBuild = esbuild.build({
-  entryPoints: ['src/canvas/host.ts'],
-  bundle: true,
-  platform: 'node',
-  target: 'es2022',
-  format: 'cjs',
-  outfile: 'dist/canvas-host.cjs',
   sourcemap: true,
   external: ['vscode'],
 });
@@ -172,7 +147,7 @@ const analyzerBrowserBuild = esbuild.build({
   plugins: [analyzerBrowserStubs, builtinRulesVirtualModule],
 });
 
-await Promise.all([extensionBuild, workerBuild, parseWorkerBuild, cacheWriteWorkerBuild, canvasHostBuild, webviewBuild, cliBuild, scanAppBuild, analyzerBrowserBuild]);
+await Promise.all([workerBuild, parseWorkerBuild, cacheWriteWorkerBuild, webviewBuild, cliBuild, scanAppBuild, analyzerBrowserBuild]);
 
 // Copy static webview assets
 const webviewDist = 'dist/webview';
@@ -218,23 +193,9 @@ bundleCss();
 fs.mkdirSync('dist/scan', { recursive: true });
 fs.copyFileSync(path.join(webviewDist, 'styles.css'), 'dist/scan/styles.css');
 
-// Copy sidebar CSS separately (sidebar is its own webview)
-fs.copyFileSync('src/webview/styles-sidebar.css', path.join(webviewDist, 'sidebar.css'));
-
 console.log('Build complete.');
 
 if (isWatch) {
-  const ctx1 = await esbuild.context({
-    entryPoints: ['src/extension.ts'],
-    bundle: true,
-    platform: 'node',
-    target: 'es2022',
-    format: 'cjs',
-    outfile: 'dist/extension.js',
-    sourcemap: true,
-    external: ['vscode'],
-    define,
-  });
   const ctx2 = await esbuild.context({
     entryPoints: ['src/core/warm-up-worker.ts'],
     bundle: true,
@@ -265,16 +226,6 @@ if (isWatch) {
     sourcemap: true,
     external: ['vscode'],
   });
-  const ctxCanvas = await esbuild.context({
-    entryPoints: ['src/canvas/host.ts'],
-    bundle: true,
-    platform: 'node',
-    target: 'es2022',
-    format: 'cjs',
-    outfile: 'dist/canvas-host.cjs',
-    sourcemap: true,
-    external: ['vscode'],
-  });
   const ctx4 = await esbuild.context({
     entryPoints: ['src/webview/app.ts'],
     bundle: true,
@@ -284,7 +235,7 @@ if (isWatch) {
     outfile: 'dist/webview/app.js',
     sourcemap: true,
   });
-  await Promise.all([ctx1.watch(), ctx2.watch(), ctx3.watch(), ctx4.watch(), ctx5.watch(), ctxCanvas.watch()]);
+  await Promise.all([ctx2.watch(), ctx3.watch(), ctx4.watch(), ctx5.watch()]);
   for (const source of cssSources) {
     fs.watch(source, () => {
       try {

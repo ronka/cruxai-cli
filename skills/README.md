@@ -8,7 +8,6 @@ file with YAML front matter that names it and describes when an AI agent should 
 | Skill | When to use |
 |---|---|
 | [update-docs](update-docs.md) | Update or add a page under `docs/content/` |
-| [package-extension](package-extension.md) | Build the `.vsix` via `npm run package` |
 
 ## Layout
 
