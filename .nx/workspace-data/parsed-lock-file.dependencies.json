@@ -14901,6 +14901,11 @@
   },
   {
     "source": "npm:lucide-react",
+    "target": "npm:react@19.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:lucide-react",
     "target": "npm:react@19.2.7",
     "type": "static"
   },
@@ -16362,6 +16367,16 @@
   {
     "source": "npm:needle",
     "target": "npm:sax",
+    "type": "static"
+  },
+  {
+    "source": "npm:next-themes",
+    "target": "npm:react@19.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:next-themes",
+    "target": "npm:react-dom@19.1.0",
     "type": "static"
   },
   {

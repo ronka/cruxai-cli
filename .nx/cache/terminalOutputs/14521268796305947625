@@ -1,8 +1,0 @@
-> pnpm next lint
-
-
- [33m[1m⚠[22m[39m The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config
-Error while loading rule '@typescript-eslint/await-thenable': You have used a rule which requires type information, but don't have parserOptions set to generate type information for this file. See https://tseslint.com/typed-linting for enabling linting with type information.
-Parser: typescript-eslint/parser
-Occurred while linting /Users/ronkantor/Projects/crux-cli/apps/dashboard/src/app/layout.tsx
-Warning: command "pnpm next lint" exited with non-zero status code

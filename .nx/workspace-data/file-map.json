@@ -26,167 +26,223 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".claude/skills/update-docs.md",
-        "hash": "3239256933346067394"
-      },
-      {
-        "file": "CODE_OF_CONDUCT.md",
-        "hash": "15583593583900038246"
-      },
-      {
-        "file": "docs/content/features/_index.md",
-        "hash": "9667899314193175690"
-      },
-      {
-        "file": "docs/content/measure/burndown.md",
-        "hash": "14846698686656042694"
-      },
-      {
-        "file": "scripts/test-local.sh",
-        "hash": "17340866300636108950"
-      },
-      {
-        "file": "docs/themes/coach/layouts/_default/list.html",
-        "hash": "4585621203937319624"
-      },
-      {
-        "file": "assets/screen-share.png",
-        "hash": "6603324224365911220"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "5429580751060051843"
-      },
-      {
-        "file": "docs/themes/coach/layouts/partials/topbar.html",
-        "hash": "18023809959034100201"
-      },
-      {
-        "file": "docs/content/improve/data-explorer.md",
-        "hash": "11122619613280191932"
-      },
-      {
-        "file": ".github/workflows/dependency-review.yml",
-        "hash": "6923910758498023900"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-context-management.png",
-        "hash": "10453887510957370015"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-patterns-workhours.png",
-        "hash": "3070379972738389539"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-achievements.png",
-        "hash": "14925335981049783836"
-      },
-      {
-        "file": ".vscode/tasks.json",
-        "hash": "12613953075461179573"
-      },
-      {
-        "file": ".github/workflows/copilot-setup-steps.yml",
-        "hash": "4428937325183202154"
-      },
-      {
-        "file": ".github/aw/actions-lock.json",
-        "hash": "8199909585755977799"
-      },
-      {
-        "file": "docs/build-pdf.sh",
-        "hash": "17861020319913732471"
-      },
-      {
-        "file": "docs/content/observe/_index.md",
-        "hash": "12535700666457671917"
-      },
-      {
-        "file": "docs/themes/coach/layouts/partials/page-nav.html",
-        "hash": "47587239396545806"
-      },
-      {
-        "file": "docs/content/level-up/achievements.md",
-        "hash": "3332576986935521492"
-      },
-      {
-        "file": "assets/screen-antipatterns.png",
-        "hash": "8258025590399074357"
-      },
-      {
         "file": "assets/screen-context-management.png",
         "hash": "10453887510957370015"
       },
       {
-        "file": "plans/crux-cli-skill-finder.md",
-        "hash": "9124650243644054551"
+        "file": "docs/themes/coach/static/screenshots/screen-sdlc.png",
+        "hash": "6426767861577983218"
       },
       {
-        "file": "docs/themes/coach/layouts/partials/sidebar.html",
-        "hash": "8079066490001657233"
+        "file": "eslint.config.mjs",
+        "hash": "17026701954594866849"
       },
       {
-        "file": "docs/themes/coach/static/screenshots/screen-learning.png",
-        "hash": "4250279844223465167"
+        "file": "knip.json",
+        "hash": "8437532363115317044"
       },
       {
-        "file": "docs/hugo.toml",
-        "hash": "5476270928885237582"
-      },
-      {
-        "file": "assets/screen-learning.png",
-        "hash": "4250279844223465167"
-      },
-      {
-        "file": "docs/content/measure/_index.md",
-        "hash": "3822725049297592341"
-      },
-      {
-        "file": "assets/icon.svg",
-        "hash": "5919921453771739929"
-      },
-      {
-        "file": "SUPPORT.md",
-        "hash": "17326369525850542205"
+        "file": "scripts/benchmark-reload-stability.ts",
+        "hash": "11419716390225183005"
       },
       {
         "file": "docs/themes/coach/layouts/_default/single.html",
         "hash": "10241084546496303339"
       },
       {
-        "file": "docs/themes/coach/static/screenshots/screen-context-quality.png",
-        "hash": "4647252154905627561"
+        "file": "docs/themes/coach/layouts/partials/topbar.html",
+        "hash": "18023809959034100201"
       },
       {
-        "file": "src/spike-browser-analyzer.ts",
-        "hash": "17895288548257738332"
+        "file": "docs/themes/coach/static/screenshots/screen-antipatterns.png",
+        "hash": "8258025590399074357"
       },
       {
-        "file": "docs/AUTHORING_RULES.md",
-        "hash": "10218536025349973904"
+        "file": "scripts/test-local.sh",
+        "hash": "17340866300636108950"
       },
       {
-        "file": "assets/screen-sdlc.png",
-        "hash": "6426767861577983218"
+        "file": "AGENTS.md",
+        "hash": "17822765343542333160"
       },
       {
-        "file": "scripts/test-catalog-fetch.mjs",
-        "hash": "17391334912988292744"
+        "file": "assets/screen-patterns-workhours.png",
+        "hash": "3070379972738389539"
       },
       {
-        "file": "docs/themes/coach/layouts/_default/baseof.html",
-        "hash": "6727535159479434015"
+        "file": ".nvmrc",
+        "hash": "541564060168964990"
+      },
+      {
+        "file": "docs/content/improve/skill-finder.md",
+        "hash": "17770806022905086555"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-context-management.png",
+        "hash": "10453887510957370015"
+      },
+      {
+        "file": "docs/content/features/chat.md",
+        "hash": "13212699325178379432"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "15933073794931537783"
+      },
+      {
+        "file": ".github/workflows/issue-triage.md",
+        "hash": "3382919107420579155"
+      },
+      {
+        "file": ".github/workflows/release.yml",
+        "hash": "6905094045717209606"
+      },
+      {
+        "file": "SECURITY.md",
+        "hash": "11853627410331962928"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE.md",
+        "hash": "2020660100577432678"
+      },
+      {
+        "file": "docs/content/features/_index.md",
+        "hash": "9667899314193175690"
+      },
+      {
+        "file": ".github/aw/actions-lock.json",
+        "hash": "8199909585755977799"
+      },
+      {
+        "file": "plans/crux-cli-skill-finder.md",
+        "hash": "9124650243644054551"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-consumption.png",
+        "hash": "10942577584928286873"
+      },
+      {
+        "file": "CODE_OF_CONDUCT.md",
+        "hash": "15583593583900038246"
+      },
+      {
+        "file": "docs/hugo.toml",
+        "hash": "5476270928885237582"
+      },
+      {
+        "file": "docs/content/getting-started/installation.md",
+        "hash": "15104242998400635742"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-output.png",
+        "hash": "11596694042587502605"
+      },
+      {
+        "file": "assets/screen-output.png",
+        "hash": "11596694042587502605"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "9750177317466281158"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2153668783743347518"
+      },
+      {
+        "file": "docs/content/improve/data-explorer.md",
+        "hash": "11122619613280191932"
+      },
+      {
+        "file": ".github/extensions/ai-engineer-coach/extension.mjs",
+        "hash": "5027993152730079472"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-share.png",
+        "hash": "6603324224365911220"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-dashboard.png",
+        "hash": "12141695275278717093"
       },
       {
         "file": "scripts/benchmark-memory.ts",
         "hash": "13140227646111605238"
       },
       {
-        "file": ".vscode/launch.json",
-        "hash": "16333925714243406474"
+        "file": "assets/screen-patterns-projects.png",
+        "hash": "14789938301752249448"
       },
       {
-        "file": "assets/screen-patterns-projects.png",
+        "file": ".github/agents/agentic-workflows.md",
+        "hash": "2010539682193509772"
+      },
+      {
+        "file": ".lockfile-lintrc.json",
+        "hash": "749032822260825365"
+      },
+      {
+        "file": "scripts/test-catalog-fetch.mjs",
+        "hash": "17391334912988292744"
+      },
+      {
+        "file": "docs/content/observe/_index.md",
+        "hash": "12535700666457671917"
+      },
+      {
+        "file": "NOTICE",
+        "hash": "7696014822941818922"
+      },
+      {
+        "file": ".github/mcp.json",
+        "hash": "9736875827884461715"
+      },
+      {
+        "file": "skills/README.md",
+        "hash": "7372644367523803184"
+      },
+      {
+        "file": ".github/workflows/dependency-review.yml",
+        "hash": "6923910758498023900"
+      },
+      {
+        "file": ".github/skills/agentic-workflows/SKILL.md",
+        "hash": "10348505566197714320"
+      },
+      {
+        "file": "docs/build-pdf.sh",
+        "hash": "17861020319913732471"
+      },
+      {
+        "file": ".github/workflows/agentics-maintenance.yml",
+        "hash": "16082667513408350862"
+      },
+      {
+        "file": "SUPPORT.md",
+        "hash": "17326369525850542205"
+      },
+      {
+        "file": "docs/content/level-up/sdlc.md",
+        "hash": "67068850495636709"
+      },
+      {
+        "file": "assets/screen-consumption.png",
+        "hash": "10942577584928286873"
+      },
+      {
+        "file": "docs/content/improve/_index.md",
+        "hash": "6695471500655392777"
+      },
+      {
+        "file": "docs/content/measure/patterns.md",
+        "hash": "13774172592720636373"
+      },
+      {
+        "file": "README.md",
+        "hash": "9820642062457164480"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-patterns-projects.png",
         "hash": "14789938301752249448"
       },
       {
@@ -194,395 +250,901 @@
         "hash": "12221387565996228513"
       },
       {
-        "file": "docs/themes/coach/static/screenshots/screen-share.png",
-        "hash": "6603324224365911220"
-      },
-      {
-        "file": ".github/workflows/agentics-maintenance.yml",
-        "hash": "16082667513408350862"
-      },
-      {
-        "file": ".github/workflows/release.yml",
-        "hash": "6905094045717209606"
-      },
-      {
-        "file": "docs/content/getting-started/supported-tools.md",
-        "hash": "4093595375726472079"
-      },
-      {
-        "file": "docs/content/measure/output.md",
-        "hash": "5454878888309067532"
-      },
-      {
-        "file": "SECURITY.md",
-        "hash": "11853627410331962928"
-      },
-      {
-        "file": "docs/content/measure/patterns.md",
-        "hash": "13774172592720636373"
-      },
-      {
-        "file": ".github/skills/agentic-workflows/SKILL.md",
-        "hash": "10348505566197714320"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-output.png",
-        "hash": "11596694042587502605"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "6047953398208211651"
-      },
-      {
-        "file": "plans/crux-view-terminal-dashboard.md",
-        "hash": "4036078040524454978"
-      },
-      {
-        "file": ".github/agents/agentic-workflows.md",
-        "hash": "2010539682193509772"
-      },
-      {
-        "file": "docs/content/improve/context-health.md",
-        "hash": "6664675930612171540"
-      },
-      {
-        "file": "docs/content/level-up/sdlc.md",
-        "hash": "67068850495636709"
-      },
-      {
-        "file": ".lockfile-lintrc.json",
-        "hash": "749032822260825365"
-      },
-      {
-        "file": "assets/screen-output.png",
-        "hash": "11596694042587502605"
-      },
-      {
-        "file": "docs/themes/coach/static/js/main.js",
-        "hash": "12195441133691245112"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/feature_request.yml",
-        "hash": "15446561628232187943"
-      },
-      {
-        "file": "assets/screen-achievements.png",
-        "hash": "14925335981049783836"
-      },
-      {
-        "file": ".github/extensions/package-and-run/extension.mjs",
-        "hash": "11514737998441749269"
-      },
-      {
-        "file": "docs/content/getting-started/installation.md",
-        "hash": "15104242998400635742"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "6882267454583255025"
-      },
-      {
-        "file": "skills/update-docs.md",
-        "hash": "3239256933346067394"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-sdlc.png",
-        "hash": "6426767861577983218"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "2153668783743347518"
-      },
-      {
-        "file": "assets/screen-consumption.png",
-        "hash": "10942577584928286873"
-      },
-      {
         "file": "plans/crux-cli-scan-migration.md",
         "hash": "3288651541710663659"
-      },
-      {
-        "file": "package.json",
-        "hash": "45836965526501011"
-      },
-      {
-        "file": ".github/mcp.json",
-        "hash": "9736875827884461715"
-      },
-      {
-        "file": ".gitattributes",
-        "hash": "15933073794931537783"
-      },
-      {
-        "file": "docs/content/getting-started/_index.md",
-        "hash": "12462504184504246109"
-      },
-      {
-        "file": "docs/content/features/chat.md",
-        "hash": "13212699325178379432"
-      },
-      {
-        "file": ".github/workflows/issue-triage.md",
-        "hash": "3382919107420579155"
-      },
-      {
-        "file": "docs/themes/coach/layouts/partials/footer.html",
-        "hash": "720200417051050860"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE.md",
-        "hash": "2020660100577432678"
-      },
-      {
-        "file": ".github/workflows/codeql.yml",
-        "hash": "493083138358057307"
-      },
-      {
-        "file": "README.md",
-        "hash": "9820642062457164480"
-      },
-      {
-        "file": "docs/themes/coach/static/css/style.css",
-        "hash": "6443514480889317537"
-      },
-      {
-        "file": ".github/instructions/update-docs.md",
-        "hash": "3239256933346067394"
-      },
-      {
-        "file": "docs/content/level-up/_index.md",
-        "hash": "14943431696630888389"
-      },
-      {
-        "file": "scripts/benchmark-reload-stability.ts",
-        "hash": "11419716390225183005"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "7906348773486878943"
-      },
-      {
-        "file": ".github/extensions/ai-engineer-coach/README.md",
-        "hash": "13666113051327038937"
-      },
-      {
-        "file": ".github/workflows/issue-triage.lock.yml",
-        "hash": "12824497034062295931"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-timeline.png",
-        "hash": "14185466993275695120"
-      },
-      {
-        "file": "docs/themes/coach/layouts/shortcodes/callout.html",
-        "hash": "11410446041589174622"
-      },
-      {
-        "file": ".github/extensions/ai-engineer-coach/extension.mjs",
-        "hash": "5027993152730079472"
-      },
-      {
-        "file": "assets/screen-dashboard.png",
-        "hash": "12141695275278717093"
-      },
-      {
-        "file": "docs/content/level-up/share.md",
-        "hash": "16681128081837447556"
-      },
-      {
-        "file": "docs/content/improve/_index.md",
-        "hash": "6695471500655392777"
-      },
-      {
-        "file": "docs/content/level-up/learning.md",
-        "hash": "8189901153938903075"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-patterns-projects.png",
-        "hash": "14789938301752249448"
-      },
-      {
-        "file": "scripts/check-bundle-size.mjs",
-        "hash": "9172173154949187860"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/bug_report.yml",
-        "hash": "8277316637467730947"
-      },
-      {
-        "file": ".devcontainer/Dockerfile",
-        "hash": "9130320209132645735"
-      },
-      {
-        "file": "docs/content/improve/rule-playground.md",
-        "hash": "2688970597678028943"
-      },
-      {
-        "file": "cspell.json",
-        "hash": "14801224587609051908"
-      },
-      {
-        "file": "assets/screen-timeline.png",
-        "hash": "14185466993275695120"
-      },
-      {
-        "file": "scripts/data-inventory.ts",
-        "hash": "4541561702602705798"
-      },
-      {
-        "file": "plans/crux-monorepo-migration-tasks.md",
-        "hash": "14060250202804305281"
-      },
-      {
-        "file": "docs/content/observe/timeline.md",
-        "hash": "17266681870526504053"
-      },
-      {
-        "file": "scripts/e2e-real-data.ts",
-        "hash": "17028717044472383431"
-      },
-      {
-        "file": "docs/themes/coach/static/screenshots/screen-consumption.png",
-        "hash": "10942577584928286873"
-      },
-      {
-        "file": "assets/screen-skill-finder.png",
-        "hash": "6584717676547462611"
-      },
-      {
-        "file": "assets/icon.png",
-        "hash": "13363254088841898888"
-      },
-      {
-        "file": "docs/content/improve/rule-editor.md",
-        "hash": "6912942635687800868"
-      },
-      {
-        "file": "CONTRIBUTING.md",
-        "hash": "7935778332258169784"
-      },
-      {
-        "file": "scripts/oom-repro.ts",
-        "hash": "9990233758282515211"
-      },
-      {
-        "file": "skills/README.md",
-        "hash": "7372644367523803184"
       },
       {
         "file": "docs/content/_index.md",
         "hash": "2560159756016596432"
       },
       {
-        "file": "docs/content/improve/skill-finder.md",
-        "hash": "17770806022905086555"
+        "file": "docs/themes/coach/layouts/shortcodes/callout.html",
+        "hash": "11410446041589174622"
       },
       {
-        "file": "assets/screen-patterns-workhours.png",
-        "hash": "3070379972738389539"
+        "file": "CONTRIBUTING.md",
+        "hash": "7935778332258169784"
       },
       {
-        "file": "assets/screen-context-quality.png",
-        "hash": "4647252154905627561"
+        "file": "docs/content/level-up/_index.md",
+        "hash": "14943431696630888389"
       },
       {
-        "file": "vitest.config.mts",
-        "hash": "2472873275946351872"
+        "file": "assets/screen-skill-finder.png",
+        "hash": "6584717676547462611"
       },
       {
-        "file": "docs/themes/coach/layouts/index.html",
-        "hash": "14433564126797915558"
-      },
-      {
-        "file": "docs/content/observe/dashboard.md",
-        "hash": "12725046331414218446"
+        "file": ".github/extensions/package-and-run/extension.mjs",
+        "hash": "11514737998441749269"
       },
       {
         "file": "plans/nx-monorepo-migration.md",
         "hash": "9778413085561444329"
       },
       {
-        "file": "CHANGELOG.md",
-        "hash": "9440587372853600056"
+        "file": "assets/screen-learning.png",
+        "hash": "4250279844223465167"
       },
       {
-        "file": "AGENTS.md",
-        "hash": "17822765343542333160"
+        "file": "docs/content/level-up/learning.md",
+        "hash": "8189901153938903075"
       },
       {
-        "file": ".devcontainer/devcontainer.json",
-        "hash": "10092588186575092274"
+        "file": ".github/ISSUE_TEMPLATE/feature_request.yml",
+        "hash": "15446561628232187943"
       },
       {
-        "file": ".github/dependabot.yml",
-        "hash": "18158410902722634667"
+        "file": ".vscode/launch.json",
+        "hash": "16333925714243406474"
       },
       {
-        "file": "LICENSE",
-        "hash": "15723201580761093197"
+        "file": "docs/content/level-up/achievements.md",
+        "hash": "3332576986935521492"
       },
       {
-        "file": "docs/themes/coach/static/screenshots/screen-skill-finder.png",
-        "hash": "6584717676547462611"
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "hash": "12824497034062295931"
       },
       {
-        "file": "docs/themes/coach/static/screenshots/screen-dashboard.png",
-        "hash": "12141695275278717093"
+        "file": "docs/themes/coach/layouts/partials/footer.html",
+        "hash": "720200417051050860"
       },
       {
-        "file": "NOTICE",
-        "hash": "7696014822941818922"
+        "file": "docs/content/level-up/share.md",
+        "hash": "16681128081837447556"
       },
       {
-        "file": ".nvmrc",
-        "hash": "541564060168964990"
-      },
-      {
-        "file": "docs/context-health-cli-findings.md",
-        "hash": "17073155483050902113"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "6269312103602751510"
+        "file": "assets/screen-context-quality.png",
+        "hash": "4647252154905627561"
       },
       {
         "file": "nx.json",
         "hash": "9502947409351005964"
       },
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "9750177317466281158"
+        "file": "vitest.config.mts",
+        "hash": "2472873275946351872"
       },
       {
-        "file": "docs/content/improve/anti-patterns.md",
-        "hash": "3020294536577837765"
+        "file": "assets/screen-timeline.png",
+        "hash": "14185466993275695120"
       },
       {
-        "file": "eslint.config.mjs",
-        "hash": "17026701954594866849"
+        "file": "scripts/e2e-real-data.ts",
+        "hash": "17028717044472383431"
+      },
+      {
+        "file": ".github/workflows/copilot-setup-steps.yml",
+        "hash": "4428937325183202154"
+      },
+      {
+        "file": "docs/content/measure/output.md",
+        "hash": "5454878888309067532"
+      },
+      {
+        "file": "docs/content/improve/context-health.md",
+        "hash": "6664675930612171540"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "9440587372853600056"
+      },
+      {
+        "file": ".github/workflows/codeql.yml",
+        "hash": "493083138358057307"
+      },
+      {
+        "file": "skills/update-docs.md",
+        "hash": "3239256933346067394"
+      },
+      {
+        "file": "docs/themes/coach/layouts/partials/page-nav.html",
+        "hash": "47587239396545806"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-timeline.png",
+        "hash": "14185466993275695120"
+      },
+      {
+        "file": "assets/screen-achievements.png",
+        "hash": "14925335981049783836"
+      },
+      {
+        "file": "assets/icon.svg",
+        "hash": "5919921453771739929"
+      },
+      {
+        "file": "docs/content/measure/burndown.md",
+        "hash": "14846698686656042694"
+      },
+      {
+        "file": "cspell.json",
+        "hash": "14801224587609051908"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "6882267454583255025"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "4011803576832317708"
+      },
+      {
+        "file": "docs/content/improve/rule-playground.md",
+        "hash": "2688970597678028943"
+      },
+      {
+        "file": "docs/themes/coach/static/css/style.css",
+        "hash": "6443514480889317537"
+      },
+      {
+        "file": "package.json",
+        "hash": "45836965526501011"
+      },
+      {
+        "file": "plans/crux-monorepo-migration-tasks.md",
+        "hash": "14060250202804305281"
+      },
+      {
+        "file": "scripts/oom-repro.ts",
+        "hash": "9990233758282515211"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "6269312103602751510"
       },
       {
         "file": "scripts/explore-context-composition.ts",
         "hash": "5081545507180728710"
       },
       {
-        "file": "docs/themes/coach/static/screenshots/screen-antipatterns.png",
-        "hash": "8258025590399074357"
+        "file": "docs/content/getting-started/_index.md",
+        "hash": "12462504184504246109"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-skill-finder.png",
+        "hash": "6584717676547462611"
+      },
+      {
+        "file": "src/spike-browser-analyzer.ts",
+        "hash": "17895288548257738332"
+      },
+      {
+        "file": "docs/content/observe/dashboard.md",
+        "hash": "12725046331414218446"
+      },
+      {
+        "file": ".devcontainer/devcontainer.json",
+        "hash": "10092588186575092274"
+      },
+      {
+        "file": "docs/content/measure/_index.md",
+        "hash": "3822725049297592341"
+      },
+      {
+        "file": "docs/content/improve/rule-editor.md",
+        "hash": "6912942635687800868"
+      },
+      {
+        "file": "assets/screen-sdlc.png",
+        "hash": "6426767861577983218"
+      },
+      {
+        "file": ".github/extensions/ai-engineer-coach/README.md",
+        "hash": "13666113051327038937"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "15723201580761093197"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "12613953075461179573"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-learning.png",
+        "hash": "4250279844223465167"
+      },
+      {
+        "file": "scripts/check-bundle-size.mjs",
+        "hash": "9172173154949187860"
+      },
+      {
+        "file": ".github/instructions/update-docs.md",
+        "hash": "3239256933346067394"
+      },
+      {
+        "file": ".github/dependabot.yml",
+        "hash": "18158410902722634667"
+      },
+      {
+        "file": "docs/themes/coach/layouts/partials/sidebar.html",
+        "hash": "8079066490001657233"
+      },
+      {
+        "file": "scripts/data-inventory.ts",
+        "hash": "4541561702602705798"
+      },
+      {
+        "file": "docs/themes/coach/layouts/index.html",
+        "hash": "14433564126797915558"
+      },
+      {
+        "file": "docs/themes/coach/layouts/_default/baseof.html",
+        "hash": "6727535159479434015"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-context-quality.png",
+        "hash": "4647252154905627561"
+      },
+      {
+        "file": "docs/content/getting-started/supported-tools.md",
+        "hash": "4093595375726472079"
+      },
+      {
+        "file": "docs/AUTHORING_RULES.md",
+        "hash": "10218536025349973904"
+      },
+      {
+        "file": ".claude/skills/update-docs.md",
+        "hash": "3239256933346067394"
+      },
+      {
+        "file": "docs/content/observe/timeline.md",
+        "hash": "17266681870526504053"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "6047953398208211651"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "7906348773486878943"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-patterns-workhours.png",
+        "hash": "3070379972738389539"
       },
       {
         "file": "plans/nx-monorepo.md",
         "hash": "7948316766132284936"
       },
       {
-        "file": "knip.json",
-        "hash": "8437532363115317044"
+        "file": "docs/context-health-cli-findings.md",
+        "hash": "17073155483050902113"
       },
       {
-        "file": "pnpm-lock.yaml",
-        "hash": "14752350571057202977"
+        "file": "docs/themes/coach/static/js/main.js",
+        "hash": "12195441133691245112"
+      },
+      {
+        "file": "plans/crux-view-terminal-dashboard.md",
+        "hash": "4036078040524454978"
+      },
+      {
+        "file": "docs/themes/coach/static/screenshots/screen-achievements.png",
+        "hash": "14925335981049783836"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "hash": "8277316637467730947"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5429580751060051843"
+      },
+      {
+        "file": "docs/themes/coach/layouts/_default/list.html",
+        "hash": "4585621203937319624"
+      },
+      {
+        "file": "assets/screen-antipatterns.png",
+        "hash": "8258025590399074357"
+      },
+      {
+        "file": "docs/content/improve/anti-patterns.md",
+        "hash": "3020294536577837765"
+      },
+      {
+        "file": "assets/screen-share.png",
+        "hash": "6603324224365911220"
+      },
+      {
+        "file": ".devcontainer/Dockerfile",
+        "hash": "9130320209132645735"
+      },
+      {
+        "file": "assets/screen-dashboard.png",
+        "hash": "12141695275278717093"
+      },
+      {
+        "file": "assets/icon.png",
+        "hash": "13363254088841898888"
       }
     ],
     "projectFileMap": {
+      "cli": [
+        {
+          "file": "apps/cli/bin/run.js",
+          "hash": "14098423060962426268"
+        },
+        {
+          "file": "apps/cli/esbuild.mjs",
+          "hash": "16028483050734143768",
+          "deps": [
+            "npm:esbuild"
+          ]
+        },
+        {
+          "file": "apps/cli/package.json",
+          "hash": "15597041561431992477",
+          "deps": [
+            "npm:esbuild",
+            "core",
+            "npm:chart.js",
+            "npm:chartjs-chart-treemap",
+            "npm:htm",
+            "npm:preact"
+          ]
+        },
+        {
+          "file": "apps/cli/playwright.config.ts",
+          "hash": "14721015047361534482",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/project.json",
+          "hash": "8857364207951609651"
+        },
+        {
+          "file": "apps/cli/src/browser/analyzer-entry.ts",
+          "hash": "16757054120089517867",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/browser/shared-browser.ts",
+          "hash": "6342175780885948836",
+          "deps": [
+            "npm:chart.js",
+            "npm:chartjs-chart-treemap"
+          ]
+        },
+        {
+          "file": "apps/cli/src/browser/stub-analyzer-config.ts",
+          "hash": "9084793433004263181",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/browser/stub-rule-loader.ts",
+          "hash": "3858579224961018948",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/context-health.test.ts",
+          "hash": "2646164857407066390",
+          "deps": [
+            "npm:vitest",
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/context-health.ts",
+          "hash": "12867905869986982270",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/scan.ts",
+          "hash": "4143810791604087794",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/skills.test.ts",
+          "hash": "13634929784426219747",
+          "deps": [
+            "npm:vitest",
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/skills.ts",
+          "hash": "12446817482492750344",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/view.test.ts",
+          "hash": "2856661228623152350",
+          "deps": [
+            "npm:vitest",
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/commands/view.ts",
+          "hash": "13571191762001946947",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/index.ts",
+          "hash": "6734354451575311455"
+        },
+        {
+          "file": "apps/cli/src/render/term.ts",
+          "hash": "15325580727726381955"
+        },
+        {
+          "file": "apps/cli/src/scan.test.ts",
+          "hash": "9390725130270651383",
+          "deps": [
+            "npm:vitest",
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/app.ts",
+          "hash": "10138353013764249425",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/capabilities.ts",
+          "hash": "2229069460841663888"
+        },
+        {
+          "file": "apps/cli/src/webview/dashboard-shell.ts",
+          "hash": "10254390773398948198",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/dsl-cheatsheet.test.ts",
+          "hash": "6821033751917970519",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/dsl-cheatsheet.ts",
+          "hash": "3945222523039887584"
+        },
+        {
+          "file": "apps/cli/src/webview/fetch-utils.test.ts",
+          "hash": "9635200378212895893",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/fetch-utils.ts",
+          "hash": "3027028138202197097"
+        },
+        {
+          "file": "apps/cli/src/webview/html-tag.test.ts",
+          "hash": "10053053743707304551",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/loading-grid-model.test.ts",
+          "hash": "11481921167137507746",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/loading-grid-model.ts",
+          "hash": "13840515601961557365"
+        },
+        {
+          "file": "apps/cli/src/webview/loading-grid-view.test.ts",
+          "hash": "16122765385582272788",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/loading-grid-view.ts",
+          "hash": "4011572923522107150"
+        },
+        {
+          "file": "apps/cli/src/webview/page-achievements.ts",
+          "hash": "10157442328409858988",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-antipatterns-editor.test.ts",
+          "hash": "15646045883665814557",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-antipatterns-editor.ts",
+          "hash": "17253967082796148702",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-antipatterns-heatmap.ts",
+          "hash": "490805247195971295",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-antipatterns.ts",
+          "hash": "15045875863598402445",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-burndown.ts",
+          "hash": "11209884873772953931",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-config.ts",
+          "hash": "16888182622179078114",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-context-mgmt.ts",
+          "hash": "13895890639143308745",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-dashboard.ts",
+          "hash": "7078845624685465509",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-data-explorer.ts",
+          "hash": "12471644091239428553",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-dsl-reference.ts",
+          "hash": "4499627991919198652",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-experiments.ts",
+          "hash": "9866592678885426568",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-image-gallery.test.ts",
+          "hash": "995035373371875252",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-image-gallery.ts",
+          "hash": "6243659854073807137",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-insights.ts",
+          "hash": "7247381382981635353",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-learning-snake.ts",
+          "hash": "15154601861256423822"
+        },
+        {
+          "file": "apps/cli/src/webview/page-learning-state.ts",
+          "hash": "16501858854796809520"
+        },
+        {
+          "file": "apps/cli/src/webview/page-learning-templates.test.ts",
+          "hash": "2423592497542672297",
+          "deps": [
+            "npm:vitest",
+            "npm:preact-render-to-string",
+            "npm:preact"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-learning-templates.ts",
+          "hash": "7471646956935338345"
+        },
+        {
+          "file": "apps/cli/src/webview/page-learning.ts",
+          "hash": "4772858680726854134",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-output.ts",
+          "hash": "10434178412513982809",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-patterns.ts",
+          "hash": "14360731712553960186",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-peers.ts",
+          "hash": "4659965653674022373",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-rule-editor.ts",
+          "hash": "4860707530867407460",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-rule-playground.ts",
+          "hash": "10869049528116382952",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-sdlc.ts",
+          "hash": "7559452871481958546",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-skills.ts",
+          "hash": "14363064601801534803",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-timeline.ts",
+          "hash": "2563331466803744032",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/page-workflows.ts",
+          "hash": "2068294427665603144",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/panel-catalog.ts",
+          "hash": "17882123668447476159",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/render.ts",
+          "hash": "3056421403722567602",
+          "deps": [
+            "npm:preact",
+            "npm:htm"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/shared-progress.test.ts",
+          "hash": "8182245227605983924",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/shared.ts",
+          "hash": "13771526987891108416",
+          "deps": [
+            "npm:chart.js",
+            "npm:chartjs-chart-treemap"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/skill-cache.ts",
+          "hash": "5037526734201429293",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/skipped-banner.test.ts",
+          "hash": "11299926537766292013",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/skipped-banner.ts",
+          "hash": "17561767758622348034"
+        },
+        {
+          "file": "apps/cli/src/webview/styles-learning.css",
+          "hash": "42976113465942660"
+        },
+        {
+          "file": "apps/cli/src/webview/styles-pages.css",
+          "hash": "3563285148162207328"
+        },
+        {
+          "file": "apps/cli/src/webview/styles-skills.css",
+          "hash": "4100511071760148038"
+        },
+        {
+          "file": "apps/cli/src/webview/styles.css",
+          "hash": "13027173801992928276"
+        },
+        {
+          "file": "apps/cli/src/webview/svg-icons.ts",
+          "hash": "5231512647084394315"
+        },
+        {
+          "file": "apps/cli/src/webview/telemetry-strip.test.ts",
+          "hash": "14271204511651026930",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/telemetry-strip.ts",
+          "hash": "12605679389408772360"
+        },
+        {
+          "file": "apps/cli/src/webview/vibe-roles.ts",
+          "hash": "5657753807727187241",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "apps/cli/src/webview/webview-smoke.test.ts",
+          "hash": "11865360127465707833",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/antipatterns.spec.ts",
+          "hash": "615144650930161562",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/burndown.spec.ts",
+          "hash": "6836910677905804120",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/context-mgmt.spec.ts",
+          "hash": "6064350866457844807",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/dashboard.spec.ts",
+          "hash": "14701151286128384153",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/harness.html",
+          "hash": "10669375849743827892"
+        },
+        {
+          "file": "apps/cli/tests/e2e/navigation.spec.ts",
+          "hash": "3541833607752910593",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/output.spec.ts",
+          "hash": "1422011111465347430",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/patterns.spec.ts",
+          "hash": "8264710812027718782",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/telemetry.spec.ts",
+          "hash": "9305529680149825794",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tests/e2e/timeline.spec.ts",
+          "hash": "13931477845299288574",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/cli/tsconfig.json",
+          "hash": "18381080416959339831"
+        }
+      ],
       "cruxai-hire": [
         {
           "file": "apps/cruxai-hire/.agents/skills/ai-elements/SKILL.md",
@@ -5412,566 +5974,465 @@
           ]
         }
       ],
-      "cli": [
+      "dashboard": [
         {
-          "file": "apps/cli/bin/run.js",
-          "hash": "14098423060962426268"
+          "file": "apps/dashboard/.next/app-build-manifest.json",
+          "hash": "7205868890036356358"
         },
         {
-          "file": "apps/cli/esbuild.mjs",
-          "hash": "16028483050734143768",
+          "file": "apps/dashboard/.next/build-manifest.json",
+          "hash": "5125768831124365349"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/.previewinfo",
+          "hash": "6743338107733518694"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/.rscinfo",
+          "hash": "3709851665351396599"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/.tsbuildinfo",
+          "hash": "8436933953963173785"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/eslint/.cache_1mvr341",
+          "hash": "3249458848175297923"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/eslint/.cache_tng5et",
+          "hash": "1954719408268755570"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development-fallback/0.pack.gz",
+          "hash": "15727246567160121471"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development-fallback/index.pack.gz",
+          "hash": "7827986833124900326"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development-fallback/index.pack.gz.old",
+          "hash": "11302558918881392282"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/0.pack.gz",
+          "hash": "10013699714913512366"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/1.pack.gz",
+          "hash": "8014792149630951601"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/2.pack.gz",
+          "hash": "12764638547276063801"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/3.pack.gz",
+          "hash": "14167507724203523166"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/4.pack.gz",
+          "hash": "14344559449880429300"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/index.pack.gz",
+          "hash": "12691674608066004579"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-development/index.pack.gz.old",
+          "hash": "16546292724892222600"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/0.pack",
+          "hash": "940214156732796544"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/1.pack",
+          "hash": "3400108783361700573"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/2.pack",
+          "hash": "11097267252686267502"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/3.pack",
+          "hash": "3148224119856449139"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/4.pack",
+          "hash": "14969378102644221247"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/5.pack",
+          "hash": "4187515426350517152"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/6.pack",
+          "hash": "16796147948057503161"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/index.pack",
+          "hash": "54239239068890192"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/client-production/index.pack.old",
+          "hash": "432153136836165512"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/edge-server-production/0.pack",
+          "hash": "471599872138982288"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/edge-server-production/index.pack",
+          "hash": "11834450513267915167"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/edge-server-production/index.pack.old",
+          "hash": "11579159778666875852"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-development/0.pack.gz",
+          "hash": "9454270965168560173"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-development/1.pack.gz",
+          "hash": "16076212368737344530"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-development/2.pack.gz",
+          "hash": "17173047416460760014"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-development/3.pack.gz",
+          "hash": "5694780758974631074"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-development/index.pack.gz",
+          "hash": "272373017071928783"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-development/index.pack.gz.old",
+          "hash": "4480763404501715613"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-production/0.pack",
+          "hash": "10426004378629488277"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-production/1.pack",
+          "hash": "13538220895326836142"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-production/index.pack",
+          "hash": "18123171531392278919"
+        },
+        {
+          "file": "apps/dashboard/.next/cache/webpack/server-production/index.pack.old",
+          "hash": "13121141058992660817"
+        },
+        {
+          "file": "apps/dashboard/.next/package.json",
+          "hash": "11338307439248427064"
+        },
+        {
+          "file": "apps/dashboard/.next/react-loadable-manifest.json",
+          "hash": "1389868326933519382"
+        },
+        {
+          "file": "apps/dashboard/.next/server/app-paths-manifest.json",
+          "hash": "6045270427439857966"
+        },
+        {
+          "file": "apps/dashboard/.next/server/app/page.js",
+          "hash": "6529092186244950019",
           "deps": [
-            "npm:esbuild"
+            [
+              "npm:next@15.3.3",
+              "dynamic"
+            ]
           ]
         },
         {
-          "file": "apps/cli/package.json",
-          "hash": "15597041561431992477",
+          "file": "apps/dashboard/.next/server/app/page_client-reference-manifest.js",
+          "hash": "13037513462492576057"
+        },
+        {
+          "file": "apps/dashboard/.next/server/interception-route-rewrite-manifest.js",
+          "hash": "10484309360224763022"
+        },
+        {
+          "file": "apps/dashboard/.next/server/middleware-build-manifest.js",
+          "hash": "10146558356613894909"
+        },
+        {
+          "file": "apps/dashboard/.next/server/middleware-manifest.json",
+          "hash": "9889576824779923310"
+        },
+        {
+          "file": "apps/dashboard/.next/server/middleware-react-loadable-manifest.js",
+          "hash": "9185069726031651908"
+        },
+        {
+          "file": "apps/dashboard/.next/server/next-font-manifest.js",
+          "hash": "16541577805185552134"
+        },
+        {
+          "file": "apps/dashboard/.next/server/next-font-manifest.json",
+          "hash": "11891788324563068681"
+        },
+        {
+          "file": "apps/dashboard/.next/server/pages-manifest.json",
+          "hash": "1389868326933519382"
+        },
+        {
+          "file": "apps/dashboard/.next/server/server-reference-manifest.js",
+          "hash": "13062913855343812063"
+        },
+        {
+          "file": "apps/dashboard/.next/server/server-reference-manifest.json",
+          "hash": "18276207531467032239"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/@opentelemetry+api@1.9.1.js",
+          "hash": "7926416102268151632"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/@swc+helpers@0.5.15.js",
+          "hash": "13427625782704409906"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/class-variance-authority@0.7.1.js",
+          "hash": "7926102971890366059"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/clsx@2.1.1.js",
+          "hash": "4225787570006685433"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/lucide-react@1.21.0_react@19.2.7.js",
+          "hash": "3902865410031801171"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/next-themes@0.4.6_react-dom@19.1.0_react@19.1.0__react@19.1.0.js",
+          "hash": "15658328259956634649"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/next@15.3.3_@babel+core@7.29.7_@opentelemetry+api@1.9.1_@playwright+test@1.61.0_react-d_389f3234508c5d7bc19fe54c375e406f.js",
+          "hash": "5928240569686538085"
+        },
+        {
+          "file": "apps/dashboard/.next/server/vendor-chunks/tailwind-merge@2.6.1.js",
+          "hash": "6225049573054496172"
+        },
+        {
+          "file": "apps/dashboard/.next/server/webpack-runtime.js",
+          "hash": "12535375845819073665"
+        },
+        {
+          "file": "apps/dashboard/.next/static/chunks/app-pages-internals.js",
+          "hash": "16031276145393461575"
+        },
+        {
+          "file": "apps/dashboard/.next/static/chunks/app/layout.js",
+          "hash": "6033815432299507389"
+        },
+        {
+          "file": "apps/dashboard/.next/static/chunks/app/page.js",
+          "hash": "14069536093252694520"
+        },
+        {
+          "file": "apps/dashboard/.next/static/chunks/main-app.js",
+          "hash": "4082674474345147381"
+        },
+        {
+          "file": "apps/dashboard/.next/static/chunks/polyfills.js",
+          "hash": "8152964857117933876"
+        },
+        {
+          "file": "apps/dashboard/.next/static/chunks/webpack.js",
+          "hash": "12635965756093352972"
+        },
+        {
+          "file": "apps/dashboard/.next/static/css/app/layout.css",
+          "hash": "15194484021518130664"
+        },
+        {
+          "file": "apps/dashboard/.next/static/development/_buildManifest.js",
+          "hash": "13063724784290855366"
+        },
+        {
+          "file": "apps/dashboard/.next/static/development/_ssgManifest.js",
+          "hash": "17018243955171961484"
+        },
+        {
+          "file": "apps/dashboard/.next/static/webpack/633457081244afec._.hot-update.json",
+          "hash": "10481436618516908015"
+        },
+        {
+          "file": "apps/dashboard/.next/trace",
+          "hash": "7831134159993068686"
+        },
+        {
+          "file": "apps/dashboard/.next/types/app/layout.ts",
+          "hash": "17447634258323695836",
           "deps": [
-            "npm:esbuild",
+            "npm:next@15.3.3"
+          ]
+        },
+        {
+          "file": "apps/dashboard/.next/types/app/page.ts",
+          "hash": "11122277193795942222",
+          "deps": [
+            "npm:next@15.3.3"
+          ]
+        },
+        {
+          "file": "apps/dashboard/.next/types/cache-life.d.ts",
+          "hash": "12858368115349027927",
+          "deps": [
+            "npm:next@15.3.3"
+          ]
+        },
+        {
+          "file": "apps/dashboard/.next/types/package.json",
+          "hash": "6094546126370684104"
+        },
+        {
+          "file": "apps/dashboard/next-env.d.ts",
+          "hash": "1320675027584673186"
+        },
+        {
+          "file": "apps/dashboard/next.config.ts",
+          "hash": "9278641756147569869",
+          "deps": [
+            "npm:next@15.3.3"
+          ]
+        },
+        {
+          "file": "apps/dashboard/package.json",
+          "hash": "11992248019191987203",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/react@19.1.6",
+            "npm:@types/react-dom@19.1.5",
+            "npm:autoprefixer",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:tailwindcss-animate",
+            "npm:typescript",
             "core",
-            "npm:chart.js",
-            "npm:chartjs-chart-treemap",
-            "npm:htm",
-            "npm:preact"
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:lucide-react",
+            "npm:next@15.3.3",
+            "npm:next-themes",
+            "npm:react@19.1.0",
+            "npm:react-dom@19.1.0",
+            "npm:tailwind-merge@2.6.1"
           ]
         },
         {
-          "file": "apps/cli/playwright.config.ts",
-          "hash": "14721015047361534482",
+          "file": "apps/dashboard/postcss.config.js",
+          "hash": "8055263870272897227"
+        },
+        {
+          "file": "apps/dashboard/project.json",
+          "hash": "7608702163304610951"
+        },
+        {
+          "file": "apps/dashboard/src/app/globals.css",
+          "hash": "7856256054645479521"
+        },
+        {
+          "file": "apps/dashboard/src/app/layout.tsx",
+          "hash": "11423237641587441538",
           "deps": [
-            "npm:@playwright/test"
+            "npm:next@15.3.3"
           ]
         },
         {
-          "file": "apps/cli/project.json",
-          "hash": "8857364207951609651"
-        },
-        {
-          "file": "apps/cli/src/browser/analyzer-entry.ts",
-          "hash": "16757054120089517867",
+          "file": "apps/dashboard/src/app/page.tsx",
+          "hash": "4211626365593791269",
           "deps": [
-            "core"
+            "npm:lucide-react"
           ]
         },
         {
-          "file": "apps/cli/src/browser/shared-browser.ts",
-          "hash": "6342175780885948836",
+          "file": "apps/dashboard/src/components/Header.tsx",
+          "hash": "505096080211973314"
+        },
+        {
+          "file": "apps/dashboard/src/components/Sparkline.tsx",
+          "hash": "8782014417225867011"
+        },
+        {
+          "file": "apps/dashboard/src/components/StatCard.tsx",
+          "hash": "16356128141171731967",
           "deps": [
-            "npm:chart.js",
-            "npm:chartjs-chart-treemap"
+            "npm:lucide-react"
           ]
         },
         {
-          "file": "apps/cli/src/browser/stub-analyzer-config.ts",
-          "hash": "9084793433004263181",
+          "file": "apps/dashboard/src/components/ThemeProvider.tsx",
+          "hash": "8095891120942119336",
           "deps": [
-            "core"
+            "npm:next-themes"
           ]
         },
         {
-          "file": "apps/cli/src/browser/stub-rule-loader.ts",
-          "hash": "3858579224961018948",
+          "file": "apps/dashboard/src/components/ThemeToggle.tsx",
+          "hash": "7779355337658746983",
           "deps": [
-            "core"
+            "npm:lucide-react",
+            "npm:next-themes"
           ]
         },
         {
-          "file": "apps/cli/src/commands/context-health.test.ts",
-          "hash": "2646164857407066390",
+          "file": "apps/dashboard/src/components/ui/button.tsx",
+          "hash": "1500541850618910277",
           "deps": [
-            "npm:vitest",
-            "core"
+            "npm:react@19.1.0",
+            "npm:class-variance-authority"
           ]
         },
         {
-          "file": "apps/cli/src/commands/context-health.ts",
-          "hash": "12867905869986982270",
+          "file": "apps/dashboard/src/components/ui/card.tsx",
+          "hash": "15005713201845347564",
           "deps": [
-            "core"
+            "npm:react@19.1.0"
           ]
         },
         {
-          "file": "apps/cli/src/commands/scan.ts",
-          "hash": "4143810791604087794",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/commands/skills.test.ts",
-          "hash": "13634929784426219747",
-          "deps": [
-            "npm:vitest",
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/commands/skills.ts",
-          "hash": "12446817482492750344",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/commands/view.test.ts",
-          "hash": "2856661228623152350",
-          "deps": [
-            "npm:vitest",
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/commands/view.ts",
-          "hash": "13571191762001946947",
+          "file": "apps/dashboard/src/lib/mock-data.ts",
+          "hash": "3240441874227512731",
           "deps": [
             "core"
           ]
         },
         {
-          "file": "apps/cli/src/index.ts",
-          "hash": "6734354451575311455"
-        },
-        {
-          "file": "apps/cli/src/render/term.ts",
-          "hash": "15325580727726381955"
-        },
-        {
-          "file": "apps/cli/src/scan.test.ts",
-          "hash": "9390725130270651383",
+          "file": "apps/dashboard/src/lib/utils.ts",
+          "hash": "302961142249979891",
           "deps": [
-            "npm:vitest",
-            "core"
+            "npm:clsx",
+            "npm:tailwind-merge@2.6.1"
           ]
         },
         {
-          "file": "apps/cli/src/webview/app.ts",
-          "hash": "10138353013764249425",
+          "file": "apps/dashboard/src/types/css.d.ts",
+          "hash": "11131433396000736150"
+        },
+        {
+          "file": "apps/dashboard/tailwind.config.ts",
+          "hash": "17661029928591722676",
           "deps": [
-            "core"
+            "npm:tailwindcss-animate",
+            "npm:tailwindcss"
           ]
         },
         {
-          "file": "apps/cli/src/webview/capabilities.ts",
-          "hash": "2229069460841663888"
-        },
-        {
-          "file": "apps/cli/src/webview/dashboard-shell.ts",
-          "hash": "10254390773398948198",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/dsl-cheatsheet.test.ts",
-          "hash": "6821033751917970519",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/dsl-cheatsheet.ts",
-          "hash": "3945222523039887584"
-        },
-        {
-          "file": "apps/cli/src/webview/fetch-utils.test.ts",
-          "hash": "9635200378212895893",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/fetch-utils.ts",
-          "hash": "3027028138202197097"
-        },
-        {
-          "file": "apps/cli/src/webview/html-tag.test.ts",
-          "hash": "10053053743707304551",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/loading-grid-model.test.ts",
-          "hash": "11481921167137507746",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/loading-grid-model.ts",
-          "hash": "13840515601961557365"
-        },
-        {
-          "file": "apps/cli/src/webview/loading-grid-view.test.ts",
-          "hash": "16122765385582272788",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/loading-grid-view.ts",
-          "hash": "4011572923522107150"
-        },
-        {
-          "file": "apps/cli/src/webview/page-achievements.ts",
-          "hash": "10157442328409858988",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-antipatterns-editor.test.ts",
-          "hash": "15646045883665814557",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-antipatterns-editor.ts",
-          "hash": "17253967082796148702",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-antipatterns-heatmap.ts",
-          "hash": "490805247195971295",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-antipatterns.ts",
-          "hash": "15045875863598402445",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-burndown.ts",
-          "hash": "11209884873772953931",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-config.ts",
-          "hash": "16888182622179078114",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-context-mgmt.ts",
-          "hash": "13895890639143308745",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-dashboard.ts",
-          "hash": "7078845624685465509",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-data-explorer.ts",
-          "hash": "12471644091239428553",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-dsl-reference.ts",
-          "hash": "4499627991919198652",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-experiments.ts",
-          "hash": "9866592678885426568",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-image-gallery.test.ts",
-          "hash": "995035373371875252",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-image-gallery.ts",
-          "hash": "6243659854073807137",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-insights.ts",
-          "hash": "7247381382981635353",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-learning-snake.ts",
-          "hash": "15154601861256423822"
-        },
-        {
-          "file": "apps/cli/src/webview/page-learning-state.ts",
-          "hash": "16501858854796809520"
-        },
-        {
-          "file": "apps/cli/src/webview/page-learning-templates.test.ts",
-          "hash": "2423592497542672297",
-          "deps": [
-            "npm:vitest",
-            "npm:preact-render-to-string",
-            "npm:preact"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-learning-templates.ts",
-          "hash": "7471646956935338345"
-        },
-        {
-          "file": "apps/cli/src/webview/page-learning.ts",
-          "hash": "4772858680726854134",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-output.ts",
-          "hash": "10434178412513982809",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-patterns.ts",
-          "hash": "14360731712553960186",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-peers.ts",
-          "hash": "4659965653674022373",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-rule-editor.ts",
-          "hash": "4860707530867407460",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-rule-playground.ts",
-          "hash": "10869049528116382952",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-sdlc.ts",
-          "hash": "7559452871481958546",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-skills.ts",
-          "hash": "14363064601801534803",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-timeline.ts",
-          "hash": "2563331466803744032",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/page-workflows.ts",
-          "hash": "2068294427665603144",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/panel-catalog.ts",
-          "hash": "17882123668447476159",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/render.ts",
-          "hash": "3056421403722567602",
-          "deps": [
-            "npm:preact",
-            "npm:htm"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/shared-progress.test.ts",
-          "hash": "8182245227605983924",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/shared.ts",
-          "hash": "13771526987891108416",
-          "deps": [
-            "npm:chart.js",
-            "npm:chartjs-chart-treemap"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/skill-cache.ts",
-          "hash": "5037526734201429293",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/skipped-banner.test.ts",
-          "hash": "11299926537766292013",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/skipped-banner.ts",
-          "hash": "17561767758622348034"
-        },
-        {
-          "file": "apps/cli/src/webview/styles-learning.css",
-          "hash": "42976113465942660"
-        },
-        {
-          "file": "apps/cli/src/webview/styles-pages.css",
-          "hash": "3563285148162207328"
-        },
-        {
-          "file": "apps/cli/src/webview/styles-skills.css",
-          "hash": "4100511071760148038"
-        },
-        {
-          "file": "apps/cli/src/webview/styles.css",
-          "hash": "13027173801992928276"
-        },
-        {
-          "file": "apps/cli/src/webview/svg-icons.ts",
-          "hash": "5231512647084394315"
-        },
-        {
-          "file": "apps/cli/src/webview/telemetry-strip.test.ts",
-          "hash": "14271204511651026930",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/telemetry-strip.ts",
-          "hash": "12605679389408772360"
-        },
-        {
-          "file": "apps/cli/src/webview/vibe-roles.ts",
-          "hash": "5657753807727187241",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/cli/src/webview/webview-smoke.test.ts",
-          "hash": "11865360127465707833",
-          "deps": [
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/antipatterns.spec.ts",
-          "hash": "615144650930161562",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/burndown.spec.ts",
-          "hash": "6836910677905804120",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/context-mgmt.spec.ts",
-          "hash": "6064350866457844807",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/dashboard.spec.ts",
-          "hash": "14701151286128384153",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/harness.html",
-          "hash": "10669375849743827892"
-        },
-        {
-          "file": "apps/cli/tests/e2e/navigation.spec.ts",
-          "hash": "3541833607752910593",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/output.spec.ts",
-          "hash": "1422011111465347430",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/patterns.spec.ts",
-          "hash": "8264710812027718782",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/telemetry.spec.ts",
-          "hash": "9305529680149825794",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tests/e2e/timeline.spec.ts",
-          "hash": "13931477845299288574",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/cli/tsconfig.json",
-          "hash": "18381080416959339831"
+          "file": "apps/dashboard/tsconfig.json",
+          "hash": "15615867093431096408"
         }
       ],
       "core": [
@@ -6872,334 +7333,6 @@
         {
           "file": "packages/core/tsconfig.json",
           "hash": "3277623467729701730"
-        }
-      ],
-      "dashboard": [
-        {
-          "file": "apps/dashboard/.next/app-build-manifest.json",
-          "hash": "11239511380896646314"
-        },
-        {
-          "file": "apps/dashboard/.next/build-manifest.json",
-          "hash": "5125768831124365349"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/.previewinfo",
-          "hash": "6743338107733518694"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/.rscinfo",
-          "hash": "3709851665351396599"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/.tsbuildinfo",
-          "hash": "4382084976567367877"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/eslint/.cache_1mvr341",
-          "hash": "3249458848175297923"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development-fallback/0.pack.gz",
-          "hash": "15727246567160121471"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development-fallback/index.pack.gz",
-          "hash": "7827986833124900326"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development-fallback/index.pack.gz.old",
-          "hash": "11302558918881392282"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/0.pack.gz",
-          "hash": "8862063933392520012"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/1.pack.gz",
-          "hash": "14502111384531752143"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/2.pack.gz",
-          "hash": "12764638547276063801"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/3.pack.gz",
-          "hash": "14167507724203523166"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/4.pack.gz",
-          "hash": "14344559449880429300"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/index.pack.gz",
-          "hash": "7778743016453593186"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-development/index.pack.gz.old",
-          "hash": "6869249496816648496"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/0.pack",
-          "hash": "16916360579447664530"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/1.pack",
-          "hash": "3749431013094759996"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/2.pack",
-          "hash": "1533097719762817148"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/3.pack",
-          "hash": "3148224119856449139"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/4.pack",
-          "hash": "14969378102644221247"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/5.pack",
-          "hash": "4187515426350517152"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/6.pack",
-          "hash": "16796147948057503161"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/index.pack",
-          "hash": "4448796152538046929"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/client-production/index.pack.old",
-          "hash": "1818653279814054559"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/edge-server-production/0.pack",
-          "hash": "471599872138982288"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/edge-server-production/index.pack",
-          "hash": "11579159778666875852"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-development/0.pack.gz",
-          "hash": "10810194406345067192"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-development/1.pack.gz",
-          "hash": "16076212368737344530"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-development/2.pack.gz",
-          "hash": "17173047416460760014"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-development/3.pack.gz",
-          "hash": "5694780758974631074"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-development/index.pack.gz",
-          "hash": "4480763404501715613"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-development/index.pack.gz.old",
-          "hash": "11021781629013274865"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-production/0.pack",
-          "hash": "15956812752892586677"
-        },
-        {
-          "file": "apps/dashboard/.next/cache/webpack/server-production/index.pack",
-          "hash": "8825825369082682083"
-        },
-        {
-          "file": "apps/dashboard/.next/package.json",
-          "hash": "11338307439248427064"
-        },
-        {
-          "file": "apps/dashboard/.next/react-loadable-manifest.json",
-          "hash": "1389868326933519382"
-        },
-        {
-          "file": "apps/dashboard/.next/server/app-paths-manifest.json",
-          "hash": "6045270427439857966"
-        },
-        {
-          "file": "apps/dashboard/.next/server/app/page.js",
-          "hash": "9004434916613856623",
-          "deps": [
-            [
-              "npm:next@15.3.3",
-              "dynamic"
-            ]
-          ]
-        },
-        {
-          "file": "apps/dashboard/.next/server/app/page_client-reference-manifest.js",
-          "hash": "5840453218264808350"
-        },
-        {
-          "file": "apps/dashboard/.next/server/interception-route-rewrite-manifest.js",
-          "hash": "10484309360224763022"
-        },
-        {
-          "file": "apps/dashboard/.next/server/middleware-build-manifest.js",
-          "hash": "10146558356613894909"
-        },
-        {
-          "file": "apps/dashboard/.next/server/middleware-manifest.json",
-          "hash": "9889576824779923310"
-        },
-        {
-          "file": "apps/dashboard/.next/server/middleware-react-loadable-manifest.js",
-          "hash": "9185069726031651908"
-        },
-        {
-          "file": "apps/dashboard/.next/server/next-font-manifest.js",
-          "hash": "16541577805185552134"
-        },
-        {
-          "file": "apps/dashboard/.next/server/next-font-manifest.json",
-          "hash": "11891788324563068681"
-        },
-        {
-          "file": "apps/dashboard/.next/server/pages-manifest.json",
-          "hash": "1389868326933519382"
-        },
-        {
-          "file": "apps/dashboard/.next/server/server-reference-manifest.js",
-          "hash": "13062913855343812063"
-        },
-        {
-          "file": "apps/dashboard/.next/server/server-reference-manifest.json",
-          "hash": "18276207531467032239"
-        },
-        {
-          "file": "apps/dashboard/.next/server/vendor-chunks/@swc+helpers@0.5.15.js",
-          "hash": "14722863788598501843"
-        },
-        {
-          "file": "apps/dashboard/.next/server/vendor-chunks/next@15.3.3_@babel+core@7.29.7_@playwright+test@1.61.0_react-dom@19.1.0_react@19.1.0__react@19.1.0_sass@1.101.0.js",
-          "hash": "6485859861763296929"
-        },
-        {
-          "file": "apps/dashboard/.next/server/webpack-runtime.js",
-          "hash": "1227718318027734687"
-        },
-        {
-          "file": "apps/dashboard/.next/static/chunks/app-pages-internals.js",
-          "hash": "10637581937158255490"
-        },
-        {
-          "file": "apps/dashboard/.next/static/chunks/app/layout.js",
-          "hash": "8104243578016372066"
-        },
-        {
-          "file": "apps/dashboard/.next/static/chunks/app/page.js",
-          "hash": "7386702842847511258"
-        },
-        {
-          "file": "apps/dashboard/.next/static/chunks/main-app.js",
-          "hash": "13828521787969692795"
-        },
-        {
-          "file": "apps/dashboard/.next/static/chunks/polyfills.js",
-          "hash": "8152964857117933876"
-        },
-        {
-          "file": "apps/dashboard/.next/static/chunks/webpack.js",
-          "hash": "8822357673432170455"
-        },
-        {
-          "file": "apps/dashboard/.next/static/development/_buildManifest.js",
-          "hash": "13063724784290855366"
-        },
-        {
-          "file": "apps/dashboard/.next/static/development/_ssgManifest.js",
-          "hash": "17018243955171961484"
-        },
-        {
-          "file": "apps/dashboard/.next/static/webpack/633457081244afec._.hot-update.json",
-          "hash": "10481436618516908015"
-        },
-        {
-          "file": "apps/dashboard/.next/trace",
-          "hash": "7751539537278886958"
-        },
-        {
-          "file": "apps/dashboard/.next/types/app/layout.ts",
-          "hash": "10942116676153320066",
-          "deps": [
-            "npm:next@15.3.3"
-          ]
-        },
-        {
-          "file": "apps/dashboard/.next/types/app/page.ts",
-          "hash": "955924350358481823",
-          "deps": [
-            "npm:next@15.3.3"
-          ]
-        },
-        {
-          "file": "apps/dashboard/.next/types/cache-life.d.ts",
-          "hash": "12858368115349027927",
-          "deps": [
-            "npm:next@15.3.3"
-          ]
-        },
-        {
-          "file": "apps/dashboard/.next/types/package.json",
-          "hash": "6094546126370684104"
-        },
-        {
-          "file": "apps/dashboard/next-env.d.ts",
-          "hash": "1320675027584673186"
-        },
-        {
-          "file": "apps/dashboard/next.config.ts",
-          "hash": "9278641756147569869",
-          "deps": [
-            "npm:next@15.3.3"
-          ]
-        },
-        {
-          "file": "apps/dashboard/package.json",
-          "hash": "2526447814777993964",
-          "deps": [
-            "npm:@types/node",
-            "npm:@types/react@19.1.6",
-            "npm:@types/react-dom@19.1.5",
-            "npm:typescript",
-            "core",
-            "npm:next@15.3.3",
-            "npm:react@19.1.0",
-            "npm:react-dom@19.1.0"
-          ]
-        },
-        {
-          "file": "apps/dashboard/project.json",
-          "hash": "7608702163304610951"
-        },
-        {
-          "file": "apps/dashboard/src/app/layout.tsx",
-          "hash": "298500817201135247",
-          "deps": [
-            "npm:next@15.3.3"
-          ]
-        },
-        {
-          "file": "apps/dashboard/src/app/page.tsx",
-          "hash": "13722265699024077526",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/dashboard/tsconfig.json",
-          "hash": "15615867093431096408"
         }
       ]
     }

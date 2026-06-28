@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx dev cruxai-hire",
-    "startTime": "2026-06-28T07:13:09.207Z",
-    "endTime": "2026-06-28T07:13:28.412Z",
+    "command": "nx run dashboard:dev",
+    "startTime": "2026-06-28T07:29:48.929Z",
+    "endTime": "2026-06-28T07:30:38.184Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "cruxai-hire:dev",
+      "taskId": "dashboard:dev",
       "target": "dev",
-      "projectName": "cruxai-hire",
-      "hash": "6323966672192589820",
-      "startTime": "2026-06-28T07:13:09.262Z",
-      "endTime": "2026-06-28T07:13:28.410Z",
+      "projectName": "dashboard",
+      "hash": "3280081894387518069",
+      "startTime": "2026-06-28T07:29:48.984Z",
+      "endTime": "2026-06-28T07:30:38.183Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1
