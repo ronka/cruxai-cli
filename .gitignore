@@ -24,3 +24,7 @@ test-results/
 # Generated scan reports (contain a verbatim mirror of session logs)
 crux-report/
 *-report/
+
+# nx
+.nx/cache
+.nx/workspace-data
