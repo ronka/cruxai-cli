@@ -1,27 +1,43 @@
 {
   "$schema": "https://unpkg.com/knip@latest/schema.json",
-  "entry": [
-    "src/webview/app.ts",
-    "src/core/warm-up-worker.ts",
-    "src/core/parse-worker.ts",
-    "src/core/cache-write-worker.ts",
-    "src/core/parser.bench.ts",
-    "src/cli/index.ts",
-    "src/cli/browser/analyzer-entry.ts",
-    "src/cli/browser/shared-browser.ts",
-    "src/cli/browser/stub-analyzer-config.ts",
-    "src/cli/browser/stub-rule-loader.ts"
-  ],
-  "project": ["src/**/*.ts"],
-  "ignore": [
-    "src/webview/page-insights.ts",
-    "src/webview/page-rule-editor.ts",
-    "src/webview/page-workflows.ts",
-    "src/webview/vibe-roles.ts",
-    "src/spike-browser-analyzer.ts"
-  ],
-  "ignoreDependencies": ["lint-staged", "serve"],
+  "workspaces": {
+    "packages/core": {
+      "entry": [
+        "src/warm-up-worker.ts",
+        "src/parse-worker.ts",
+        "src/cache-write-worker.ts"
+      ],
+      "project": ["src/**/*.ts"]
+    },
+    "apps/cli": {
+      "entry": [
+        "src/webview/app.ts",
+        "src/index.ts",
+        "src/browser/analyzer-entry.ts",
+        "src/browser/shared-browser.ts",
+        "src/browser/stub-analyzer-config.ts",
+        "src/browser/stub-rule-loader.ts"
+      ],
+      "project": ["src/**/*.ts"],
+      "ignore": [
+        "src/webview/page-insights.ts",
+        "src/webview/page-rule-editor.ts",
+        "src/webview/page-workflows.ts",
+        "src/webview/vibe-roles.ts"
+      ]
+    },
+    "apps/dashboard": {
+      "entry": ["src/app/**/*.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    ".": {
+      "entry": ["scripts/**/*.{ts,mjs}"],
+      "project": ["scripts/**/*.{ts,mjs}"]
+    }
+  },
+  "ignoreDependencies": ["lint-staged", "serve", "@nx/next", "@nx/eslint", "esbuild"],
   "ignoreBinaries": ["tsx", "sqlite3", "open", "xdg-open"],
+  "ignore": [],
   "rules": {
     "exports": "off",
     "types": "off",

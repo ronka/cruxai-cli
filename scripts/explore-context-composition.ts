@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { findLogsDirs, parseAllLogs } from '../src/core/parser';
+import { findLogsDirs, parseAllLogs } from '../packages/core/src/parser';
 
 const dirs = findLogsDirs();
 const { sessions } = parseAllLogs(dirs);

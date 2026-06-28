@@ -19,43 +19,56 @@ If you're a human, [`README.md`](README.md) is the better starting point.
 ## Tech stack
 
 - **Node** ≥ 20 (CI uses Node 22)
+- **Package manager** pnpm 10 (workspaces: `apps/*`, `packages/*`)
+- **Monorepo** Nx 23 (`pnpm nx run-many -t build test lint`)
 - **TypeScript** 6.0.3, strict mode
-- **Bundler** esbuild (`esbuild.mjs`) — CLI → `dist/cli.cjs`; offline scan report → `dist/scan/`
+- **Bundler** esbuild (`apps/cli/esbuild.mjs`) — CLI → `apps/cli/dist/cli.cjs`; offline scan report → `apps/cli/dist/scan/`
 - **Tests** vitest (unit + inline rule tests), Playwright (e2e for the webview bundle)
-- **Lint** eslint
+- **Lint** eslint with `@nx/enforce-module-boundaries`
 - **Docs site** Hugo (sources in `docs/content/`)
 
 ## Repository map
 
 ```
 cruxai-cli/
-├── bin/
-│   └── run.js                  # CLI entry point (requires dist/cli.cjs)
-├── src/
-│   ├── cli/                    # oclif-style CLI: index.ts + commands/*
-│   │   ├── index.ts            # Command router
-│   │   ├── commands/           # scan, view, context-health, skills
-│   │   ├── browser/            # Browser bundle: Analyzer + local RPC for scan reports
-│   │   └── render/             # Terminal rendering helpers (tables, sparklines, color)
-│   ├── core/                   # Parsers, analyzers, the rule engine
-│   │   ├── analyzer.ts         # Top-level coordinator across analyzer-*.ts
-│   │   ├── parser.ts           # Reads session logs from disk
-│   │   ├── parse-worker.ts     # Worker thread: logsDirs → progress + result/error
-│   │   ├── warm-up-worker.ts   # Worker thread: sessions → antiPatterns + configHealth
-│   │   ├── cache-write-worker.ts # Worker thread: persists cache payload
-│   │   ├── metric-engine.ts    # DSL evaluator for rules and metrics
-│   │   ├── rule-loader.ts      # Loads built-in + personal + project rule layers
-│   │   ├── rule-trust.ts       # Trust gate (pending → review → approve → reload)
-│   │   ├── rules/<id>.md        # 45+ built-in detection rules (markdown + DSL)
-│   │   └── metrics/<id>.metric.md # Built-in metrics referenced by rules
-│   └── webview/                # Dashboard UI: app.ts plus page-*.ts per route
+├── apps/
+│   ├── cli/                    # Published CLI app (@crux/cli)
+│   │   ├── bin/run.js          # Entry point (requires dist/cli.cjs)
+│   │   ├── src/
+│   │   │   ├── index.ts        # Command router
+│   │   │   ├── commands/       # scan, view, context-health, skills
+│   │   │   ├── browser/        # Browser bundle: Analyzer + local RPC for scan reports
+│   │   │   ├── render/         # Terminal rendering helpers (tables, sparklines, color)
+│   │   │   └── webview/        # Dashboard UI: app.ts plus page-*.ts per route
+│   │   ├── esbuild.mjs         # 7-bundle custom bundler
+│   │   └── project.json        # Nx build/test/lint/e2e targets
+│   └── dashboard/              # Next.js dashboard app (@crux/dashboard)
+│       ├── src/app/            # Next.js App Router pages
+│       └── project.json        # Nx build/dev/lint targets
+├── packages/
+│   └── core/                   # Shared analysis engine (@crux/core, private)
+│       ├── src/
+│       │   ├── index.ts        # Public browser-safe surface
+│       │   ├── analyzer.ts     # Top-level coordinator across analyzer-*.ts
+│       │   ├── parser.ts       # Reads session logs from disk
+│       │   ├── parse-worker.ts # Worker thread: logsDirs → progress + result/error
+│       │   ├── warm-up-worker.ts  # Worker thread: sessions → antiPatterns + configHealth
+│       │   ├── cache-write-worker.ts # Worker thread: persists cache payload
+│       │   ├── metric-engine.ts   # DSL evaluator for rules and metrics
+│       │   ├── rule-loader.ts     # Loads built-in + personal + project rule layers
+│       │   ├── rule-trust.ts      # Trust gate (pending → review → approve → reload)
+│       │   ├── rules/<id>.md      # 45+ built-in detection rules (markdown + DSL)
+│       │   └── metrics/<id>.metric.md # Built-in metrics referenced by rules
+│       └── project.json        # Nx test/lint/typecheck targets
+├── tsconfig.base.json          # Shared TS config; defines @crux/core path alias
+├── pnpm-workspace.yaml         # Workspace package globs
+├── nx.json                     # Nx cache + plugin config
 ├── docs/
 │   ├── content/                # Hugo source
 │   ├── AUTHORING_RULES.md      # How to author a rule or metric (DSL + tests)
 │   └── hugo.toml
 ├── scripts/                    # Data inventory and analysis tools
 ├── skills/                     # Reusable instructions for recurring agentic tasks
-├── tests/e2e/                  # Playwright end-to-end tests
 └── AGENTS.md                   # You are here
 ```
 
@@ -63,24 +76,26 @@ cruxai-cli/
 
 | Task | Command |
 |---|---|
-| Install dependencies | `npm ci` |
-| Build the CLI + scan bundle | `npm run build` |
-| Watch-mode rebuild | `npm run watch` |
-| Type-check | `npm run typecheck` |
-| Lint | `npm run lint` |
-| Spellcheck markdown + TS | `npm run spellcheck` |
-| Unit tests (vitest) | `npm test` |
-| All checks (CI gate) | `npm run check` |
-| End-to-end (Playwright) | `npm run test:e2e` |
-| Bundle-size budget | `npm run check-size` |
+| Install dependencies | `pnpm install` |
+| Build the CLI + scan bundle | `pnpm nx build cli` |
+| Build all projects | `pnpm nx run-many -t build` |
+| Watch-mode rebuild | `pnpm nx run cli:watch` |
+| Type-check | `pnpm typecheck` |
+| Lint | `pnpm lint` |
+| Spellcheck markdown + TS | `pnpm spellcheck` |
+| Unit tests (vitest) | `pnpm test` |
+| All checks (CI gate) | `pnpm check` |
+| Lint/test/build all projects | `pnpm nx run-many -t lint test build` |
+| End-to-end (Playwright) | `pnpm nx run cli:e2e` |
+| Bundle-size budget | `pnpm check-size` |
 
-CI runs `npm run check` (typecheck + lint + spellcheck + knip + lockfile-lint + test) plus the
-size check on every PR. Run those locally before pushing.
+CI runs `pnpm check` (typecheck + lint + spellcheck + knip + test) plus
+`nx affected -t build` on every PR. Run those locally before pushing.
 
 ## crux CLI
 
-Build with `npm run build` (output: `dist/cli.cjs`), then run via `npm link` + `crux <command>`
-or `node ./bin/run <command>`.
+Build with `pnpm nx build cli` (output: `apps/cli/dist/cli.cjs`), then run via `pnpm link` + `crux <command>`
+or `node ./apps/cli/bin/run <command>`.
 
 | Command | Description |
 |---------|-------------|
@@ -129,22 +144,32 @@ Available today:
 Detection rules and metrics are the primary extensibility surface — markdown files with YAML
 front matter and a small DSL, no code changes required.
 
-- Built-in rules: [`src/core/rules/<id>.md`](src/core/rules/) (45+ today)
-- Built-in metrics: [`src/core/metrics/<id>.metric.md`](src/core/metrics/)
+- Built-in rules: [`packages/core/src/rules/<id>.md`](packages/core/src/rules/) (45+ today)
+- Built-in metrics: [`packages/core/src/metrics/<id>.metric.md`](packages/core/src/metrics/)
 - Authoring guide with annotated examples: [`docs/AUTHORING_RULES.md`](docs/AUTHORING_RULES.md)
 - Trust layers (built-in / personal / project) gated through
-  [`src/core/rule-trust.ts`](src/core/rule-trust.ts)
+  [`packages/core/src/rule-trust.ts`](packages/core/src/rule-trust.ts)
 
-Rules ship with inline `# Tests` blocks that run as part of `npm test`.
+Rules ship with inline `# Tests` blocks that run as part of `pnpm test`.
 
 ## Workers
 
 Heavy lifting can happen off the main thread, with a synchronous fallback when a worker is
 unavailable:
 
-- [`src/core/parse-worker.ts`](src/core/parse-worker.ts) — `logsDirs` → `progress` + `result`/`error`.
-- [`src/core/warm-up-worker.ts`](src/core/warm-up-worker.ts) — `sessions` → `antiPatterns` + `configHealth`.
-- [`src/core/cache-write-worker.ts`](src/core/cache-write-worker.ts) — persists the cache payload.
+- [`packages/core/src/parse-worker.ts`](packages/core/src/parse-worker.ts) — `logsDirs` → `progress` + `result`/`error`.
+- [`packages/core/src/warm-up-worker.ts`](packages/core/src/warm-up-worker.ts) — `sessions` → `antiPatterns` + `configHealth`.
+- [`packages/core/src/cache-write-worker.ts`](packages/core/src/cache-write-worker.ts) — persists the cache payload.
+
+## Module boundaries
+
+Nx enforces cross-package import rules via ESLint `@nx/enforce-module-boundaries`:
+
+- `scope:shared` (`@crux/core`) — may only depend on other `scope:shared` packages
+- `scope:cli` (`@crux/cli`) — may depend on `scope:shared`; cannot import `scope:dashboard`
+- `scope:dashboard` (`@crux/dashboard`) — may depend on `scope:shared`; cannot import `scope:cli`
+
+A violation fails `pnpm lint`.
 
 ## Local rule trust flow
 
@@ -178,7 +203,7 @@ body and an optional `# Tests` block. See [`docs/AUTHORING_RULES.md`](docs/AUTHO
 - Branch from `main`: `feat/<scope>`, `fix/<scope>`, `docs/<scope>`, `chore/<scope>`.
 - Commits use Conventional Commits prefixes (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`,
   `test:`).
-- Run `npm run check` (and `npm run test:e2e` if you touched the webview) before pushing.
+- Run `pnpm check` (and `pnpm nx run cli:e2e` if you touched the webview) before pushing.
 
 ## Conventions
 
@@ -194,13 +219,13 @@ body and an optional `# Tests` block. See [`docs/AUTHORING_RULES.md`](docs/AUTHO
 
 ✅ **Always:**
 
-- Run `npm run check` before declaring work complete.
+- Run `pnpm check` before declaring work complete.
 - Add or update inline `# Tests` blocks when changing rule or metric behavior.
 - Use repo-relative markdown links so they resolve on GitHub and in the published Hugo site.
 
 ⚠️ **Ask first:**
 
-- Adding a runtime dependency (bundle-size budget enforced by `npm run check-size`).
+- Adding a runtime dependency (bundle-size budget enforced by `pnpm check-size`).
 - Introducing a network call from a core analysis path.
 - Changing the rule trust flow (`pending → review → approve → reload`) or the DSL surface.
 - Renaming public commands or flags (breaks user scripts).
@@ -212,4 +237,4 @@ body and an optional `# Tests` block. See [`docs/AUTHORING_RULES.md`](docs/AUTHO
 - Modify files under the user's session-log directories — crux is strictly read-only with
   respect to user data.
 - Add telemetry, analytics, or remote logging.
-- Skip hooks (`--no-verify`) or push with failing `npm run check`.
+- Skip hooks (`--no-verify`) or push with failing `pnpm check`.

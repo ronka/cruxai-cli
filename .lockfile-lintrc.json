@@ -1,6 +1,6 @@
 {
-  "path": "package-lock.json",
-  "type": "npm",
+  "path": "pnpm-lock.yaml",
+  "type": "pnpm",
   "allowedHosts": ["npm"],
   "allowedSchemes": ["https:"],
   "allowEmpty": false,

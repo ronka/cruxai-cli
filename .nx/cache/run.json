@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run dashboard:dev",
+    "startTime": "2026-06-28T06:57:38.801Z",
+    "endTime": "2026-06-28T06:58:01.995Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "dashboard:dev",
+      "target": "dev",
+      "projectName": "dashboard",
+      "hash": "5396951000319822341",
+      "startTime": "2026-06-28T06:57:38.854Z",
+      "endTime": "2026-06-28T06:58:01.992Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

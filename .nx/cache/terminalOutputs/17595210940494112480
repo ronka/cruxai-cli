@@ -1,0 +1,11 @@
+> pnpm vitest run apps/cli/src
+
+
+ RUN  v4.1.9 /Users/ronkantor/Projects/crux-cli
+
+
+ Test Files  16 passed (16)
+      Tests  132 passed (132)
+   Start at  08:53:23
+   Duration  2.07s (transform 4.04s, setup 0ms, import 5.36s, tests 1.15s, environment 6.72s)
+

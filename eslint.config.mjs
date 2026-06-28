@@ -8,12 +8,15 @@ import tseslint from "typescript-eslint";
 import noUnsanitized from "eslint-plugin-no-unsanitized";
 import importX from "eslint-plugin-import-x";
 import unicorn from "eslint-plugin-unicorn";
+import nxPlugin from "@nx/eslint-plugin";
+
+const TYPED_FILES = ["apps/cli/src/**/*.ts", "packages/core/src/**/*.ts"];
 
 export default tseslint.config(
   eslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
   {
-    files: ["src/**/*.ts"],
+    files: TYPED_FILES,
+    extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -83,6 +86,26 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ["dist/", "node_modules/", "**/*.mjs", "tests/"],
+    files: ["apps/dashboard/src/**/*.{ts,tsx}"],
+    extends: [...tseslint.configs.recommended],
+    rules: {
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+    },
+  },
+  {
+    plugins: { "@nx": nxPlugin },
+    rules: {
+      "@nx/enforce-module-boundaries": ["error", {
+        enforceBuildableLibDependency: false,
+        depConstraints: [
+          { sourceTag: "scope:shared", onlyDependOnLibsWithTags: ["scope:shared"] },
+          { sourceTag: "scope:cli", onlyDependOnLibsWithTags: ["scope:shared", "scope:cli"] },
+          { sourceTag: "scope:dashboard", onlyDependOnLibsWithTags: ["scope:shared", "scope:dashboard"] },
+        ],
+      }],
+    },
+  },
+  {
+    ignores: ["dist/", "node_modules/", "**/*.mjs", "apps/cli/tests/", "apps/*/dist/", ".next/"],
   }
 );

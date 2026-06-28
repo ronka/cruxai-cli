@@ -10,8 +10,8 @@
  * Run: npx tsx scripts/e2e-real-data.ts
  */
 
-import { findLogsDirs, parseAllLogs } from '../src/core/parser';
-import { Analyzer } from '../src/core/analyzer';
+import { findLogsDirs, parseAllLogs } from '../packages/core/src/parser';
+import { Analyzer } from '../packages/core/src/analyzer';
 
 let failures = 0;
 let passes = 0;

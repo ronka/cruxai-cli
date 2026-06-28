@@ -10,8 +10,12 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": false,
     "noEmit": true,
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@crux/core": ["./packages/core/src/index.ts"],
+      "@crux/core/*": ["./packages/core/src/*"]
+    }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["apps/cli/src/**/*.ts", "packages/core/src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

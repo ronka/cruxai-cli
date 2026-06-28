@@ -1,31 +1,34 @@
-# Contributing to AI Engineer Coach
+# Contributing to crux
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This project welcomes contributions and suggestions.
 
 ## How to Contribute
 
 1. **Fork** the repository and create your branch from `main`.
-2. **Install dependencies**: `npm install`
-3. **Build**: `npm run build`
-4. **Run tests**: `npm test`
-5. **Lint**: `npm run lint`
+2. **Install dependencies**: `pnpm install`
+3. **Build the CLI**: `pnpm nx build cli`
+4. **Run tests**: `pnpm test`
+5. **Lint + typecheck + spellcheck + knip**: `pnpm check`
 6. If you've added code, add tests that cover your changes.
 7. Ensure the test suite passes and linting is clean.
 8. Submit a **pull request**.
 
+### Monorepo structure
+
+```
+apps/cli/       → @crux/cli — published CLI (esbuild, Preact webview)
+apps/dashboard/ → @crux/dashboard — Next.js dashboard (work in progress)
+packages/core/  → @crux/core — shared analysis engine (private package)
+```
+
+Nx manages cross-project builds: `pnpm nx run-many -t lint test build`.
+Module boundaries are enforced by ESLint (`@nx/enforce-module-boundaries`):
+`apps/dashboard` cannot import from `apps/cli` and vice-versa;
+both may depend on `packages/core`.
+
 ## Reporting Issues
 
-Please use [GitHub Issues](https://github.com/microsoft/ai-engineer-coach/issues) to report bugs or
+Please use [GitHub Issues](https://github.com/ronka/cruxai-cli/issues) to report bugs or
 request features. Before filing a new issue, please check if one already exists.
 
 ## Security
@@ -35,10 +38,10 @@ If you discover a security vulnerability, please follow the instructions in [SEC
 
 ## Creating Rules and Metrics
 
-Detection rules and metrics are the primary extensibility surface of AI Engineer Coach. Each one is
+Detection rules and metrics are the primary extensibility surface of crux. Each one is
 a self-contained markdown file with YAML frontmatter and a small DSL — no code changes required to
-ship a new one. Built-in rules live in [`src/core/rules/`](src/core/rules/) and metrics in
-[`src/core/metrics/`](src/core/metrics/).
+ship a new one. Built-in rules live in [`packages/core/src/rules/`](packages/core/src/rules/) and metrics in
+[`packages/core/src/metrics/`](packages/core/src/metrics/).
 
 See [docs/AUTHORING_RULES.md](docs/AUTHORING_RULES.md) for the full authoring guide: file format,
 annotated rule and metric examples, the local testing workflow, and links to the DSL reference.

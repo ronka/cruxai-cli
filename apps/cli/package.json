@@ -1,0 +1,56 @@
+{
+  "name": "@crux/cli",
+  "description": "Analyze your AI coding assistant usage across Claude, Codex, OpenCode, and more — a local-first CLI that turns your session logs into an offline dashboard and terminal reports. Read-only, zero telemetry.",
+  "version": "0.1.1",
+  "author": {
+    "name": "Ron Kantor"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronka/cruxai-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ronka/cruxai-cli/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cli",
+    "crux",
+    "ai",
+    "analytics",
+    "harness",
+    "claude",
+    "codex",
+    "opencode",
+    "productivity"
+  ],
+  "bin": {
+    "crux": "./bin/run.js"
+  },
+  "main": "./dist/cli.cjs",
+  "files": [
+    "bin",
+    "dist",
+    "!dist/**/*.map"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch"
+  },
+  "dependencies": {
+    "@crux/core": "workspace:*",
+    "chart.js": "4.5.1",
+    "chartjs-chart-treemap": "3.1.0",
+    "htm": "3.1.1",
+    "preact": "10.29.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1"
+  }
+}

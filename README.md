@@ -42,20 +42,20 @@ insights — no data leaves your machine, no telemetry, read-only.
 
 crux is not yet published to npm. Build it from source and link the local binary.
 
-Prerequisites: Node.js 20+ and npm.
+Prerequisites: Node.js 20+ and pnpm 10.
 
 ```bash
 git clone https://github.com/ronka/cruxai-cli.git
 cd cruxai-cli
-npm ci
-npm run build
-npm link        # makes `crux` available on your PATH
+pnpm install
+pnpm nx build cli
+cd apps/cli && pnpm link --global   # makes `crux` available on your PATH
 ```
 
 Or run it without linking:
 
 ```bash
-node ./bin/run <command>
+node ./apps/cli/bin/run <command>
 ```
 
 ---

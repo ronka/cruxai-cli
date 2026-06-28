@@ -15,9 +15,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fork } from 'child_process';
-import { findLogsDirs } from '../src/core/parser';
-import { Analyzer } from '../src/core/analyzer';
-import { stripSessionsForMemory } from '../src/core/cache';
+import { findLogsDirs } from '../packages/core/src/parser';
+import { Analyzer } from '../packages/core/src/analyzer';
+import { stripSessionsForMemory } from '../packages/core/src/cache';
 
 function mb(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
@@ -39,7 +39,7 @@ function clearParseCache(): void {
 type WorkerPayload = {
   result: {
     workspaces: Array<[string, { id: string; name: string; path: string }]>;
-    sessions: import('../src/core/types').Session[];
+    sessions: import('../packages/core/src/types').Session[];
     editLocIndex: Array<[string, Array<[string, number]>]>;
   };
 };
@@ -55,7 +55,7 @@ function runChildParse(label: string, logsDirs: string[]): Promise<WorkerPayload
     let lastLogged = 0;
 
     // Accumulators for the chunked IPC protocol (issue #106, S1).
-    const sessions: import('../src/core/types').Session[] = [];
+    const sessions: import('../packages/core/src/types').Session[] = [];
     const editLocEntries: Array<[string, Array<[string, number]>]> = [];
     let workspaces: Array<[string, { id: string; name: string; path: string }]> = [];
 
@@ -63,7 +63,7 @@ function runChildParse(label: string, logsDirs: string[]): Promise<WorkerPayload
       type: string;
       progress?: { detail?: string };
       payload?: {
-        sessions?: import('../src/core/types').Session[];
+        sessions?: import('../packages/core/src/types').Session[];
         editLocEntries?: Array<[string, Array<[string, number]>]>;
         workspaces?: Array<[string, { id: string; name: string; path: string }]>;
         orphanEditLoc?: Array<[string, Array<[string, number]>]>;

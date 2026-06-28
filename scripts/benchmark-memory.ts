@@ -12,10 +12,10 @@
  * and the effect of stripSessionsForMemory.
  */
 
-import { parseAllLogsAsync, findLogsDirs } from '../src/core/parser';
-import { stripSessionsForMemory } from '../src/core/cache';
-import { Analyzer } from '../src/core/analyzer';
-import type { Session, SessionRequest } from '../src/core/types/session-types';
+import { parseAllLogsAsync, findLogsDirs } from '../packages/core/src/parser';
+import { stripSessionsForMemory } from '../packages/core/src/cache';
+import { Analyzer } from '../packages/core/src/analyzer';
+import type { Session, SessionRequest } from '../packages/core/src/types/session-types';
 
 function mb(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;

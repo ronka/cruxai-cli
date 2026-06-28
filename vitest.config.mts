@@ -4,17 +4,27 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { defineConfig } from 'vitest/config';
+import path from 'node:path';
+
+const CORE_SRC = path.resolve('./packages/core/src');
 
 export default defineConfig({
+  resolve: {
+    alias: [
+      { find: /^@crux\/core\/(.+)$/, replacement: `${CORE_SRC}/$1` },
+      { find: '@crux/core', replacement: `${CORE_SRC}/index.ts` },
+    ],
+  },
   test: {
-    include: ['src/**/*.test.ts'],
+    include: ['apps/cli/src/**/*.test.ts', 'packages/core/src/**/*.test.ts'],
     environment: 'node',
     testTimeout: 15_000,
     coverage: {
       provider: 'v8',
-      include: ['src/core/**/*.ts'],
+      include: ['packages/core/src/**/*.ts'],
       exclude: [
-        'src/**/*.test.ts',
+        'apps/cli/src/**/*.test.ts',
+        'packages/core/src/**/*.test.ts',
         'src/webview/**',
         'src/extension.ts',
       ],
