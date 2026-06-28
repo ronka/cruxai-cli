@@ -1,0 +1,45 @@
+{
+  "name": "cruxai-hire",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cruxai-hire/src",
+  "projectType": "application",
+  "tags": ["scope:cruxai-hire", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm next build --webpack",
+        "cwd": "apps/cruxai-hire"
+      },
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm next dev",
+        "cwd": "apps/cruxai-hire"
+      }
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm next start",
+        "cwd": "apps/cruxai-hire"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm eslint .",
+        "cwd": "apps/cruxai-hire"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm vitest run",
+        "cwd": "apps/cruxai-hire"
+      }
+    }
+  }
+}

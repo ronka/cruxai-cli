@@ -23226,3 +23226,1754 @@ DEBUG nx::native::watch::watcher: watching stopped origin=/Users/ronkantor/Proje
 [NX v23.0.1 Daemon Server] - 2026-06-28T06:59:00.760Z - [WATCHER]: Stopping the watcher for /Users/ronkantor/Projects/crux-cli (outputs)
 [NX v23.0.1 Daemon Server] - 2026-06-28T06:59:00.760Z - [LATEST-NX]: Cleaning up latest Nx installation from /private/tmp/tmp-52645-jkkAPSjG1e3N
 [NX v23.0.1 Daemon Server] - 2026-06-28T06:59:00.761Z - Server stopped because: "this process is no longer the current daemon (native)"
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:22.969Z - [Client] Starting new daemon server in background
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:22.972Z - [Client] Waiting for server (max: 6000 attempts, 10ms interval)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.608Z - New daemon starting from: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/daemon/server/server.js
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.608Z - New daemon __dirname: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/daemon/server
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.609Z - New daemon nxVersion: 23.0.1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.609Z - New daemon getInstalledNxVersion(): 23.0.1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.610Z - Time taken for 'workspace context init' 4.941000000000031ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.612Z - [Server] Starting outdated check interval (20ms)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.613Z - Started listening on: /private/tmp/98dca8228fd7f5ef90b7/d.sock
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.619Z - [Client] Server available
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.619Z - [Client] Daemon server started, pid=99435
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.619Z - [Messenger] Setting up socket listeners
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.619Z - [Messenger] listen() complete
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.643Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.643Z - [Messenger] Message sent
+DEBUG nx::native::watch::watcher: watching started origin=/Users/ronkantor/Projects/crux-mono
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.652Z - [WATCHER]: Subscribed to changes within: /Users/ronkantor/Projects/crux-mono (native)
+DEBUG nx::native::watch::watcher: watching started origin=/Users/ronkantor/Projects/crux-mono
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.656Z - [LATEST-NX]: Pulling latest Nx...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.659Z - [AI-AGENTS]: Starting agent configuration status computation
+[isolated-plugin] spawned worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 99442, socket: /private/tmp/plugin99435-0-669.995167.sock)
+[isolated-plugin] spawned worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 99443, socket: /private/tmp/plugin99435-1-671.370292.sock)
+[isolated-plugin] spawned worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 99444, socket: /private/tmp/plugin99435-2-674.022125.sock)
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 99445, socket: /private/tmp/plugin99435-3-674.938292.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.667Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.667Z - Established a connection. Number of open connections: 2
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.668Z - Closed a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.668Z - Received raw message of length 5175
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.668Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.668Z - [REQUEST]: Client Request for Project Graph Received
+DEBUG nx::native::watch::watcher: force-flush END count=0 replies=1 elapsed=9.833458ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.679Z - Reusing in-memory cached project graph because no files changed.
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 99443) listening on /private/tmp/plugin99435-1-671.370292.sock
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 99442) listening on /private/tmp/plugin99435-0-669.995167.sock
+Time taken for 'plugin worker 99443 code loading' 76.927917ms
+Time taken for 'plugin worker 99442 code loading' 77.351541ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 99444) listening on /private/tmp/plugin99435-2-674.022125.sock
+[plugin-worker] "@nx/js/typescript" (pid: 99445) listening on /private/tmp/plugin99435-3-674.938292.sock
+Time taken for 'plugin worker 99444 code loading' 75.938542ms
+Time taken for 'plugin worker 99445 code loading' 76.09991699999999ms
+[isolated-plugin] connected to worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 99442)
+[isolated-plugin] connected to worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 99443)
+[isolated-plugin] connected to worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 99444)
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 99445)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.781Z - Time taken for 'start-plugin-worker:/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js' 120.02704199999994ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.781Z - Time taken for 'start-plugin-worker:/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json' 119.16391699999997ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.781Z - Time taken for 'start-plugin-worker:/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json' 116.63758399999995ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.781Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 115.80991700000004ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 99442) connected
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 99443) connected
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 99444) connected
+[plugin-worker] "@nx/js/typescript" (pid: 99445) connected
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 99444) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.836Z - Time taken for 'Load Nx Plugin: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json' 181.79670799999997ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 99443) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.838Z - Time taken for 'Load Nx Plugin: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json' 183.64924999999994ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 99442) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.845Z - Time taken for 'loadDefaultNxPlugins' 190.63700000000006ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.845Z - Time taken for 'Load Nx Plugin: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js' 190.5032080000001ms
+[plugin-worker] "@nx/js/typescript" (pid: 99445) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.925Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.926Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.926Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.928Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.928Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.928Z - Time taken for 'loadSpecifiedNxPlugins' 268.87925000000007ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.928Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 268.786792ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.928Z - Time taken for 'hash changed files from watcher' 1.3431659999999965ms
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.930Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.930Z - [Messenger] Received message, length: 176
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 5.972542000000033ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.938Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.938Z - [Messenger] Received message, length: 139
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:23.939Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:23.939Z - [Messenger] Received message, length: 98
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.083Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:24.083Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.120Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:24.120Z - [Messenger] Received message, length: 47
+Time taken for '@nx/js/typescript:createNodes' 154.17145800000003ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.125Z - Time taken for 'build-project-configs' 163.37408399999993ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.125Z - Time taken for 'createNodes:merge' 7.210166000000072ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.125Z - Time taken for 'native-file-deps' 0.007792000000108601ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.125Z - Time taken for 'get-workspace-files' 12.801167000000078ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.125Z - Time taken for 'read cache' 0.7748749999998381ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.131Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:24.131Z - [Messenger] Received message, length: 119
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.131Z - Time taken for '@nx/js/typescript:createDependencies' 10.762583999999833ms
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:23:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:25:42 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:33:25 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:62:86 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:63:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:85:111 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:86:23 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:102:105 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:103:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:111:101 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:112:44 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/route-normalize.mjs:61:20 A numeric separator is only allowed between two digits
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/verify-claim.mjs:1093:60 Unterminated string constant
+Time taken for 'build typescript dependencies' 362.64941600000003ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.500Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:24.500Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.507Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.514Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.514Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.514Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.514Z - [REQUEST]: Responding to the client. project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'total for creating and serializing project graph' 845.2557089999999ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'total execution time for createProjectGraph()' 391.81445900000017ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'createDependencies' 384.9360419999998ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 384.712125ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'createMetadata' 0.013249999999970896ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'serialize graph' 1.7581669999999576ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.515Z - Time taken for 'write cache' 5.811999999999898ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.516Z - Done responding to the client project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.516Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 846. Response time: 2.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:24.516Z - [Messenger] Received message, length: 568511
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:24.674Z - Closed a connection. Number of open connections: 0
+Fetching nx...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:26.566Z - [LATEST-NX]: Successfully pulled latest Nx to /private/tmp/tmp-99435-cwtT7JE0FiJK
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:26.567Z - [NX-CONSOLE]: Using local implementation (NX_USE_LOCAL=true or inner call)
+DEBUG nx::native::ide::install: Detected editor: Unknown
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:26.577Z - [NX-CONSOLE]: Console status check completed, shouldPrompt: false
+DEBUG nx::native::ide::install: Editor command 'code' is installed
+DEBUG nx::native::ide::install: Editor command 'code-insiders' not found
+DEBUG nx::native::ide::install: Checking if Nx Console extension is installed with: code --list-extensions
+DEBUG nx::native::ide::install: Nx Console extension is not installed
+DEBUG nx::native::ide::install: Editor command 'cursor' is installed
+DEBUG nx::native::ide::install: Checking if Nx Console extension is installed with: cursor --list-extensions
+DEBUG nx::native::ide::install: Nx Console extension is not installed
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:27.597Z - [AI-AGENTS]: Agent configuration status computation completed: 0 fully configured, 0 outdated, 4 partially configured, 2 non-configured
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_99790_75a4010ae415cd978cd4932d995b986b
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.164Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_99790_75a4010ae415cd978cd4932d995b986b
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.165Z - [WATCHER]: _tmp_99790_75a4010ae415cd978cd4932d995b986b was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.165Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_99790_75a4010ae415cd978cd4932d995b986b
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.165Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_99790_75a4010ae415cd978cd4932d995b986b
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.165Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.167Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.167Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.167Z - [REQUEST]: _tmp_99790_75a4010ae415cd978cd4932d995b986b
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 99810, socket: /private/tmp/plugin99435-4-5179.214625.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 99811, socket: /private/tmp/plugin99435-5-5180.23625.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 99812, socket: /private/tmp/plugin99435-6-5180.865834.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 99813, socket: /private/tmp/plugin99435-7-5181.574375.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.172Z - Time taken for 'hash changed files from watcher' 1.4099999999998545ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 99811) listening on /private/tmp/plugin99435-5-5180.23625.sock
+[plugin-worker] "@nx/js/typescript" (pid: 99810) listening on /private/tmp/plugin99435-4-5179.214625.sock
+[plugin-worker] "nx/core/project-json" (pid: 99813) listening on /private/tmp/plugin99435-7-5181.574375.sock
+[plugin-worker] "nx/core/package-json" (pid: 99812) listening on /private/tmp/plugin99435-6-5180.865834.sock
+Time taken for 'plugin worker 99811 code loading' 76.32575ms
+Time taken for 'plugin worker 99813 code loading' 76.411084ms
+Time taken for 'plugin worker 99810 code loading' 76.763375ms
+Time taken for 'plugin worker 99812 code loading' 76.590084ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 99810)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 99811)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.290Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 120.32754099999966ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.290Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 119.48425000000043ms
+[plugin-worker] "@nx/js/typescript" (pid: 99810) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 99811) connected
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 99812)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 99813)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.290Z - Time taken for 'start-plugin-worker:nx/core/package-json' 119.15087500000027ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.290Z - Time taken for 'start-plugin-worker:nx/core/project-json' 118.68420800000058ms
+[plugin-worker] "nx/core/package-json" (pid: 99812) connected
+[plugin-worker] "nx/core/project-json" (pid: 99813) connected
+[plugin-worker] "nx/core/project-json" (pid: 99813) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/core/package-json" (pid: 99812) loaded successfully
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 99811) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 4.282834000000008ms
+[plugin-worker] "@nx/js/typescript" (pid: 99810) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.415Z - Time taken for 'build-project-configs' 237.29162499999984ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.415Z - Time taken for 'createNodes:merge' 1.324333000000479ms
+Time taken for '@nx/js/typescript:createNodes' 7.955083000000002ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.419Z - Time taken for '@nx/js/typescript:createDependencies' 7.8744580000002316ms
+Time taken for 'build typescript dependencies' 0.09774999999999068ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.428Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.428Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.428Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Time taken for 'total execution time for createProjectGraph()' 18.248999999999796ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Time taken for 'createDependencies' 14.148457999999664ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 14.066875000000437ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Time taken for 'createMetadata' 0.007333999999900698ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Time taken for 'serialize graph' 1.6811250000000655ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.432Z - Time taken for 'write cache' 4.352459000000636ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.529Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.530Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.531Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.531Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.531Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.531Z - [Messenger] Setting up socket listeners
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.532Z - [Messenger] listen() complete
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.555Z - [Messenger] Sending message type: GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.555Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.557Z - Received raw message of length 5175
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.557Z - Received json message of type GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.558Z - Serializing response for GET_NX_CONSOLE_STATUS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.558Z - Responding to GET_NX_CONSOLE_STATUS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.558Z - [REQUEST]: Responding to the client. handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.558Z - Done responding to the client handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.558Z - Handled json message GET_NX_CONSOLE_STATUS. Handling time: 0. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.558Z - [Messenger] Received message, length: 22
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.603Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.603Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.603Z - Received raw message of length 32
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.603Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.603Z - [REQUEST]: Client Request for Project Graph Received
+DEBUG nx::native::watch::watcher: force-flush END count=0 replies=1 elapsed=11.144167ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.614Z - Reusing in-memory cached project graph because no files changed.
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.614Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.614Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.614Z - [REQUEST]: Responding to the client. project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.615Z - Time taken for 'total for creating and serializing project graph' 11.486832999999933ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.617Z - Done responding to the client project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.617Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 11. Response time: 3.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:06:28.617Z - [Messenger] Received message, length: 568511
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:06:28.628Z - Closed a connection. Number of open connections: 0
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/package.json.tmp.93783.83e21f5b4442
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/package.json
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/package.json.tmp.93783.83e21f5b4442
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/package.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.028Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.028Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.028Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 2 events: delete:apps/cruxai-hire/package.json.tmp.93783.83e21f5b4442, create:apps/cruxai-hire/package.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.029Z - [WATCHER]: File changes detected:
+Created:
+  - apps/cruxai-hire/package.json
+Updated:
+(none)
+Deleted:
+  - apps/cruxai-hire/package.json.tmp.93783.83e21f5b4442
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.029Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.031Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.031Z - [REQUEST]: apps/cruxai-hire/package.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.031Z - [REQUEST]: apps/cruxai-hire/package.json.tmp.93783.83e21f5b4442
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 4966, socket: /private/tmp/plugin99435-8-159040.886167.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 4967, socket: /private/tmp/plugin99435-9-159041.924959.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 4968, socket: /private/tmp/plugin99435-10-159042.466167.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 4969, socket: /private/tmp/plugin99435-11-159042.972459.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.035Z - Time taken for 'hash changed files from watcher' 1.5024169999815058ms
+[plugin-worker] "nx/core/package-json" (pid: 4968) listening on /private/tmp/plugin99435-10-159042.466167.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 4967) listening on /private/tmp/plugin99435-9-159041.924959.sock
+Time taken for 'plugin worker 4968 code loading' 67.735417ms
+[plugin-worker] "@nx/js/typescript" (pid: 4966) listening on /private/tmp/plugin99435-8-159040.886167.sock
+[plugin-worker] "nx/core/project-json" (pid: 4969) listening on /private/tmp/plugin99435-11-159042.972459.sock
+Time taken for 'plugin worker 4967 code loading' 68.844375ms
+Time taken for 'plugin worker 4966 code loading' 68.54950000000001ms
+Time taken for 'plugin worker 4969 code loading' 66.855625ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 4966)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 4967)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 4968)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 4969)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.143Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 110.507042000012ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.144Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 109.87341699999524ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.144Z - Time taken for 'start-plugin-worker:nx/core/package-json' 109.45254199998453ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.144Z - Time taken for 'start-plugin-worker:nx/core/project-json' 109.03850000002421ms
+[plugin-worker] "@nx/js/typescript" (pid: 4966) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 4967) connected
+[plugin-worker] "nx/core/package-json" (pid: 4968) connected
+[plugin-worker] "nx/core/project-json" (pid: 4969) connected
+[plugin-worker] "nx/core/project-json" (pid: 4969) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 4968) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 4967) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 4.345749999999981ms
+[plugin-worker] "@nx/js/typescript" (pid: 4966) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.263Z - Time taken for 'build-project-configs' 221.35462500000722ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.263Z - Time taken for 'createNodes:merge' 1.591833000013139ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.263Z - Time taken for 'native-file-deps' 0.0019169999868609011ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.263Z - Time taken for 'get-workspace-files' 1.491875000006985ms
+Time taken for '@nx/js/typescript:createNodes' 6.299125000000004ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.268Z - Time taken for '@nx/js/typescript:createDependencies' 9.329666999983601ms
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/route-normalize.mjs:61:20 A numeric separator is only allowed between two digits
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/verify-claim.mjs:1093:60 Unterminated string constant
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/packages/core/src/dsl/interpreter.ts:1674:186 Unterminated string constant
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:23:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:25:42 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:33:25 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:62:86 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:63:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:85:111 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:86:23 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:102:105 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:103:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:111:101 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:112:44 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+Time taken for 'build typescript dependencies' 415.595958ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.697Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.697Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.702Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.702Z - Time taken for 'total execution time for createProjectGraph()' 439.59070800000336ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.703Z - Time taken for 'createDependencies' 435.80145800000173ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.703Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 435.72254200000316ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.703Z - Time taken for 'createMetadata' 0.02166699999361299ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.703Z - Time taken for 'serialize graph' 1.7571670000033919ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:02.703Z - Time taken for 'write cache' 5.164416999992682ms
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/project.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/project.json.tmp.93783.083123f3fce4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.029Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/project.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/project.json.tmp.93783.083123f3fce4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.033Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.033Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 2 events: create:apps/cruxai-hire/project.json, delete:apps/cruxai-hire/project.json.tmp.93783.083123f3fce4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.033Z - [WATCHER]: File changes detected:
+Created:
+  - apps/cruxai-hire/project.json
+Updated:
+(none)
+Deleted:
+  - apps/cruxai-hire/project.json.tmp.93783.083123f3fce4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.033Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.035Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.035Z - [REQUEST]: apps/cruxai-hire/project.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.035Z - [REQUEST]: apps/cruxai-hire/project.json.tmp.93783.083123f3fce4
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 5026, socket: /private/tmp/plugin99435-12-165044.994125.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 5027, socket: /private/tmp/plugin99435-13-165046.152959.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 5028, socket: /private/tmp/plugin99435-14-165046.775167.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 5029, socket: /private/tmp/plugin99435-15-165047.324667.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.039Z - Time taken for 'hash changed files from watcher' 1.4156249999941792ms
+[plugin-worker] "nx/core/project-json" (pid: 5029) listening on /private/tmp/plugin99435-15-165047.324667.sock
+[plugin-worker] "@nx/js/typescript" (pid: 5026) listening on /private/tmp/plugin99435-12-165044.994125.sock
+Time taken for 'plugin worker 5029 code loading' 65.059875ms
+[plugin-worker] "nx/core/package-json" (pid: 5028) listening on /private/tmp/plugin99435-14-165046.775167.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5027) listening on /private/tmp/plugin99435-13-165046.152959.sock
+Time taken for 'plugin worker 5026 code loading' 65.87112499999999ms
+Time taken for 'plugin worker 5028 code loading' 66.122875ms
+Time taken for 'plugin worker 5027 code loading' 66.283333ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 5026)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.147Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 110.17879199999152ms
+[plugin-worker] "@nx/js/typescript" (pid: 5026) connected
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 5027)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 5028)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 5029)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.148Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 110.62062500001048ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.148Z - Time taken for 'start-plugin-worker:nx/core/package-json' 110.0889169999864ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.148Z - Time taken for 'start-plugin-worker:nx/core/project-json' 109.61766699998407ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5027) connected
+[plugin-worker] "nx/core/package-json" (pid: 5028) connected
+[plugin-worker] "nx/core/project-json" (pid: 5029) connected
+[plugin-worker] "nx/core/project-json" (pid: 5029) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 5028) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5027) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 4.619834000000026ms
+[plugin-worker] "@nx/js/typescript" (pid: 5026) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.256Z - Time taken for 'build-project-configs' 211.72650000001886ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.256Z - Time taken for 'createNodes:merge' 1.3614159999997355ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.256Z - Time taken for 'native-file-deps' 0.0020000000076834112ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.256Z - Time taken for 'get-workspace-files' 1.4471659999981057ms
+Time taken for '@nx/js/typescript:createNodes' 6.559040999999979ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.261Z - Time taken for '@nx/js/typescript:createDependencies' 8.873542000015732ms
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/verify-claim.mjs:1093:60 Unterminated string constant
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:23:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:25:42 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:33:25 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:62:86 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:63:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:85:111 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:86:23 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:102:105 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:103:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:111:101 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:112:44 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/packages/core/src/dsl/interpreter.ts:1674:186 Unterminated string constant
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/route-normalize.mjs:61:20 A numeric separator is only allowed between two digits
+Time taken for 'build typescript dependencies' 405.041041ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.680Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.680Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.684Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.684Z - Time taken for 'total execution time for createProjectGraph()' 427.98299999997835ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.684Z - Time taken for 'createDependencies' 425.1164590000117ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.684Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 425.0481660000223ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.685Z - Time taken for 'createMetadata' 0.03554100001929328ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.685Z - Time taken for 'serialize graph' 1.9028749999997672ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:08.685Z - Time taken for 'write cache' 4.435666000004858ms
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/package-lock.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/bun.lockb
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/bun.lockb
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/package-lock.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.464Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.464Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 2 events: delete:apps/cruxai-hire/package-lock.json, delete:apps/cruxai-hire/bun.lockb
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.464Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - apps/cruxai-hire/package-lock.json
+  - apps/cruxai-hire/bun.lockb
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.464Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.465Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.466Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.466Z - [REQUEST]: apps/cruxai-hire/package-lock.json,apps/cruxai-hire/bun.lockb
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 5078, socket: /private/tmp/plugin99435-16-168475.654042.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 5079, socket: /private/tmp/plugin99435-17-168476.538584.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 5080, socket: /private/tmp/plugin99435-18-168477.162042.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 5081, socket: /private/tmp/plugin99435-19-168477.696959.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.470Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.470Z - Time taken for 'hash changed files from watcher' 1.3591249999881256ms
+[plugin-worker] "@nx/js/typescript" (pid: 5078) listening on /private/tmp/plugin99435-16-168475.654042.sock
+[plugin-worker] "nx/core/project-json" (pid: 5081) listening on /private/tmp/plugin99435-19-168477.696959.sock
+Time taken for 'plugin worker 5078 code loading' 66.204333ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5079) listening on /private/tmp/plugin99435-17-168476.538584.sock
+Time taken for 'plugin worker 5081 code loading' 67.028083ms
+[plugin-worker] "nx/core/package-json" (pid: 5080) listening on /private/tmp/plugin99435-18-168477.162042.sock
+Time taken for 'plugin worker 5079 code loading' 67.881833ms
+Time taken for 'plugin worker 5080 code loading' 66.400292ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 5078)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 5079)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 5080)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 5081)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.576Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 108.8385840000119ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.576Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 108.08133399998769ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.576Z - Time taken for 'start-plugin-worker:nx/core/package-json' 107.55420800001593ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.576Z - Time taken for 'start-plugin-worker:nx/core/project-json' 107.08845900002052ms
+[plugin-worker] "@nx/js/typescript" (pid: 5078) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5079) connected
+[plugin-worker] "nx/core/project-json" (pid: 5081) connected
+[plugin-worker] "nx/core/package-json" (pid: 5080) connected
+[plugin-worker] "nx/core/project-json" (pid: 5081) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 5080) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5079) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 4.324208999999996ms
+[plugin-worker] "@nx/js/typescript" (pid: 5078) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.687Z - Time taken for 'build-project-configs' 211.89516700000968ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.687Z - Time taken for 'createNodes:merge' 1.2708329999877606ms
+Time taken for '@nx/js/typescript:createNodes' 6.0858340000000055ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.691Z - Time taken for '@nx/js/typescript:createDependencies' 7.0555830000084825ms
+Time taken for 'build typescript dependencies' 0.07499999999998863ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.697Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.698Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.698Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Time taken for 'total execution time for createProjectGraph()' 15.391957999992883ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Time taken for 'createDependencies' 11.875583999993978ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 11.797500000015134ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Time taken for 'createMetadata' 0.013417000009212643ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Time taken for 'serialize graph' 1.66487499998766ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:11.702Z - Time taken for 'write cache' 3.975417000008747ms
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_5797_c915c18098703d7cc03d808bd12c1299
+DEBUG nx::native::watch::watcher:   [delete] _tmp_5797_c915c18098703d7cc03d808bd12c1299
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.664Z - [WATCHER]: _tmp_5797_c915c18098703d7cc03d808bd12c1299 was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.664Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_5797_c915c18098703d7cc03d808bd12c1299
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.664Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_5797_c915c18098703d7cc03d808bd12c1299
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.664Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.666Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.666Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.666Z - [REQUEST]: _tmp_5797_c915c18098703d7cc03d808bd12c1299
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 5807, socket: /private/tmp/plugin99435-20-174676.047375.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 5808, socket: /private/tmp/plugin99435-21-174676.872084.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 5809, socket: /private/tmp/plugin99435-22-174677.60925.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 5810, socket: /private/tmp/plugin99435-23-174678.255334.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.670Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.670Z - Time taken for 'hash changed files from watcher' 1.4521250000107102ms
+[plugin-worker] "nx/core/project-json" (pid: 5810) listening on /private/tmp/plugin99435-23-174678.255334.sock
+[plugin-worker] "nx/core/package-json" (pid: 5809) listening on /private/tmp/plugin99435-22-174677.60925.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5808) listening on /private/tmp/plugin99435-21-174676.872084.sock
+[plugin-worker] "@nx/js/typescript" (pid: 5807) listening on /private/tmp/plugin99435-20-174676.047375.sock
+Time taken for 'plugin worker 5810 code loading' 76.15337500000001ms
+Time taken for 'plugin worker 5809 code loading' 76.22933300000001ms
+Time taken for 'plugin worker 5807 code loading' 76.810084ms
+Time taken for 'plugin worker 5808 code loading' 75.159625ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 5807)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 5808)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 5809)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 5810)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.792Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 123.55225000000792ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.792Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 122.86579100001836ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.792Z - Time taken for 'start-plugin-worker:nx/core/package-json' 122.26112500001909ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.792Z - Time taken for 'start-plugin-worker:nx/core/project-json' 121.6583329999994ms
+[plugin-worker] "@nx/js/typescript" (pid: 5807) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5808) connected
+[plugin-worker] "nx/core/package-json" (pid: 5809) connected
+[plugin-worker] "nx/core/project-json" (pid: 5810) connected
+[plugin-worker] "nx/core/project-json" (pid: 5810) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/core/package-json" (pid: 5809) loaded successfully
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 5808) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 4.465874999999983ms
+[plugin-worker] "@nx/js/typescript" (pid: 5807) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.915Z - Time taken for 'build-project-configs' 240.4964579999796ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.915Z - Time taken for 'createNodes:merge' 1.3185839999932796ms
+Time taken for '@nx/js/typescript:createNodes' 6.694166999999993ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.920Z - Time taken for '@nx/js/typescript:createDependencies' 7.945541000022786ms
+Time taken for 'build typescript dependencies' 0.10249999999999204ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.927Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.927Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.927Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Time taken for 'total execution time for createProjectGraph()' 15.730749999987893ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Time taken for 'createDependencies' 13.050457999983337ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 12.998958999989554ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Time taken for 'createMetadata' 0.006666000001132488ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Time taken for 'serialize graph' 1.593209000013303ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:17.931Z - Time taken for 'write cache' 4.0427909999853ms
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7342_69caaf0ab776cd703d935aabf333efb4
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7342_69caaf0ab776cd703d935aabf333efb4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.101Z - [WATCHER]: _tmp_7342_69caaf0ab776cd703d935aabf333efb4 was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.101Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_7342_69caaf0ab776cd703d935aabf333efb4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.101Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_7342_69caaf0ab776cd703d935aabf333efb4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.101Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.102Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.102Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.102Z - [REQUEST]: _tmp_7342_69caaf0ab776cd703d935aabf333efb4
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 7383, socket: /private/tmp/plugin99435-24-204112.346209.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 7384, socket: /private/tmp/plugin99435-25-204113.198459.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 7385, socket: /private/tmp/plugin99435-26-204113.741125.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 7386, socket: /private/tmp/plugin99435-27-204114.227792.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.107Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.107Z - Time taken for 'hash changed files from watcher' 1.333916000003228ms
+[plugin-worker] "nx/core/project-json" (pid: 7386) listening on /private/tmp/plugin99435-27-204114.227792.sock
+[plugin-worker] "nx/core/package-json" (pid: 7385) listening on /private/tmp/plugin99435-26-204113.741125.sock
+[plugin-worker] "@nx/js/typescript" (pid: 7383) listening on /private/tmp/plugin99435-24-204112.346209.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7384) listening on /private/tmp/plugin99435-25-204113.198459.sock
+Time taken for 'plugin worker 7386 code loading' 76.27425ms
+Time taken for 'plugin worker 7385 code loading' 76.422ms
+Time taken for 'plugin worker 7383 code loading' 76.53408300000001ms
+Time taken for 'plugin worker 7384 code loading' 75.248375ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 7383)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 7384)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 7385)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 7386)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.226Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 121.28849999999511ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.226Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 120.55133300001035ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.226Z - Time taken for 'start-plugin-worker:nx/core/package-json' 120.09200000000419ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.226Z - Time taken for 'start-plugin-worker:nx/core/project-json' 119.68029099999694ms
+[plugin-worker] "@nx/js/typescript" (pid: 7383) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7384) connected
+[plugin-worker] "nx/core/package-json" (pid: 7385) connected
+[plugin-worker] "nx/core/project-json" (pid: 7386) connected
+[plugin-worker] "nx/core/project-json" (pid: 7386) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/core/package-json" (pid: 7385) loaded successfully
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7384) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 4.684291999999999ms
+[plugin-worker] "@nx/js/typescript" (pid: 7383) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.351Z - Time taken for 'build-project-configs' 238.80124999998952ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.351Z - Time taken for 'createNodes:merge' 1.3299169999954756ms
+Time taken for '@nx/js/typescript:createNodes' 7.332416999999992ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.361Z - Time taken for '@nx/js/typescript:createDependencies' 14.13262499999837ms
+Time taken for 'build typescript dependencies' 0.0776249999999834ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.368Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.368Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.368Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Time taken for 'total execution time for createProjectGraph()' 21.5535830000008ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Time taken for 'createDependencies' 18.574874999991152ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 18.50358300001244ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Time taken for 'createMetadata' 0.007250000024214387ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Time taken for 'serialize graph' 1.7185830000089481ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.372Z - Time taken for 'write cache' 4.254458000010345ms
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7375_5514409deda7915b31ee734b2b0e8f41
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.412Z - [WATCHER]: _tmp_7375_5514409deda7915b31ee734b2b0e8f41 was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.412Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_7375_5514409deda7915b31ee734b2b0e8f41
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.412Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_7375_5514409deda7915b31ee734b2b0e8f41
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.412Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.414Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.414Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.414Z - [REQUEST]: _tmp_7375_5514409deda7915b31ee734b2b0e8f41
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7375_5514409deda7915b31ee734b2b0e8f41
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 7388, socket: /private/tmp/plugin99435-28-204425.145459.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 7389, socket: /private/tmp/plugin99435-29-204426.094709.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 7390, socket: /private/tmp/plugin99435-30-204427.209584.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 7391, socket: /private/tmp/plugin99435-31-204428.013667.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.420Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.421Z - Time taken for 'hash changed files from watcher' 1.3168750000186265ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7389) listening on /private/tmp/plugin99435-29-204426.094709.sock
+Time taken for 'plugin worker 7389 code loading' 115.99529199999999ms
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 7389)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.579Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 160.6322499999951ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7389) connected
+[plugin-worker] "nx/core/project-json" (pid: 7391) listening on /private/tmp/plugin99435-31-204428.013667.sock
+Time taken for 'plugin worker 7391 code loading' 122.35954199999999ms
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 7391)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.588Z - Time taken for 'start-plugin-worker:nx/core/project-json' 168.39654200000223ms
+[plugin-worker] "nx/core/project-json" (pid: 7391) connected
+[plugin-worker] "@nx/js/typescript" (pid: 7388) listening on /private/tmp/plugin99435-28-204425.145459.sock
+[plugin-worker] "nx/core/package-json" (pid: 7390) listening on /private/tmp/plugin99435-30-204427.209584.sock
+Time taken for 'plugin worker 7388 code loading' 127.0385ms
+Time taken for 'plugin worker 7390 code loading' 126.917667ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 7388)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 7390)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.599Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 181.7919160000165ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.599Z - Time taken for 'start-plugin-worker:nx/core/package-json' 179.9055839999928ms
+[plugin-worker] "@nx/js/typescript" (pid: 7388) connected
+[plugin-worker] "nx/core/package-json" (pid: 7390) connected
+[plugin-worker] "nx/core/project-json" (pid: 7391) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7389) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 7390) loaded successfully
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 5.722875000000016ms
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[plugin-worker] "@nx/js/typescript" (pid: 7388) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.736Z - Time taken for 'build-project-configs' 312.2604159999755ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.736Z - Time taken for 'createNodes:merge' 1.4907909999892581ms
+Time taken for '@nx/js/typescript:createNodes' 6.969625000000008ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.742Z - Time taken for '@nx/js/typescript:createDependencies' 9.083041999983834ms
+Time taken for 'build typescript dependencies' 0.08579200000002629ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.749Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.749Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.749Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Time taken for 'total execution time for createProjectGraph()' 16.917207999998936ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Time taken for 'createDependencies' 14.033499999990454ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 13.986207999987528ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Time taken for 'createMetadata' 0.00858300001709722ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Time taken for 'serialize graph' 1.6917909999901894ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:09:47.754Z - Time taken for 'write cache' 4.847792000015033ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.485Z - [Server] lock file hash changed! old=8330821752362221157, new=3766378409038839074
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.485Z - [Server] Daemon outdated: LOCK_FILES_CHANGED
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.488Z - [Server] Restarting daemon...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.490Z - Restarting daemon with script: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/daemon/server/start.js
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.490Z - Old daemon __dirname: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/daemon/server
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.490Z - Current process.execPath: /Users/ronkantor/.nvm/versions/node/v22.23.1/bin/node
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.491Z - Started new daemon process in background
+DEBUG nx::native::watch::watcher: watching stopped origin=/Users/ronkantor/Projects/crux-mono
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.491Z - [WATCHER]: Stopping the watcher for /Users/ronkantor/Projects/crux-mono (sources)
+DEBUG nx::native::watch::watcher: watching stopped origin=/Users/ronkantor/Projects/crux-mono
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.491Z - [WATCHER]: Stopping the watcher for /Users/ronkantor/Projects/crux-mono (outputs)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.492Z - [LATEST-NX]: Cleaning up latest Nx installation from /private/tmp/tmp-99435-cwtT7JE0FiJK
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:07.492Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.002Z - New daemon starting from: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/daemon/server/server.js
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.003Z - New daemon __dirname: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/daemon/server
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.003Z - New daemon nxVersion: 23.0.1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.004Z - New daemon getInstalledNxVersion(): 23.0.1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.004Z - Time taken for 'workspace context init' 4.290415999999993ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.006Z - [Server] Starting outdated check interval (20ms)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.007Z - Started listening on: /private/tmp/aec1e3e293c94e97ce66/d.sock
+DEBUG nx::native::watch::watcher: watching started origin=/Users/ronkantor/Projects/crux-mono
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.051Z - [WATCHER]: Subscribed to changes within: /Users/ronkantor/Projects/crux-mono (native)
+DEBUG nx::native::watch::watcher: watching started origin=/Users/ronkantor/Projects/crux-mono
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.055Z - [LATEST-NX]: Pulling latest Nx...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.057Z - [AI-AGENTS]: Starting agent configuration status computation
+[isolated-plugin] spawned worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 7586, socket: /private/tmp/plugin7560-0-229.099167.sock)
+[isolated-plugin] spawned worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 7587, socket: /private/tmp/plugin7560-1-230.311834.sock)
+[isolated-plugin] spawned worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 7588, socket: /private/tmp/plugin7560-2-230.998375.sock)
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 7589, socket: /private/tmp/plugin7560-3-231.791584.sock)
+DEBUG nx::native::watch::watcher: idle-window emitting events count=17
+DEBUG nx::native::watch::watcher:   [update] .husky/_/post-commit
+DEBUG nx::native::watch::watcher:   [update] .husky/_/pre-commit
+DEBUG nx::native::watch::watcher:   [update] .husky/_/post-applypatch
+DEBUG nx::native::watch::watcher:   [update] .husky/_/pre-applypatch
+DEBUG nx::native::watch::watcher:   [update] .husky/_/applypatch-msg
+DEBUG nx::native::watch::watcher:   [update] .husky/_/post-merge
+DEBUG nx::native::watch::watcher:   [update] .husky/_/.gitignore
+DEBUG nx::native::watch::watcher:   [update] .husky/_/post-rewrite
+DEBUG nx::native::watch::watcher:   [update] .husky/_/prepare-commit-msg
+DEBUG nx::native::watch::watcher:   [update] .husky/_/h
+DEBUG nx::native::watch::watcher:   [update] .husky/_/pre-merge-commit
+DEBUG nx::native::watch::watcher:   [update] .husky/_/pre-push
+DEBUG nx::native::watch::watcher:   [update] .husky/_/post-checkout
+DEBUG nx::native::watch::watcher:   [update] .husky/_/commit-msg
+DEBUG nx::native::watch::watcher:   [create] .husky/_/husky.sh
+DEBUG nx::native::watch::watcher:   [update] .husky/_/pre-rebase
+DEBUG nx::native::watch::watcher:   [update] .husky/_/pre-auto-gc
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.326Z - [WATCHER]: Processing file changes in outputs
+[plugin-worker] "@nx/js/typescript" (pid: 7589) listening on /private/tmp/plugin7560-3-231.791584.sock
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 7586) listening on /private/tmp/plugin7560-0-229.099167.sock
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 7587) listening on /private/tmp/plugin7560-1-230.311834.sock
+Time taken for 'plugin worker 7589 code loading' 70.153042ms
+Time taken for 'plugin worker 7586 code loading' 69.130875ms
+Time taken for 'plugin worker 7587 code loading' 69.05779100000001ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 7588) listening on /private/tmp/plugin7560-2-230.998375.sock
+Time taken for 'plugin worker 7588 code loading' 68.947666ms
+[isolated-plugin] connected to worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 7586)
+[isolated-plugin] connected to worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 7587)
+[isolated-plugin] connected to worker for "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 7588)
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 7589)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.553Z - Time taken for 'start-plugin-worker:/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js' 494.260041ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.553Z - Time taken for 'start-plugin-worker:/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json' 493.47950000000003ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.553Z - Time taken for 'start-plugin-worker:/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json' 492.929792ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.553Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 492.2518749999999ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 7588) connected
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 7587) connected
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 7586) connected
+[plugin-worker] "@nx/js/typescript" (pid: 7589) connected
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 7588) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.603Z - Time taken for 'Load Nx Plugin: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json' 549.1234999999999ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json" (pid: 7587) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.606Z - Time taken for 'Load Nx Plugin: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/package-json' 552.4895ms
+[plugin-worker] "/Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js" (pid: 7586) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.612Z - Time taken for 'loadDefaultNxPlugins' 558.435791ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.612Z - Time taken for 'Load Nx Plugin: /Users/ronkantor/Projects/crux-mono/node_modules/.pnpm/nx@23.0.1/node_modules/nx/dist/src/plugins/js' 558.264084ms
+[plugin-worker] "@nx/js/typescript" (pid: 7589) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.686Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.686Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.686Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.695Z - Time taken for 'loadSpecifiedNxPlugins' 626.588666ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.695Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 626.488833ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.695Z - Time taken for 'hash changed files from watcher' 4.586791000000062ms
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for '@nx/js/typescript:createNodes' 52.00387500000002ms
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 82.20112499999999ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.814Z - Time taken for 'build-project-configs' 95.55270899999994ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.814Z - Time taken for 'createNodes:merge' 7.010375000000067ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.815Z - Time taken for 'native-file-deps' 0.006957999999940512ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.815Z - Time taken for 'get-workspace-files' 1.5343750000000682ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.815Z - Time taken for 'read cache' 1.4843329999999924ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:08.822Z - Time taken for '@nx/js/typescript:createDependencies' 13.708334000000036ms
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:23:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:25:42 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:33:25 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:62:86 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:63:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:0 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:78:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:85:111 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:86:23 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:102:105 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:103:34 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:111:101 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/src/components/ui/form.tsx:112:44 Unexpected token. Did you mean `{'>'}` or `&gt;`?
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/packages/core/src/dsl/interpreter.ts:1674:186 Unterminated string constant
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/route-normalize.mjs:61:20 A numeric separator is only allowed between two digits
+DEBUG nx::native::plugins::js::ts_import_locators: /Users/ronkantor/Projects/crux-mono/apps/cruxai-hire/.agents/skills/vercel-optimize/lib/verify-claim.mjs:1093:60 Unterminated string constant
+Fetching nx...
+Time taken for 'build typescript dependencies' 403.020541ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.260Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Time taken for 'total execution time for createProjectGraph()' 455.57729200000006ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Time taken for 'createDependencies' 447.47741699999995ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 447.3426250000001ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Time taken for 'createMetadata' 0.014541999999892141ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Time taken for 'serialize graph' 2.6300410000001193ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:09.267Z - Time taken for 'write cache' 7.061584000000039ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:10.589Z - [LATEST-NX]: Successfully pulled latest Nx to /private/tmp/tmp-7560-l87YTcTOwXU4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:10.590Z - [NX-CONSOLE]: Using local implementation (NX_USE_LOCAL=true or inner call)
+DEBUG nx::native::ide::install: Detected editor: Unknown
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:10.599Z - [NX-CONSOLE]: Console status check completed, shouldPrompt: false
+DEBUG nx::native::ide::install: Editor command 'code' is installed
+DEBUG nx::native::ide::install: Editor command 'code-insiders' not found
+DEBUG nx::native::ide::install: Checking if Nx Console extension is installed with: code --list-extensions
+DEBUG nx::native::ide::install: Nx Console extension is not installed
+DEBUG nx::native::ide::install: Editor command 'cursor' is installed
+DEBUG nx::native::ide::install: Checking if Nx Console extension is installed with: cursor --list-extensions
+DEBUG nx::native::ide::install: Nx Console extension is not installed
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:11.558Z - [AI-AGENTS]: Agent configuration status computation completed: 0 fully configured, 0 outdated, 4 partially configured, 2 non-configured
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7860_904db17cd0890d4eac17b4fb1112bc81
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7860_904db17cd0890d4eac17b4fb1112bc81
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.988Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.988Z - [WATCHER]: _tmp_7860_904db17cd0890d4eac17b4fb1112bc81 was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.988Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_7860_904db17cd0890d4eac17b4fb1112bc81
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.988Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_7860_904db17cd0890d4eac17b4fb1112bc81
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.988Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.990Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.990Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.990Z - [REQUEST]: _tmp_7860_904db17cd0890d4eac17b4fb1112bc81
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 7899, socket: /private/tmp/plugin7560-4-10162.696.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 7900, socket: /private/tmp/plugin7560-5-10163.699584.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 7901, socket: /private/tmp/plugin7560-6-10164.258625.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 7902, socket: /private/tmp/plugin7560-7-10164.91975.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:17.994Z - Time taken for 'hash changed files from watcher' 1.2819170000002487ms
+[plugin-worker] "@nx/js/typescript" (pid: 7899) listening on /private/tmp/plugin7560-4-10162.696.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7900) listening on /private/tmp/plugin7560-5-10163.699584.sock
+[plugin-worker] "nx/core/package-json" (pid: 7901) listening on /private/tmp/plugin7560-6-10164.258625.sock
+[plugin-worker] "nx/core/project-json" (pid: 7902) listening on /private/tmp/plugin7560-7-10164.91975.sock
+Time taken for 'plugin worker 7899 code loading' 78.093625ms
+Time taken for 'plugin worker 7900 code loading' 75.6215ms
+Time taken for 'plugin worker 7901 code loading' 77.773625ms
+Time taken for 'plugin worker 7902 code loading' 77.617042ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 7899)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 7900)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 7901)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 7902)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.115Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 122.3292079999992ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.115Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 121.52770899999996ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.115Z - Time taken for 'start-plugin-worker:nx/core/package-json' 121.08812500000022ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.115Z - Time taken for 'start-plugin-worker:nx/core/project-json' 120.67399999999907ms
+[plugin-worker] "nx/core/project-json" (pid: 7902) connected
+[plugin-worker] "nx/core/package-json" (pid: 7901) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7900) connected
+[plugin-worker] "@nx/js/typescript" (pid: 7899) connected
+[plugin-worker] "nx/core/project-json" (pid: 7902) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/core/package-json" (pid: 7901) loaded successfully
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7900) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 8.280833000000001ms
+[plugin-worker] "@nx/js/typescript" (pid: 7899) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.250Z - Time taken for 'build-project-configs' 246.1592499999988ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.250Z - Time taken for 'createNodes:merge' 2.2112079999988055ms
+Time taken for '@nx/js/typescript:createNodes' 7.85583299999999ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.255Z - Time taken for '@nx/js/typescript:createDependencies' 10.463416000000507ms
+Time taken for 'build typescript dependencies' 0.07695799999999053ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.268Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.268Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.268Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Time taken for 'total execution time for createProjectGraph()' 26.010667000000467ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Time taken for 'createDependencies' 20.518708000001425ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 20.463540999999168ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Time taken for 'createMetadata' 0.007666999999855761ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Time taken for 'serialize graph' 2.682082999999693ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.275Z - Time taken for 'write cache' 6.922083999999813ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.358Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.359Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.360Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.360Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.360Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.360Z - [Messenger] Setting up socket listeners
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.361Z - [Messenger] listen() complete
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.386Z - [Messenger] Sending message type: GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.386Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.387Z - Received raw message of length 6057
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.387Z - Received json message of type GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.387Z - Graph recompute necessary due to env variable refresh. Changed keys: NVM_INC, MANPATH, CMUX_CLAUDE_WRAPPER_SHIM_ROOT, GHOSTTY_SURFACE_ID, CMUX_PANEL_ID, PATH, NODE_PATH, NVM_BIN, CMUX_CLAUDE_WRAPPER_SHIM, CMUX_SURFACE_ID, NoDefaultCurrentDirectoryInExePath, CLAUDE_CODE_ENTRYPOINT, CLAUDE_EFFORT, CLAUDE_CODE_CHILD_SESSION, AI_AGENT, GIT_EDITOR, CMUX_AGENT_LAUNCH_ARGV_B64, CMUX_AGENT_LAUNCH_CWD, CMUX_CLAUDE_HOOK_CMUX_BIN, CMUX_CLAUDE_PID, CLAUDE_CODE_EXECPATH, COREPACK_ENABLE_AUTO_PIN, CLAUDE_CODE_SESSION_ID, CMUX_AGENT_LAUNCH_KIND, CMUX_AGENT_LAUNCH_EXECUTABLE
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.388Z - Serializing response for GET_NX_CONSOLE_STATUS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.388Z - Responding to GET_NX_CONSOLE_STATUS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.388Z - [REQUEST]: Responding to the client. handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.388Z - Done responding to the client handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.388Z - Handled json message GET_NX_CONSOLE_STATUS. Handling time: 0. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.388Z - [Messenger] Received message, length: 22
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.406Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.407Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.407Z - Received raw message of length 32
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.407Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.407Z - [REQUEST]: Client Request for Project Graph Received
+DEBUG nx::native::watch::watcher: force-flush END count=0 replies=1 elapsed=10.927916ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.418Z - No in-memory cached project graph found. Recomputing it...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.419Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.419Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.419Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.421Z - Streaming message to client: progress update for topic graph-construction
+[plugin-client] restarting worker for "@nx/js/typescript"
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.421Z - [Messenger] Received message, length: 47
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 7913, socket: /private/tmp/plugin7560-8-10591.962125.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 7914, socket: /private/tmp/plugin7560-9-10592.956084.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 7915, socket: /private/tmp/plugin7560-10-10593.562.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 7916, socket: /private/tmp/plugin7560-11-10594.104542.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.424Z - Time taken for 'hash changed files from watcher' 1.2638329999990674ms
+[plugin-worker] "@nx/js/typescript" (pid: 7913) listening on /private/tmp/plugin7560-8-10591.962125.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7914) listening on /private/tmp/plugin7560-9-10592.956084.sock
+Time taken for 'plugin worker 7913 code loading' 71.925209ms
+Time taken for 'plugin worker 7914 code loading' 72.076042ms
+[plugin-worker] "nx/core/project-json" (pid: 7916) listening on /private/tmp/plugin7560-11-10594.104542.sock
+[plugin-worker] "nx/core/package-json" (pid: 7915) listening on /private/tmp/plugin7560-10-10593.562.sock
+Time taken for 'plugin worker 7916 code loading' 73.31670799999999ms
+Time taken for 'plugin worker 7915 code loading' 72.547958ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 7913)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 7914)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.541Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 119.38379200000054ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.541Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 118.76391700000022ms
+[plugin-worker] "@nx/js/typescript" (pid: 7913) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7914) connected
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 7915)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 7916)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.541Z - Time taken for 'start-plugin-worker:nx/core/package-json' 118.47458299999926ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.541Z - Time taken for 'start-plugin-worker:nx/core/project-json' 118.03383399999984ms
+[plugin-worker] "nx/core/project-json" (pid: 7916) connected
+[plugin-worker] "nx/core/package-json" (pid: 7915) connected
+[plugin-worker] "nx/core/project-json" (pid: 7916) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 7915) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.587Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.587Z - [Messenger] Received message, length: 176
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7914) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.596Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.596Z - [Messenger] Received message, length: 150
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 7.6004999999999825ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.607Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.607Z - [Messenger] Received message, length: 98
+[plugin-worker] "@nx/js/typescript" (pid: 7913) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.645Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.645Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.651Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.651Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.656Z - Time taken for 'build-project-configs' 225.76370899999893ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.656Z - Time taken for 'createNodes:merge' 1.5683750000007421ms
+Time taken for '@nx/js/typescript:createNodes' 7.007499999999993ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.667Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.667Z - [Messenger] Received message, length: 119
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.667Z - Time taken for '@nx/js/typescript:createDependencies' 15.782040999998571ms
+Time taken for 'build typescript dependencies' 0.1043329999999969ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.672Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.672Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.678Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.678Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.678Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.685Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.685Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.685Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.685Z - [REQUEST]: Responding to the client. project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'total for creating and serializing project graph' 278.14858399999866ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'total execution time for createProjectGraph()' 27.26887500000157ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'createDependencies' 23.48029200000019ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 23.325042000000394ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'createMetadata' 0.014749999998457497ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'serialize graph' 2.767374999999447ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.686Z - Time taken for 'write cache' 6.428416000000652ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.688Z - Done responding to the client project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.688Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 278. Response time: 3.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:18.689Z - [Messenger] Received message, length: 916749
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:18.726Z - Closed a connection. Number of open connections: 0
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7918_9435f67162e19d5755b45db6f0bcd738
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_7918_9435f67162e19d5755b45db6f0bcd738
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.187Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.187Z - [WATCHER]: _tmp_7918_9435f67162e19d5755b45db6f0bcd738 was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.187Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_7918_9435f67162e19d5755b45db6f0bcd738
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.187Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_7918_9435f67162e19d5755b45db6f0bcd738
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.187Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.189Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.189Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.189Z - [REQUEST]: _tmp_7918_9435f67162e19d5755b45db6f0bcd738
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 7927, socket: /private/tmp/plugin7560-12-11361.487334.sock)
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 7928, socket: /private/tmp/plugin7560-13-11362.553667.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 7929, socket: /private/tmp/plugin7560-14-11363.201084.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 7930, socket: /private/tmp/plugin7560-15-11363.770292.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.193Z - Time taken for 'hash changed files from watcher' 1.2895830000015849ms
+[plugin-worker] "nx/core/package-json" (pid: 7929) listening on /private/tmp/plugin7560-14-11363.201084.sock
+[plugin-worker] "nx/core/project-json" (pid: 7930) listening on /private/tmp/plugin7560-15-11363.770292.sock
+[plugin-worker] "@nx/js/typescript" (pid: 7927) listening on /private/tmp/plugin7560-12-11361.487334.sock
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7928) listening on /private/tmp/plugin7560-13-11362.553667.sock
+Time taken for 'plugin worker 7929 code loading' 70.902958ms
+Time taken for 'plugin worker 7930 code loading' 68.34120899999999ms
+Time taken for 'plugin worker 7927 code loading' 73.889667ms
+Time taken for 'plugin worker 7928 code loading' 69.542958ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 7927)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.310Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 119.78274999999849ms
+[plugin-worker] "@nx/js/typescript" (pid: 7927) connected
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 7928)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 7929)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 7930)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.312Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 120.29116599999907ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.312Z - Time taken for 'start-plugin-worker:nx/core/package-json' 119.78200000000106ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.312Z - Time taken for 'start-plugin-worker:nx/core/project-json' 119.30787500000042ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7928) connected
+[plugin-worker] "nx/core/project-json" (pid: 7930) connected
+[plugin-worker] "nx/core/package-json" (pid: 7929) connected
+[plugin-worker] "nx/core/project-json" (pid: 7930) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 7929) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 7928) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 6.662749999999988ms
+[plugin-worker] "@nx/js/typescript" (pid: 7927) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.435Z - Time taken for 'build-project-configs' 234.84329199999956ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.435Z - Time taken for 'createNodes:merge' 1.5442080000011629ms
+Time taken for '@nx/js/typescript:createNodes' 7.945208000000008ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.440Z - Time taken for '@nx/js/typescript:createDependencies' 9.576042000000598ms
+Time taken for 'build typescript dependencies' 0.07262500000001637ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.451Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.451Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.451Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Time taken for 'total execution time for createProjectGraph()' 22.1060839999991ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Time taken for 'createDependencies' 16.91008299999885ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 16.858792000000903ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Time taken for 'createMetadata' 0.006916000000273925ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Time taken for 'serialize graph' 2.7369999999991705ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.457Z - Time taken for 'write cache' 5.768041999999696ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.553Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.554Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.555Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.555Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.555Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.555Z - [Messenger] Setting up socket listeners
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.556Z - [Messenger] listen() complete
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.579Z - [Messenger] Sending message type: GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.579Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.581Z - Received raw message of length 6057
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.582Z - Received json message of type GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.582Z - Serializing response for GET_NX_CONSOLE_STATUS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.582Z - Responding to GET_NX_CONSOLE_STATUS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.582Z - [REQUEST]: Responding to the client. handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.582Z - Done responding to the client handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.582Z - Handled json message GET_NX_CONSOLE_STATUS. Handling time: 0. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.582Z - [Messenger] Received message, length: 22
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.620Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.620Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.620Z - Received raw message of length 32
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.621Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.621Z - [REQUEST]: Client Request for Project Graph Received
+DEBUG nx::native::watch::watcher: force-flush END count=0 replies=1 elapsed=11.006875ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.632Z - Reusing in-memory cached project graph because no files changed.
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.632Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.632Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.632Z - [REQUEST]: Responding to the client. project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.634Z - Time taken for 'total for creating and serializing project graph' 11.381541999999172ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.636Z - Done responding to the client project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.636Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 11. Response time: 4.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:10:19.637Z - [Messenger] Received message, length: 916749
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:10:19.648Z - Closed a connection. Number of open connections: 0
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_8791_ffe157b7e47b618c089e25769e99e408
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.697Z - [WATCHER]: _tmp_8791_ffe157b7e47b618c089e25769e99e408 was deleted
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.697Z - [WATCHER]: [watcher] routeWorkspaceChanges batch: 1 events: delete:_tmp_8791_ffe157b7e47b618c089e25769e99e408
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.697Z - [WATCHER]: File changes detected:
+Created:
+(none)
+Updated:
+(none)
+Deleted:
+  - _tmp_8791_ffe157b7e47b618c089e25769e99e408
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.697Z - [SYNC]: clearing sync generators cache due to file changes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.699Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.699Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.699Z - [REQUEST]: _tmp_8791_ffe157b7e47b618c089e25769e99e408
+[plugin-client] restarting worker for "@nx/js/typescript"
+[isolated-plugin] spawned worker for "@nx/js/typescript" (pid: 8814, socket: /private/tmp/plugin7560-16-180869.242292.sock)
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [delete] _tmp_8791_ffe157b7e47b618c089e25769e99e408
+[plugin-client] restarting worker for "nx/js/dependencies-and-lockfile"
+[isolated-plugin] spawned worker for "nx/js/dependencies-and-lockfile" (pid: 8815, socket: /private/tmp/plugin7560-17-180870.266.sock)
+[plugin-client] restarting worker for "nx/core/package-json"
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 8816, socket: /private/tmp/plugin7560-18-180870.854292.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 8817, socket: /private/tmp/plugin7560-19-180871.394167.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.703Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.703Z - Time taken for 'hash changed files from watcher' 1.304999999993015ms
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 8815) listening on /private/tmp/plugin7560-17-180870.266.sock
+[plugin-worker] "@nx/js/typescript" (pid: 8814) listening on /private/tmp/plugin7560-16-180869.242292.sock
+[plugin-worker] "nx/core/project-json" (pid: 8817) listening on /private/tmp/plugin7560-19-180871.394167.sock
+[plugin-worker] "nx/core/package-json" (pid: 8816) listening on /private/tmp/plugin7560-18-180870.854292.sock
+Time taken for 'plugin worker 8815 code loading' 67.23008300000001ms
+Time taken for 'plugin worker 8814 code loading' 68.204625ms
+Time taken for 'plugin worker 8817 code loading' 67.21475ms
+Time taken for 'plugin worker 8816 code loading' 66.31775ms
+[isolated-plugin] connected to worker for "@nx/js/typescript" (pid: 8814)
+[isolated-plugin] connected to worker for "nx/js/dependencies-and-lockfile" (pid: 8815)
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 8816)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 8817)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.811Z - Time taken for 'start-plugin-worker:@nx/js/typescript' 110.66320799998357ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.811Z - Time taken for 'start-plugin-worker:nx/js/dependencies-and-lockfile' 109.79495799998404ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.811Z - Time taken for 'start-plugin-worker:nx/core/package-json' 109.29854200000409ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.811Z - Time taken for 'start-plugin-worker:nx/core/project-json' 108.83554200001527ms
+[plugin-worker] "@nx/js/typescript" (pid: 8814) connected
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 8815) connected
+[plugin-worker] "nx/core/project-json" (pid: 8817) connected
+[plugin-worker] "nx/core/package-json" (pid: 8816) connected
+[plugin-worker] "nx/core/project-json" (pid: 8817) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 8816) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[plugin-worker] "nx/js/dependencies-and-lockfile" (pid: 8815) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.879Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.880Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.880Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.880Z - Closed a connection. Number of open connections: 0
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.880Z - Established a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.880Z - [Messenger] Setting up socket listeners
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.881Z - [Messenger] listen() complete
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 6.5931659999999965ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.904Z - [Messenger] Sending message type: GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.905Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.905Z - Received raw message of length 5180
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - Received json message of type GET_NX_CONSOLE_STATUS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - Graph recompute necessary due to env variable refresh. Changed keys: NVM_INC, MANPATH, CMUX_CLAUDE_WRAPPER_SHIM_ROOT, GHOSTTY_SURFACE_ID, CMUX_PANEL_ID, PATH, NVM_BIN, CMUX_CLAUDE_WRAPPER_SHIM, CMUX_SURFACE_ID, NoDefaultCurrentDirectoryInExePath, CLAUDE_CODE_ENTRYPOINT, CLAUDE_EFFORT, CLAUDE_CODE_CHILD_SESSION, AI_AGENT, GIT_EDITOR, CMUX_AGENT_LAUNCH_ARGV_B64, CMUX_AGENT_LAUNCH_CWD, CMUX_CLAUDE_HOOK_CMUX_BIN, CMUX_CLAUDE_PID, CLAUDE_CODE_EXECPATH, COREPACK_ENABLE_AUTO_PIN, CLAUDE_CODE_SESSION_ID, CMUX_AGENT_LAUNCH_KIND, CMUX_AGENT_LAUNCH_EXECUTABLE
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - Serializing response for GET_NX_CONSOLE_STATUS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - Responding to GET_NX_CONSOLE_STATUS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - [REQUEST]: Responding to the client. handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - Done responding to the client handleGetNxConsoleStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.906Z - Handled json message GET_NX_CONSOLE_STATUS. Handling time: 0. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.907Z - [Messenger] Received message, length: 22
+[plugin-worker] "@nx/js/typescript" (pid: 8814) loaded successfully
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.945Z - Time taken for 'build-project-configs' 233.53233399998862ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.945Z - Time taken for 'createNodes:merge' 1.6542919999919832ms
+Time taken for '@nx/js/typescript:createNodes' 9.059875000000005ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.946Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.946Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.946Z - Received raw message of length 32
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.946Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.946Z - [REQUEST]: Client Request for Project Graph Received
+DEBUG nx::native::watch::watcher: force-flush END count=0 replies=1 elapsed=11.078167ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.958Z - No in-memory cached project graph found. Recomputing it...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.959Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.959Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.959Z - [REQUEST]: 
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.961Z - Streaming message to client: progress update for topic graph-construction
+[plugin-client] restarting worker for "nx/core/package-json"
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.961Z - [Messenger] Received message, length: 47
+[isolated-plugin] spawned worker for "nx/core/package-json" (pid: 8825, socket: /private/tmp/plugin7560-20-181129.643625.sock)
+[plugin-client] restarting worker for "nx/core/project-json"
+[isolated-plugin] spawned worker for "nx/core/project-json" (pid: 8826, socket: /private/tmp/plugin7560-21-181130.452042.sock)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.962Z - Time taken for 'hash changed files from watcher' 1.259250000002794ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.967Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.967Z - Time taken for '@nx/js/typescript:createDependencies' 27.90704099999857ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.967Z - [Messenger] Received message, length: 119
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.969Z - Streaming message to client: progress update for topic graph-construction
+Time taken for '@nx/js/typescript:createNodes' 3.0006659999999954ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.969Z - [Messenger] Received message, length: 179
+Time taken for 'build typescript dependencies' 0.07033300000000509ms
+Time taken for 'nx/js/dependencies-and-lockfile:createNodes' 5.720832999999999ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.980Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.980Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.980Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:08.980Z - [Messenger] Received message, length: 142
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.986Z - Time taken for 'total execution time for createProjectGraph()' 47.93549999999232ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.986Z - Time taken for 'createDependencies' 43.01237499999115ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.986Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 42.9273749999993ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.986Z - Time taken for 'createMetadata' 0.007000000012340024ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:08.986Z - Time taken for 'serialize graph' 3.1155000000144355ms
+[plugin-worker] "nx/core/package-json" (pid: 8825) listening on /private/tmp/plugin7560-20-181129.643625.sock
+[plugin-worker] "nx/core/project-json" (pid: 8826) listening on /private/tmp/plugin7560-21-181130.452042.sock
+[isolated-plugin] connected to worker for "nx/core/package-json" (pid: 8825)
+[isolated-plugin] connected to worker for "nx/core/project-json" (pid: 8826)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.060Z - Time taken for 'start-plugin-worker:nx/core/package-json' 98.58183300000383ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.060Z - Time taken for 'start-plugin-worker:nx/core/project-json' 97.90445899998304ms
+[plugin-worker] "nx/core/package-json" (pid: 8825) connected
+[plugin-worker] "nx/core/project-json" (pid: 8826) connected
+Time taken for 'plugin worker 8825 code loading' 60.549916ms
+Time taken for 'plugin worker 8826 code loading' 60.59620799999999ms
+[plugin-worker] "nx/core/project-json" (pid: 8826) loaded successfully
+[plugin-worker] "nx/core/package-json" (pid: 8825) loaded successfully
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.100Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.100Z - [Messenger] Received message, length: 101
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.109Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.109Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.115Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.115Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.120Z - Time taken for 'build-project-configs' 150.18962499999907ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.120Z - Time taken for 'createNodes:merge' 1.4478340000205208ms
+[isolated-plugin] shutting down worker for "@nx/js/typescript" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.125Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.125Z - Time taken for '@nx/js/typescript:createDependencies' 9.682124999992084ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.125Z - [Messenger] Received message, length: 119
+Time taken for 'build typescript dependencies' 0.10233299999998735ms
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.132Z - Streaming message to client: progress update for topic graph-construction
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.132Z - [Messenger] Received message, length: 47
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.137Z - [SYNC]: collect registered sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.137Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.137Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.144Z - Wrote project graph cache to /Users/ronkantor/Projects/crux-mono/.nx/workspace-data/project-graph.json
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.144Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.144Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.144Z - [REQUEST]: Responding to the client. project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.145Z - Time taken for 'total for creating and serializing project graph' 197.59387499999139ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.146Z - Time taken for 'total execution time for createProjectGraph()' 21.99975000001723ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.146Z - Time taken for 'createDependencies' 18.52633400002378ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.146Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 18.357791999995243ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.146Z - Time taken for 'createMetadata' 0.006583000009413809ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.146Z - Time taken for 'serialize graph' 2.682582999987062ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.146Z - Time taken for 'write cache' 6.639790999994148ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.148Z - Done responding to the client project-graph
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.149Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 198. Response time: 5.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.149Z - [Messenger] Received message, length: 916749
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.155Z - [Messenger] Sending message type: PRE_TASKS_EXECUTION
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.155Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.155Z - Received raw message of length 961
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.155Z - Received json message of type PRE_TASKS_EXECUTION
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.156Z - Serializing response for PRE_TASKS_EXECUTION message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.156Z - Responding to PRE_TASKS_EXECUTION message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.156Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.156Z - Done responding to the client handleRunPreTasksExecution
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.156Z - Handled json message PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.156Z - [Messenger] Received message, length: 2
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.156Z - Time taken for 'preTasksExecution' 0.5735829999903217ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.178Z - [Messenger] Sending message type: HASH_TASKS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.178Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.178Z - Received raw message of length 8311
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.178Z - Received json message of type HASH_TASKS
+DEBUG nx::native::watch::watcher: force-flush END count=0 replies=1 elapsed=6.369333ms
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.185Z - Reusing in-memory cached project graph because no files changed.
+DEBUG nx::native::tasks::hash_planner: get_plans_internal COMPLETED in 4.201208ms - processed 1 tasks (setup: 3.159875ms, parallel_planning: 1.03875ms)
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset with inputs: Adding "5429580751060051843" (".gitignore") to hash
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset with inputs: Adding "9502947409351005964" ("nx.json") to hash
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset with inputs: Hash Value: "16596067855423889248"
+DEBUG nx::native::tasks::task_hasher: hash_plans COMPLETED in 4.475875ms - processed 1 plans (setup: 532.167µs, hashing: 3.941167ms, assembly: 1.115208ms)
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.202Z - Serializing response for HASH_TASKS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.202Z - Responding to HASH_TASKS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.202Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.202Z - Done responding to the client handleHashTasks
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.203Z - Handled json message HASH_TASKS. Handling time: 24. Response time: 1.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.202Z - [Messenger] Received message, length: 57371
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.258Z - [Messenger] Sending message type: GET_ESTIMATED_TASK_TIMINGS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.259Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.259Z - Received raw message of length 90
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.259Z - Received json message of type GET_ESTIMATED_TASK_TIMINGS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.261Z - Serializing response for GET_ESTIMATED_TASK_TIMINGS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.261Z - Responding to GET_ESTIMATED_TASK_TIMINGS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.261Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.261Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:09.261Z - Handled json message GET_ESTIMATED_TASK_TIMINGS. Handling time: 2. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:09.261Z - [Messenger] Received message, length: 2
+DEBUG nx::native::watch::watcher: idle-window emitting events count=5
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/package.json
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/logs/next-development.log
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/CURRENT
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/tmp_file_io_benchmark_35337274e35faca314087d1c4c7c31ba
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/lock
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:11.478Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=9
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/build/chunks/[turbopack]_runtime.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/cf208e1b0e4c4caf.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[turbopack-node]_transforms_webpack-loaders_ts_1nw9y6m._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__0x8m--0._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__1nvwxt6._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__0x8m--0._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/cf208e1b0e4c4caf.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__1nvwxt6._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[turbopack-node]_transforms_webpack-loaders_ts_1nw9y6m._.js
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:11.634Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=30
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0n6h_@sentry_conventions_dist_0e4n5m5._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1wv6_@sentry_nextjs_build_cjs_1_nrk7x._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/apps_cruxai-hire_sentry_server_config_ts_07lawgt._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1n-m_@sentry_node_build_cjs_0k3pcb7._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0sj1_@opentelemetry_api_build_esm_0zd58_f._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0455_meriyah_dist_meriyah_cjs_1l990di._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[externals]_node_inspector_0_z8m0y._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1e02_@opentelemetry_semantic-conventions_build_esm_0_c1o_c._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0-8l_@opentelemetry_sdk-trace-base_build_esm_0s_wtfc._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__0ibs0xz._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1e6l_@sentry_node-core_build_cjs_1hg2ubm._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0-8l_@opentelemetry_sdk-trace-base_build_esm_0s_wtfc._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__0v2ig07._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/apps_cruxai-hire_sentry_server_config_ts_07lawgt._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0ty4_@sentry_core_build_cjs_1ha528k._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0455_meriyah_dist_meriyah_cjs_1l990di._.js.map
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/instrumentation.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__0v2ig07._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1n-m_@sentry_node_build_cjs_0k3pcb7._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__0ibs0xz._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0n6h_@sentry_conventions_dist_0e4n5m5._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[externals]_node_inspector_0_z8m0y._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0ty4_@sentry_core_build_cjs_1ha528k._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__1q73t-6._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1wv6_@sentry_nextjs_build_cjs_1_nrk7x._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0sj1_@opentelemetry_api_build_esm_0zd58_f._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1e6l_@sentry_node-core_build_cjs_1hg2ubm._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1e02_@opentelemetry_semantic-conventions_build_esm_0_c1o_c._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__1q73t-6._.js.map
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/chunks/[turbopack]_runtime.js
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:12.236Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=43
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/node_modules__pnpm_0o0pgj5._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/static/development/_buildManifest.js.tmp.okypj3kbvm8
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/development/_ssgManifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/development/_buildManifest.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/pages-manifest.json.tmp.d6i75n8u4b8
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/fallback-build-manifest.json.tmp.5f4z9akyg3i
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/app-paths-manifest.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/interception-route-rewrite-manifest.js.tmp.n0wyqzjpgv
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/static/development/_ssgManifest.js.tmp.my4e0z58vec
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0n6h_@sentry_conventions_dist_attributes_mjs_1iobvbe._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0bvy_@sentry_vercel-edge_build_esm_index_1rmxg1s.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/1qk0_next_dist_esm_build_templates_edge-wrapper_15rskew.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0ty4_@sentry_core_build_esm_1jbhr7v._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0bvy_@sentry_vercel-edge_build_esm_index_1rmxg1s.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/server-reference-manifest.json.tmp.0h6k5vdsjh3c
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0n6h_@sentry_conventions_dist_attributes_mjs_1iobvbe._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/development/_clientMiddlewareManifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build-manifest.json
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/instrumentation/middleware-manifest.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/next-font-manifest.js.tmp.9vg27ghx2rn
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/[root-of-the-server]__14qi10d._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/server-reference-manifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/pages-manifest.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/server-reference-manifest.js.tmp.5t2m23ujax
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/interception-route-rewrite-manifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/middleware-build-manifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/next-font-manifest.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/middleware-build-manifest.js.tmp.0qj4xvk52g2m
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/next-font-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/node_modules__pnpm_0o0pgj5._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0ty4_@sentry_core_build_esm_1jbhr7v._.js.map
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/static/development/_clientMiddlewareManifest.js.tmp.yi3rslcv9i
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/build-manifest.json.tmp.8fkal0f52h7
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0cm8_@sentry_opentelemetry_build_esm_resource-DazDAxCp_1h9rh_z.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/[root-of-the-server]__14qi10d._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/middleware-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/fallback-build-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/server-reference-manifest.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/middleware-manifest.json.tmp.jaim3kdrorp
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/next-font-manifest.json.tmp.tbo5yz80d4
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0f8x_next_dist_esm_build_templates_edge-wrapper_15rskew.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/edge/chunks/0cm8_@sentry_opentelemetry_build_esm_resource-DazDAxCp_1h9rh_z.js.map
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/app-paths-manifest.json.tmp.9iyadw1o3wl
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:12.498Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=15
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/types/validator.ts
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/node_modules__pnpm_1-ef8rh._.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/middleware.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/prerender-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__1kpr_fw._.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/types/cache-life.d.ts
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/development/_clientMiddlewareManifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__1kpr_fw._.js.map
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/types/link.d.ts
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/routes-manifest.json
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/middleware-manifest.json.tmp.f11tyhjyzr8
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/node_modules__pnpm_1-ef8rh._.js.map
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/static/development/_clientMiddlewareManifest.js.tmp.acbpxrof4um
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/middleware-manifest.json
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/types/routes.d.ts
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:12.770Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/logs/next-development.log
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:13.161Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=10
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__0w8h19f._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/075d2652596fb31f.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__1t8lm4m._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/node_modules__pnpm_0casku6._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[turbopack-node]_transforms_postcss_ts_0oey4zg._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__1t8lm4m._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[turbopack-node]_transforms_postcss_ts_0oey4zg._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/075d2652596fb31f.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/node_modules__pnpm_0casku6._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build/chunks/[root-of-the-server]__0w8h19f._.js
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:13.754Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=166
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0455_meriyah_dist_meriyah_cjs_01tfmrx._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_client_components_builtin_unauthorized_0a_u0xl.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_navigation_02y-kqr.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__0fp7zjp._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_1-_3jcj._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[externals]_node_inspector_0_z8m0y._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0do0_@trpc_server_dist_0r9n33h._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/11da_@trpc_client_dist_1s_g-ng._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0do0_@trpc_server_dist_1uyn-l9._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[externals]__00hi9if._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[externals]_node_inspector_0_z8m0y._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/1tdh_agentation_dist_index_mjs_1tua86r._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/server-reference-manifest.json.tmp.79jdxkuz7m2
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/app-paths-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/turbopack-apps_cruxai-hire_0lu757l._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0ty4_@sentry_core_build_esm_0i0e6v-._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_0xlt1vd._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/1-9-_@sentry_replay_build_npm_esm_index_1yururq.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0do0_@trpc_server_dist_1uyn-l9._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__0fp7zjp._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire_src_0k39e8l._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_0qm90mj._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire_src_0nad90d._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_0xlt1vd._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0455_meriyah_dist_meriyah_cjs_01tfmrx._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1tdh_agentation_dist_index_mjs_1xbq9dr._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_instrumentation-client_ts_1miwy1w._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__1gnhyca._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/1ip__@sentry_browser_build_npm_esm_dev_0diamgo._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_compiled_1ekgn4a._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0sj1_@opentelemetry_api_build_esm_0h9uqxp._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire__next-internal_server_app_page_actions_0wr68-u.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__1gnhyca._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_build_polyfills_polyfill-nomodule.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_0x9utcv._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0-8l_@opentelemetry_sdk-trace-base_build_esm_0cbfli3._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1e02_@opentelemetry_semantic-conventions_build_esm_0ygf_se._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[externals]_node_inspector_1dg5rnp._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/node_modules__pnpm_1z6zv_t._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/1tdh_agentation_dist_index_mjs_1tua86r._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/build-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/next-font-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/node_modules__pnpm_0lu32d0._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1e6l_@sentry_node-core_build_cjs_0t9xmm1._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_shared_lib_0lu-9g_._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/_1tohujn._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_18dzco3._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0ty4_@sentry_core_build_cjs_1a8j3fi._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0nz7_@sentry_browser-utils_build_esm_0rwoqp3._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_shared_lib_0lu-9g_._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_1-_3jcj._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0sj1_@opentelemetry_api_build_esm_1ie9cx4._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1e6l_@sentry_node-core_build_cjs_0t9xmm1._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/node_modules__pnpm_1e2spu1._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire_src_0nad90d._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_0bx0xcz._.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/app/page_client-reference-manifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_server_15uowix._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_0lu757l._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__14ce8l1._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/build-manifest.json.tmp.e4lsne511yr
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_1gu-keu._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_16qw0qp._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1wv6_@sentry_nextjs_build_cjs_20nks_e._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_react-server-dom-turbopack_08b7seq._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__1j8fj65._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_react-server-dom-turbopack_08b7seq._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0ty4_@sentry_core_build_esm_0i0e6v-._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_next-devtools_index_1x3pvpd.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_client_0r_ege0._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_lib_00rdivd._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/node_modules__pnpm_0lu32d0._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_18dzco3._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_router_1p76kp3.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/_0x_abg1._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_1k6nax1._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_app_globals_0gnq6a7.css
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_1vf5323._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_0qm90mj._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_client_0r_ege0._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_app_layout_tsx_09nw100._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__1j8fj65._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/1ip__@sentry_browser_build_npm_esm_dev_0diamgo._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1n-m_@sentry_node_build_cjs_1w7y5fs._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[externals]__00hi9if._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/app-paths-manifest.json.tmp.xhupwkdaidc
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/middleware-build-manifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_build_polyfills_polyfill-nomodule.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_instrumentation-client_ts_1miwy1w._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/next-font-manifest.js.tmp.thffx5dops
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0n6h_@sentry_conventions_dist_1n5xou3._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_server_1ye4mwf._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_06h41dw._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_1vf5323._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[root-of-the-server]__14ce8l1._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_server_route-modules_app-page_1xcb43h._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_react-dom_10hof2y._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_compiled_1ekgn4a._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_server_15uowix._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire__next-internal_server_app_page_actions_0wr68-u.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/_0x_abg1._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_client_components_builtin_unauthorized_0a_u0xl.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire_src_0k39e8l._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0-8l_@opentelemetry_sdk-trace-base_build_esm_0cbfli3._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_209juhj._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/11da_@trpc_client_dist_172fxmf._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_1k6nax1._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0n6h_@sentry_conventions_dist_1n5xou3._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_react-dom_10hof2y._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_10uawb-._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_app_global-error_tsx_1p21okh._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_1-3h5wg._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1wv6_@sentry_nextjs_build_cjs_20nks_e._.js.map
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/server-reference-manifest.js.tmp.ier2ypio7x
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0sj1_@opentelemetry_api_build_esm_0h9uqxp._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_server_route-modules_app-page_1xcb43h._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/middleware-build-manifest.js.tmp.gyjdfi5vi57
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_client_components_0-0oawd._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_client_14mrkfg._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/11da_@trpc_client_dist_172fxmf._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/next-font-manifest.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_app_globals_0gnq6a7.css.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0sj1_@opentelemetry_api_build_esm_1ie9cx4._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1e02_@opentelemetry_semantic-conventions_build_esm_0ygf_se._.js.map
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/fallback-build-manifest.json.tmp.8eydo2g7fys
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/_1tohujn._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0caf_h4._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_0x9utcv._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_app_page_tsx_1p21okh._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_10uawb-._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0ty4_@sentry_core_build_cjs_1a8j3fi._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/fallback-build-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/server-reference-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/[externals]_node_inspector_1dg5rnp._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/node_modules__pnpm_1-3h5wg._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/node_modules__pnpm_1e2spu1._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_0bx0xcz._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_app_not-found_tsx_1p21okh._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire_src_app_global-error_tsx_1isy_o7._.js.map
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/app/page/build-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_server_1ye4mwf._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0nz7_@sentry_browser-utils_build_esm_0rwoqp3._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1tdh_agentation_dist_index_mjs_1xbq9dr._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0caf_h4._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/1n-m_@sentry_node_build_cjs_1w7y5fs._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_router_1p76kp3.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/chunks/ssr/[turbopack]_runtime.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_src_06h41dw._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/11da_@trpc_client_dist_1s_g-ng._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/apps_cruxai-hire_1anvha4._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/server-reference-manifest.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/app/page.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_lib_00rdivd._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_1gu-keu._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_client_components_0-0oawd._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_navigation_02y-kqr.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/apps_cruxai-hire_src_app_global-error_tsx_1isy_o7._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_209juhj._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/1-9-_@sentry_replay_build_npm_esm_index_1yururq.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0f8x_next_dist_compiled_next-devtools_index_1x3pvpd.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/0do0_@trpc_server_dist_0r9n33h._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/next-font-manifest.json.tmp.ftxadz17bj
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/static/chunks/node_modules__pnpm_1z6zv_t._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/ssr/0f8x_next_dist_esm_client_14mrkfg._.js.map
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:16.080Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/logs/next-development.log
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:16.723Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/images/PiJvjG5d5PtjO7XpkbtkAVe6LSm60OOSW6erwZvHLkw/14400.1782645197625.PEu5blDNnKL4CLT3rQqMhCR2nLH8Hkwq3cNao3otyTU.Vy8iZTJiNmMtMTllNTM5NDFjMjAi.webp
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/cache/images/PiJvjG5d5PtjO7XpkbtkAVe6LSm60OOSW6erwZvHLkw/14400.1782340842833.PEu5blDNnKL4CLT3rQqMhCR2nLH8Hkwq3cNao3otyTU.Vy8iZTJiNmMtMTllNTM5NDFkZmYi.webp
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:17.739Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=47
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__0az5122._.js
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/server/app-paths-manifest.json.tmp.f7q77g8o40l
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/044u_cruxai-hire__next-internal_server_app_api_auth_[___all]_route_actions_05wqgje.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1a7c_zod_v4_0t7f0bl._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/app-paths-manifest.json
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0uzt_@better-auth_memory-adapter_dist_index_mjs_146wwh6._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/_15myui3._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__011w3td._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1_lr_jose_dist_webapi_16x3i-g._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_1pw8w2n._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/141x_drizzle-orm_02yxuvm._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0598_better-auth_dist_adapters_kysely-adapter_index_mjs_1fdcc9v._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0bst_@better-auth_kysely-adapter_dist_0hi6_75._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_schema_1aj5ffw._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0d-b_next_dist_server_app-render_after-task-async-storage_external_0-exn7p.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0f8x_next_0b1uput._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0bst_@better-auth_kysely-adapter_dist_0h3w7n9._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1qbf_@better-auth_core_dist_1qu6hye._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0f8x_next_0b1uput._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_schema_1aj5ffw._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/141x_drizzle-orm_02yxuvm._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__0az5122._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0bst_@better-auth_kysely-adapter_dist_0dph9jr._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/044u_cruxai-hire__next-internal_server_app_api_auth_[___all]_route_actions_05wqgje.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0sj1_@opentelemetry_api_build_esm_0zw2uwe._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0bst_@better-auth_kysely-adapter_dist_0dph9jr._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0f8x_next_dist_1x-fl45._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1a7c_zod_v4_0t7f0bl._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0bst_@better-auth_kysely-adapter_dist_0hi6_75._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0598_better-auth_dist_adapters_kysely-adapter_index_mjs_1fdcc9v._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/_15myui3._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_query-builder_1aw3xws._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0598_better-auth_dist_05xcfjc._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0d-b_next_dist_server_app-render_after-task-async-storage_external_0-exn7p.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1qbf_@better-auth_core_dist_1qu6hye._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0f8x_next_dist_1x-fl45._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_query-builder_1aw3xws._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/[root-of-the-server]__011w3td._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0sj1_@opentelemetry_api_build_esm_0zw2uwe._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_operation-node_1y6m2ec._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0bst_@better-auth_kysely-adapter_dist_0h3w7n9._.js
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/server/app/api/auth/[...all]/route.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0uzt_@better-auth_memory-adapter_dist_index_mjs_146wwh6._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0598_better-auth_dist_05xcfjc._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_operation-node_1y6m2ec._.js.map
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/1_lr_jose_dist_webapi_16x3i-g._.js
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/server/chunks/0m4a_kysely_dist_1pw8w2n._.js.map
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:18.649Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/logs/next-development.log
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:18.992Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=1
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/logs/next-development.log
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:19.705Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=4
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000002.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000004.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000003.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000001.sst
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:20.751Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=8
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000010.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000011.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000008.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000012.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000005.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000006.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000009.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000007.sst
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:21.020Z - [WATCHER]: Processing file changes in outputs
+DEBUG nx::native::watch::watcher: idle-window emitting events count=23
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000015.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/CURRENT
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000010.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000011.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000002.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000004.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000016.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000019.meta
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000017.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000020.meta
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000008.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000003.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000012.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000005.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000006.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000009.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000013.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000018.meta
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000014.sst
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000007.sst
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000021.meta
+DEBUG nx::native::watch::watcher:   [create] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/LOG
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/cache/turbopack/f37fad94/00000001.sst
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:21.333Z - [WATCHER]: Processing file changes in outputs
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.413Z - [Messenger] Sending message type: RECORD_TASK_RUNS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.413Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.413Z - Received raw message of length 209
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.413Z - Received json message of type RECORD_TASK_RUNS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.414Z - Serializing response for RECORD_TASK_RUNS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.414Z - Responding to RECORD_TASK_RUNS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.414Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.414Z - Done responding to the client handleRecordTaskRuns
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.414Z - Handled json message RECORD_TASK_RUNS. Handling time: 1. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.414Z - [Messenger] Received message, length: 4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.414Z - Established a connection. Number of open connections: 2
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.414Z - [Messenger] Sending message type: GET_CONFIGURE_AI_AGENTS_STATUS
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.415Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Closed a connection. Number of open connections: 1
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Received raw message of length 41
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Received json message of type GET_CONFIGURE_AI_AGENTS_STATUS
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - [AI-AGENTS]: Returning cached agent configuration status
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Serializing response for GET_CONFIGURE_AI_AGENTS_STATUS message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Responding to GET_CONFIGURE_AI_AGENTS_STATUS message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - [REQUEST]: Responding to the client. handleGetConfigureAiAgentsStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Done responding to the client handleGetConfigureAiAgentsStatus
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.415Z - Handled json message GET_CONFIGURE_AI_AGENTS_STATUS. Handling time: 0. Response time: 0.
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.415Z - [Messenger] Received message, length: 382
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.415Z - [Messenger] Sending message type: POST_TASKS_EXECUTION
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.416Z - [Messenger] Message sent
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.416Z - Received raw message of length 60404
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.416Z - Received json message of type POST_TASKS_EXECUTION
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.417Z - Serializing response for POST_TASKS_EXECUTION message in json mode
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.417Z - Responding to POST_TASKS_EXECUTION message
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.417Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.417Z - Done responding to the client handleRunPostTasksExecution
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.417Z - Handled json message POST_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.417Z - Time taken for 'postTasksExecution' 0.13704200001666322ms
+[NX v23.0.1 Daemon Client] - 2026-06-28T07:13:28.417Z - [Messenger] Received message, length: 4
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.455Z - Closed a connection. Number of open connections: 0
+DEBUG nx::native::watch::watcher: idle-window emitting events count=2
+DEBUG nx::native::watch::watcher:   [update] apps/cruxai-hire/.next/dev/trace
+DEBUG nx::native::watch::watcher:   [delete] apps/cruxai-hire/.next/dev/lock
+[NX v23.0.1 Daemon Server] - 2026-06-28T07:13:28.554Z - [WATCHER]: Processing file changes in outputs
