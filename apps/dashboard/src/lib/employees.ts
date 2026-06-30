@@ -36,95 +36,13 @@ export interface Employee {
 export const REAL_EMPLOYEE_ID = 'you';
 
 /**
- * The simulated team. "You" is the real employee (no `summary` — it is computed
- * from the Analyzer at load time); everyone else is a hand-written teammate.
+ * The team roster. Only the real employee ("You", backed by the local
+ * `data.json`) is listed; their `summary` is computed from the Analyzer at load
+ * time. Synthetic teammates can be added back here to simulate the multi-employee
+ * end-state.
  */
 export const SYNTHETIC_EMPLOYEES: Employee[] = [
   { id: REAL_EMPLOYEE_ID, name: 'You', role: 'Developers', real: true },
-  {
-    id: 'a-cohen',
-    name: 'Avi Cohen',
-    role: 'Developers',
-    real: false,
-    summary: {
-      sessions: 96,
-      requests: 1314,
-      credits: 31.4,
-      aiLoc: 12880,
-      flowScore: 68,
-      daily: [4, 6, 3, 7, 5, 8, 4, 6, 9, 5, 7, 6],
-    },
-  },
-  {
-    id: 'r-levi',
-    name: 'Roni Levi',
-    role: 'Developers',
-    real: false,
-    summary: {
-      sessions: 142,
-      requests: 2210,
-      credits: 52.1,
-      aiLoc: 20640,
-      flowScore: 81,
-      daily: [7, 9, 6, 10, 8, 11, 7, 9, 12, 8, 10, 11],
-    },
-  },
-  {
-    id: 'd-mizrahi',
-    name: 'Dana Mizrahi',
-    role: 'Developers',
-    real: false,
-    summary: {
-      sessions: 74,
-      requests: 902,
-      credits: 22.7,
-      aiLoc: 8410,
-      flowScore: 59,
-      daily: [3, 4, 2, 5, 4, 6, 3, 5, 4, 6, 5, 4],
-    },
-  },
-  {
-    id: 'm-adler',
-    name: 'Maya Adler',
-    role: 'Accounting',
-    real: false,
-    summary: {
-      sessions: 18,
-      requests: 146,
-      credits: 4.1,
-      aiLoc: 980,
-      flowScore: 42,
-      daily: [1, 0, 2, 1, 1, 0, 2, 1, 1, 2, 0, 1],
-    },
-  },
-  {
-    id: 'y-shapira',
-    name: 'Yossi Shapira',
-    role: 'IT',
-    real: false,
-    summary: {
-      sessions: 33,
-      requests: 287,
-      credits: 7.6,
-      aiLoc: 2140,
-      flowScore: 51,
-      daily: [2, 1, 3, 2, 1, 2, 3, 1, 2, 2, 1, 3],
-    },
-  },
-  {
-    id: 't-bar',
-    name: 'Tamar Bar',
-    role: 'IT',
-    real: false,
-    summary: {
-      sessions: 27,
-      requests: 219,
-      credits: 5.9,
-      aiLoc: 1620,
-      flowScore: 47,
-      daily: [1, 2, 1, 3, 2, 1, 2, 2, 3, 1, 2, 2],
-    },
-  },
 ];
 
 export function getEmployee(id: string): Employee | undefined {
