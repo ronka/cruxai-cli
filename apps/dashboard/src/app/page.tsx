@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header';
 import { EmployeeCard } from '@/components/EmployeeCard';
 import { SYNTHETIC_EMPLOYEES, getRoles, type Employee } from '@/lib/employees';
 import { loadReport } from '@/lib/load-report';
@@ -33,10 +32,7 @@ export default async function Home() {
   const roles = getRoles(employees);
 
   return (
-    <div className="flex min-h-screen flex-col bg-grain">
-      <Header />
-
-      <main className="container flex-1 py-10">
+    <main className="container flex-1 py-10">
         <section className="rise mb-10 max-w-2xl">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
             team · grouped by role
@@ -70,7 +66,6 @@ export default async function Home() {
             </section>
           ))}
         </div>
-      </main>
-    </div>
+    </main>
   );
 }

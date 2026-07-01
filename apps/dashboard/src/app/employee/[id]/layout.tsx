@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 
-import { Header } from '@/components/Header';
 import { getEmployee } from '@/lib/employees';
 
 export default async function EmployeeLayout({
@@ -14,10 +13,5 @@ export default async function EmployeeLayout({
   const employee = getEmployee(id);
   if (!employee) notFound();
 
-  return (
-    <div className="flex min-h-screen flex-col bg-grain">
-      <Header employee={employee} />
-      {children}
-    </div>
-  );
+  return children;
 }

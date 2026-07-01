@@ -47,6 +47,15 @@
     /* Tertiary: Sage green #9FCBAD */
     --tertiary: 139 30% 71%;
     --tertiary-foreground: 249 25% 15%;
+    /* Sidebar — aligned to the project's purple/teal palette */
+    --sidebar-background: 72 60% 93%;
+    --sidebar-foreground: 249 25% 20%;
+    --sidebar-primary: 249 20% 33%;
+    --sidebar-primary-foreground: 72 68% 90%;
+    --sidebar-accent: 192 25% 85%;
+    --sidebar-accent-foreground: 249 20% 28%;
+    --sidebar-border: 249 15% 83%;
+    --sidebar-ring: 249 20% 33%;
   }
 
   .dark {
@@ -87,6 +96,15 @@
     --warning-foreground: 249 22% 12%;
     --tertiary: 139 30% 71%;
     --tertiary-foreground: 249 22% 12%;
+    /* Sidebar — aligned to the project's purple/teal palette */
+    --sidebar-background: 249 20% 16%;
+    --sidebar-foreground: 72 50% 88%;
+    --sidebar-primary: 192 37% 58%;
+    --sidebar-primary-foreground: 249 22% 12%;
+    --sidebar-accent: 249 15% 22%;
+    --sidebar-accent-foreground: 72 40% 78%;
+    --sidebar-border: 249 15% 25%;
+    --sidebar-ring: 192 37% 58%;
   }
 }
 
