@@ -72,7 +72,7 @@ export default async function AntiPatternsPage({ params }: { params: Promise<{ i
                     <p className="font-semibold">{p.name}</p>
                     <p className="mt-1 text-sm text-muted-foreground">{p.description}</p>
                     {p.suggestion && (
-                      <p className="mt-2 text-sm text-accent">{p.suggestion}</p>
+                      <p className="mt-2 text-sm text-primary">{p.suggestion}</p>
                     )}
                   </div>
                   <div className="shrink-0 text-right">

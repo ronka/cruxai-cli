@@ -134,7 +134,7 @@ export default async function EmployeeOverview({ params }: { params: Promise<{ i
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">Last {daily.labels.length} days</p>
               </div>
-              <div className="rounded-full bg-accent/15 p-2 text-accent">
+              <div className="rounded-full bg-primary/15 p-2 text-primary">
                 <Gauge className="h-4 w-4" />
               </div>
             </div>
@@ -193,7 +193,7 @@ export default async function EmployeeOverview({ params }: { params: Promise<{ i
               <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
                 Top anti-patterns
               </p>
-              <Link href={`/employee/${id}/anti-patterns`} className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-accent hover:underline">
+              <Link href={`/employee/${id}/anti-patterns`} className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-primary hover:underline">
                 See all →
               </Link>
             </div>

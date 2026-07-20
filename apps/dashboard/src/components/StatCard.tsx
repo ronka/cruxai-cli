@@ -14,7 +14,7 @@ interface StatCardProps {
 
 export function StatCard({ label, value, icon: Icon, description, className }: StatCardProps) {
   return (
-    <Card className={cn("transition-colors hover:border-accent/60", className)}>
+    <Card className={cn("transition-colors hover:border-primary/60", className)}>
       <CardContent className="p-6">
         <div className="flex items-start justify-between">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">

@@ -21,7 +21,7 @@ export function EmployeeCard({ employee }: { employee: Employee }) {
 
   return (
     <Link href={`/employee/${employee.id}`} className="block">
-      <Card className="h-full transition-colors hover:border-accent/60">
+      <Card className="h-full transition-colors hover:border-primary/60">
         <CardContent className="flex h-full flex-col p-5">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
@@ -33,7 +33,7 @@ export function EmployeeCard({ employee }: { employee: Employee }) {
             <span
               className={[
                 'shrink-0 rounded-full px-2 py-0.5 font-mono text-[0.55rem] uppercase tracking-[0.12em]',
-                employee.real ? 'bg-accent/20 text-accent' : 'bg-muted text-muted-foreground',
+                employee.real ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground',
               ].join(' ')}
             >
               {employee.real ? 'Real' : 'Sim'}

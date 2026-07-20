@@ -38,7 +38,7 @@ function RecommendationCard({ r }: { r: RecommendationResult }) {
             <p className="font-semibold">{r.name}</p>
             <p className="mt-1 text-sm text-muted-foreground">{r.finding}</p>
             {r.recommendation && r.status !== 'good' && (
-              <p className="mt-2 text-sm text-accent">{r.recommendation}</p>
+              <p className="mt-2 text-sm text-primary">{r.recommendation}</p>
             )}
           </div>
           <div className="shrink-0 text-right">
@@ -46,7 +46,7 @@ function RecommendationCard({ r }: { r: RecommendationResult }) {
             <p className="font-mono text-[0.65rem] uppercase tracking-[0.1em] text-muted-foreground">score</p>
             <div className="mt-1 h-1 w-16 rounded-full bg-muted overflow-hidden">
               <div
-                className={['h-full rounded-full', SCORE_BAR_CLASS[r.status] ?? 'bg-accent'].join(' ')}
+                className={['h-full rounded-full', SCORE_BAR_CLASS[r.status] ?? 'bg-primary'].join(' ')}
                 style={{ width: `${Math.min(r.score, 100)}%` }}
               />
             </div>

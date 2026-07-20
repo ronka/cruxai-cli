@@ -49,7 +49,9 @@ function getCssVar(name: string): string {
 
 function hsl(cssVar: string, alpha = 1): string {
   const raw = getCssVar(cssVar);
-  return alpha < 1 ? `hsla(${raw}, ${alpha})` : `hsl(${raw})`;
+  // raw is a space-separated HSL triplet ("15 56% 52%"); use modern
+  // slash-alpha syntax so the value stays valid when an alpha is applied.
+  return alpha < 1 ? `hsl(${raw} / ${alpha})` : `hsl(${raw})`;
 }
 
 export function Chart({ labels, datasets, type = 'line', height = 220, fill = true }: ChartProps) {
@@ -59,8 +61,8 @@ export function Chart({ labels, datasets, type = 'line', height = 220, fill = tr
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    const accent = hsl('--accent');
-    const accentFade = hsl('--accent', 0.15);
+    const accent = hsl('--primary');
+    const accentFade = hsl('--primary', 0.15);
     const mutedFg = hsl('--muted-foreground');
     const border = hsl('--border');
 

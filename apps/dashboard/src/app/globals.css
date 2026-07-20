@@ -6,105 +6,122 @@
 
 @layer base {
   :root {
-    /* Light Mode — #4A4466 · #6EADBC · #9FCBAD · #F1F7D4 */
-    --background: 72 68% 90%;
-    --foreground: 249 25% 20%;
+    /* Claude theme (tweakcn) — warm cream + terracotta, converted to HSL
+       triplets so the hsl(var(--x)) convention in tailwind.config keeps working. */
+    --background: 48 33% 97%;
+    --foreground: 48 20% 20%;
 
-    --card: 72 60% 93%;
-    --card-foreground: 249 25% 20%;
+    --card: 48 33% 97%;
+    --card-foreground: 60 3% 8%;
 
-    --popover: 72 60% 93%;
-    --popover-foreground: 249 25% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 51 19% 13%;
 
-    /* Primary: Deep purple #4A4466 */
-    --primary: 249 20% 33%;
-    --primary-foreground: 72 68% 90%;
+    /* Primary: terracotta */
+    --primary: 15 56% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 192 25% 85%;
-    --secondary-foreground: 249 20% 28%;
+    --secondary: 46 23% 89%;
+    --secondary-foreground: 51 8% 30%;
 
-    --muted: 72 35% 92%;
-    --muted-foreground: 249 12% 48%;
+    --muted: 44 29% 90%;
+    --muted-foreground: 50 2% 50%;
 
-    /* Accent: Teal-blue #6EADBC */
-    --accent: 192 37% 58%;
-    --accent-foreground: 249 25% 15%;
+    /* Accent: pale warm beige (shadcn component hover states) */
+    --accent: 46 23% 89%;
+    --accent-foreground: 51 19% 13%;
 
-    --destructive: 4 70% 50%;
+    --destructive: 60 3% 8%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 249 15% 83%;
-    --input: 249 15% 83%;
-    --ring: 249 20% 33%;
+    --border: 50 8% 84%;
+    --input: 51 8% 68%;
+    --ring: 15 56% 52%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom tokens */
+    /* Custom tokens (retained from the app; not part of the claude theme) */
     --success: 139 30% 52%;
     --success-foreground: 0 0% 100%;
     --warning: 38 85% 45%;
     --warning-foreground: 0 0% 100%;
-    /* Tertiary: Sage green #9FCBAD */
-    --tertiary: 139 30% 71%;
-    --tertiary-foreground: 249 25% 15%;
-    /* Sidebar — aligned to the project's purple/teal palette */
-    --sidebar-background: 72 60% 93%;
-    --sidebar-foreground: 249 25% 20%;
-    --sidebar-primary: 249 20% 33%;
-    --sidebar-primary-foreground: 72 68% 90%;
-    --sidebar-accent: 192 25% 85%;
-    --sidebar-accent-foreground: 249 20% 28%;
-    --sidebar-border: 249 15% 83%;
-    --sidebar-ring: 249 20% 33%;
+    /* Tertiary: reuse the claude chart-2 (violet) as a secondary series color */
+    --tertiary: 251 85% 75%;
+    --tertiary-foreground: 0 0% 100%;
+
+    /* Sidebar */
+    --sidebar-background: 51 26% 95%;
+    --sidebar-foreground: 60 3% 23%;
+    --sidebar-primary: 15 56% 52%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 46 23% 89%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 180 0% 71%;
+
+    /* Chart series */
+    --chart-1: 18 57% 44%;
+    --chart-2: 251 85% 75%;
+    --chart-3: 46 28% 82%;
+    --chart-4: 257 49% 88%;
+    --chart-5: 18 60% 44%;
   }
 
   .dark {
-    /* Dark Mode — deep purple base with teal/sage accents */
-    --background: 249 22% 12%;
-    --foreground: 72 50% 88%;
+    /* Claude theme (tweakcn) — warm charcoal + terracotta */
+    --background: 60 3% 15%;
+    --foreground: 46 10% 74%;
 
-    --card: 249 20% 16%;
-    --card-foreground: 72 50% 88%;
+    --card: 60 3% 15%;
+    --card-foreground: 48 33% 97%;
 
-    --popover: 249 20% 16%;
-    --popover-foreground: 72 50% 88%;
+    --popover: 60 2% 18%;
+    --popover-foreground: 60 5% 89%;
 
-    /* Primary: Teal-blue #6EADBC, lightened for dark */
-    --primary: 192 37% 58%;
-    --primary-foreground: 249 22% 12%;
+    /* Primary: terracotta, lightened for dark */
+    --primary: 15 63% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 249 15% 22%;
-    --secondary-foreground: 72 40% 78%;
+    --secondary: 48 33% 97%;
+    --secondary-foreground: 60 2% 18%;
 
-    --muted: 249 15% 22%;
-    --muted-foreground: 249 10% 55%;
+    --muted: 60 4% 10%;
+    --muted-foreground: 51 9% 69%;
 
-    /* Accent: Sage green #9FCBAD on dark */
-    --accent: 139 30% 71%;
-    --accent-foreground: 249 22% 12%;
+    /* Accent: deep warm neutral (shadcn component hover states) */
+    --accent: 48 11% 9%;
+    --accent-foreground: 51 26% 95%;
 
-    --destructive: 4 60% 55%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 249 15% 25%;
-    --input: 249 15% 25%;
-    --ring: 192 37% 58%;
+    --border: 60 5% 23%;
+    --input: 53 5% 31%;
+    --ring: 15 63% 60%;
 
     --success: 139 30% 60%;
     --success-foreground: 0 0% 100%;
     --warning: 38 75% 52%;
-    --warning-foreground: 249 22% 12%;
-    --tertiary: 139 30% 71%;
-    --tertiary-foreground: 249 22% 12%;
-    /* Sidebar — aligned to the project's purple/teal palette */
-    --sidebar-background: 249 20% 16%;
-    --sidebar-foreground: 72 50% 88%;
-    --sidebar-primary: 192 37% 58%;
-    --sidebar-primary-foreground: 249 22% 12%;
-    --sidebar-accent: 249 15% 22%;
-    --sidebar-accent-foreground: 72 40% 78%;
-    --sidebar-border: 249 15% 25%;
-    --sidebar-ring: 192 37% 58%;
+    --warning-foreground: 60 3% 15%;
+    --tertiary: 251 85% 75%;
+    --tertiary-foreground: 0 0% 100%;
+
+    /* Sidebar */
+    --sidebar-background: 30 3% 12%;
+    --sidebar-foreground: 46 10% 74%;
+    --sidebar-primary: 0 0% 20%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 60 3% 6%;
+    --sidebar-accent-foreground: 46 10% 74%;
+    --sidebar-border: 60 5% 23%;
+    --sidebar-ring: 180 0% 71%;
+
+    /* Chart series */
+    --chart-1: 18 57% 44%;
+    --chart-2: 251 85% 75%;
+    --chart-3: 48 11% 9%;
+    --chart-4: 248 25% 23%;
+    --chart-5: 18 60% 44%;
   }
 }
 

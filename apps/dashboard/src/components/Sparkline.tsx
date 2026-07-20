@@ -27,8 +27,8 @@ export function Sparkline({ data, className, width = 240, height = 56 }: Sparkli
       role="img"
       aria-label="Daily activity trend"
     >
-      <path d={area} className="fill-accent/15" />
-      <path d={line} className="fill-none stroke-accent" strokeWidth={2} vectorEffect="non-scaling-stroke" />
+      <path d={area} className="fill-primary/15" />
+      <path d={line} className="fill-none stroke-primary" strokeWidth={2} vectorEffect="non-scaling-stroke" />
     </svg>
   );
 }
