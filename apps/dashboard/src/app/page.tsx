@@ -1,35 +1,11 @@
 import { EmployeeCard } from '@/components/EmployeeCard';
-import { SYNTHETIC_EMPLOYEES, getRoles, type Employee } from '@/lib/employees';
-import { loadReport } from '@/lib/load-report';
-import { ensureBuiltinRules } from '@/lib/register-rules';
+import { getRoles, listEmployees } from '@/lib/store';
+
+// Roster reflects the live DB (uploads/seed change it), so never prerender it.
+export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  ensureBuiltinRules();
-  const result = await loadReport();
-
-  // Fill the real employee's summary from the live Analyzer (when a report exists).
-  const employees: Employee[] = SYNTHETIC_EMPLOYEES.map((emp) => {
-    if (!emp.real || !result.ok) return emp;
-    const { analyzer } = result;
-    const stats = analyzer.getStats();
-    const credits = analyzer.getAiCredits();
-    const production = analyzer.getCodeProduction();
-    const flow = analyzer.getFlowState();
-    const daily = analyzer.getDailyActivity();
-    return {
-      ...emp,
-      summary: {
-        sessions: stats.totalSessions,
-        requests: stats.totalRequests,
-        credits: credits.totalCredits,
-        aiLoc: production.summary.totalAiLoc,
-        flowScore: Math.round(flow.overallFlowScore),
-        daily: daily.sessions,
-      },
-    };
-  });
-
-  const roles = getRoles(employees);
+  const roles = getRoles(listEmployees());
 
   return (
     <main className="container flex-1 py-10">

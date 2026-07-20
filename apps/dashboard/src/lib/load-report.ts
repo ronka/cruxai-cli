@@ -1,46 +1,63 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { Analyzer } from '@crux/core';
-import type { Session, Workspace } from '@crux/core';
+/**
+ * Per-employee Analyzer loader for the detail pages.
+ *
+ * Reads an employee's raw `data.json` from `<CRUX_DATA_DIR>/employees/<id>/`,
+ * rehydrates it into a `@crux/core` Analyzer, and caches the result in-memory
+ * keyed by employee id + file mtime so repeated page renders don't re-parse.
+ * The roster and team-aggregate pages never touch this — they read SQLite.
+ */
 
-interface DataJson {
-  sessions: Session[];
-  editLocIndex: [string, [string, number][]][];
-  workspaces: [string, Workspace][];
-}
+import fs from 'node:fs/promises';
+import { Analyzer } from '@crux/core';
+
+import { employeeDataPath } from './paths';
+import { rehydrateAnalyzer, type DataJson } from './data-json';
 
 export type LoadReportResult =
   | { ok: true; analyzer: Analyzer }
   | { ok: false; message: string };
 
-export async function loadReport(): Promise<LoadReportResult> {
-  const reportPath = process.env.CRUX_REPORT
-    ? path.resolve(process.env.CRUX_REPORT)
-    : path.resolve('./crux-report/data.json');
+interface CacheEntry {
+  mtimeMs: number;
+  analyzer: Analyzer;
+}
 
-  let raw: DataJson;
+const cache = new Map<string, CacheEntry>();
+
+/**
+ * Load the Analyzer for a single employee. Cached by data.json mtime, so a fresh
+ * upload (which rewrites the file) transparently invalidates the entry.
+ */
+export async function loadEmployeeReport(employeeId: string): Promise<LoadReportResult> {
+  const dataPath = employeeDataPath(employeeId);
+
+  let mtimeMs: number;
   try {
-    const text = await fs.readFile(reportPath, 'utf8');
-    raw = JSON.parse(text) as DataJson;
-  } catch (err) {
-    const isNotFound = err instanceof Error && 'code' in err && (err as NodeJS.ErrnoException).code === 'ENOENT';
-    if (isNotFound) {
-      return {
-        ok: false,
-        message: `No report found at ${reportPath}. Run \`crux scan\` to generate one.`,
-      };
-    }
+    mtimeMs = (await fs.stat(dataPath)).mtimeMs;
+  } catch {
     return {
       ok: false,
-      message: `Could not read report: ${err instanceof Error ? err.message : String(err)}`,
+      message: `No data for this employee yet. Run \`crux scan --upload\` (or \`pnpm dev:seed\`).`,
     };
   }
 
-  const editLocIndex = new Map<string, Map<string, number>>(
-    raw.editLocIndex.map(([reqId, entries]) => [reqId, new Map(entries)]),
-  );
-  const workspaces = new Map<string, Workspace>(raw.workspaces);
-  const analyzer = new Analyzer(raw.sessions, editLocIndex, workspaces);
+  const cached = cache.get(employeeId);
+  if (cached && cached.mtimeMs === mtimeMs) {
+    return { ok: true, analyzer: cached.analyzer };
+  }
 
+  let raw: DataJson;
+  try {
+    const text = await fs.readFile(dataPath, 'utf8');
+    raw = JSON.parse(text) as DataJson;
+  } catch (err) {
+    return {
+      ok: false,
+      message: `Could not read data for this employee: ${err instanceof Error ? err.message : String(err)}`,
+    };
+  }
+
+  const analyzer = rehydrateAnalyzer(raw);
+  cache.set(employeeId, { mtimeMs, analyzer });
   return { ok: true, analyzer };
 }

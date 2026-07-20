@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { Sparkline } from '@/components/Sparkline';
 import { Card, CardContent } from '@/components/ui/card';
-import type { Employee } from '@/lib/employees';
+import type { Employee } from '@/lib/store';
 
 const num = new Intl.NumberFormat('en-US');
 const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });

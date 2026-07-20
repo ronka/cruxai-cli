@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { getEmployee } from '@/lib/employees';
+import { getEmployee } from '@/lib/store';
 
 export default async function EmployeeLayout({
   children,

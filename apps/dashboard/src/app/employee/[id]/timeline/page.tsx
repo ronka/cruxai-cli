@@ -1,11 +1,12 @@
 import { TabbedChart } from '@/components/Chart';
 import { Card, CardContent } from '@/components/ui/card';
-import { loadReport } from '@/lib/load-report';
+import { loadEmployeeReport } from '@/lib/load-report';
 
 const num = new Intl.NumberFormat('en-US');
 
-export default async function TimelinePage() {
-  const result = await loadReport();
+export default async function TimelinePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const result = await loadEmployeeReport(id);
 
   if (!result.ok) {
     return (

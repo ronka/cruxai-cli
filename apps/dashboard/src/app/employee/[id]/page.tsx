@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { TabbedChart } from '@/components/Chart';
 import { StatCard } from '@/components/StatCard';
 import { Card, CardContent } from '@/components/ui/card';
-import { getEmployee } from '@/lib/employees';
-import { loadReport } from '@/lib/load-report';
+import { getEmployee } from '@/lib/store';
+import { loadEmployeeReport } from '@/lib/load-report';
 import { ensureBuiltinRules } from '@/lib/register-rules';
 
 const num = new Intl.NumberFormat('en-US');
@@ -18,7 +18,7 @@ export default async function EmployeeOverview({ params }: { params: Promise<{ i
   const simulated = employee ? !employee.real : false;
 
   ensureBuiltinRules();
-  const result = await loadReport();
+  const result = await loadEmployeeReport(id);
 
   if (!result.ok) {
     return (

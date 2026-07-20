@@ -19,6 +19,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# dashboard data dir (SQLite + per-employee data.json); default CRUX_DATA_DIR
+/crux-data
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

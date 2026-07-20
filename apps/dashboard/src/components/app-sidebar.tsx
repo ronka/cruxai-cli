@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Activity, LayoutDashboard, ShieldAlert, Sparkles, Users } from 'lucide-react';
 
-import { getEmployee } from '@/lib/employees';
 import {
   Sidebar,
   SidebarContent,
@@ -27,10 +26,17 @@ const EMPLOYEE_ROUTES = [
   { segment: '/anti-patterns', label: 'Anti-Patterns', icon: ShieldAlert },
 ] as const;
 
+/** Turn an employee slug into a readable label (client-safe; no DB access). */
+function labelFromId(id: string): string {
+  return id
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
   const employeeId = pathname.match(/^\/employee\/([^/]+)/)?.[1];
-  const employee = employeeId ? getEmployee(employeeId) : undefined;
 
   return (
     <Sidebar {...props}>
@@ -62,7 +68,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
         {employeeId && (
           <SidebarGroup>
-            <SidebarGroupLabel>{employee?.name ?? employeeId}</SidebarGroupLabel>
+            <SidebarGroupLabel>{labelFromId(employeeId)}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {EMPLOYEE_ROUTES.map(({ segment, label, icon: Icon }) => {

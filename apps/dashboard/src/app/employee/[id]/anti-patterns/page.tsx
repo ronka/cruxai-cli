@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { loadReport } from '@/lib/load-report';
+import { loadEmployeeReport } from '@/lib/load-report';
 import { ensureBuiltinRules } from '@/lib/register-rules';
 
 const num = new Intl.NumberFormat('en-US');
@@ -16,10 +16,11 @@ const SEVERITY_CLASS: Record<string, string> = {
   low: 'text-muted-foreground',
 };
 
-export default async function AntiPatternsPage() {
+export default async function AntiPatternsPage({ params }: { params: Promise<{ id: string }> }) {
   ensureBuiltinRules();
 
-  const result = await loadReport();
+  const { id } = await params;
+  const result = await loadEmployeeReport(id);
 
   if (!result.ok) {
     return (
